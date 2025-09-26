@@ -814,6 +814,136 @@ body {
 }
 
 
+/* ==================================== */
+/* 9. FOOTER PROFESIONAL (Página Sobre Mí) */
+/* ==================================== */
+
+.profile-footer {
+    background-color: var(--color-text-dark); /* Fondo oscuro */
+    color: var(--color-text-light); /* Texto claro */
+    padding: 50px 0 0; /* Espacio superior */
+    margin-top: 50px;
+}
+
+.footer__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales en PC */
+    gap: 3rem;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separador sutil */
+}
+
+.footer__title {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-primary); /* Títulos en color primario */
+}
+
+/* Logo y Texto Principal */
+.footer__logo {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+.footer__logo .site-name {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Enlaces de Navegación */
+.footer__links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer__link {
+    display: block;
+    text-decoration: none;
+    color: var(--color-text-light);
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.footer__link:hover {
+    color: var(--color-primary);
+}
+
+/* Redes Sociales */
+.footer__social {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer__social-link {
+    font-size: 1.5rem;
+    color: var(--color-text-light);
+    transition: color 0.3s;
+}
+
+.footer__social-link:hover {
+    color: var(--color-secondary); /* Usa el color secundario para el hover de redes */
+}
+
+/* Copyright Final */
+.footer__copy {
+    text-align: center;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+    padding: 20px 0;
+    margin: 0;
+}
+
+/* ------------------------------------ */
+/* Responsividad del Footer (Móvil/Tablet) */
+/* ------------------------------------ */
+@media (max-width: 768px) {
+    .footer__container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en Tablet */
+        padding: 0 20px 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer__container {
+        grid-template-columns: 1fr; /* 1 columna en Móvil */
+        text-align: center;
+    }
+    .footer__content {
+        margin-bottom: 20px;
+    }
+    .footer__social {
+        justify-content: center; /* Centra los iconos en móvil */
+    }
+}
+
+/* Estilos para el Logo en el Footer de la página Sobre Mí */
+
+.footer__logo-img {
+    max-width: 200px; /* AUMENTADO: Logo más grande (ajusta a tu gusto) */
+    height: auto;
+    display: block; 
+    margin-bottom: 10px;
+    margin-left: auto;   /* NUEVO: Mantiene el logo centrado dentro de su contenedor */
+    margin-right: auto;
+}
+
+/* Ajusta el tamaño de la fuente para el nombre */
+.footer__logo .site-name {
+    font-size: 1.4rem; /* AUMENTADO: Nombre más grande */
+    display: block;
+    font-weight: 700; /* Asegura que el nombre resalte */
+}
+
+/* Estilos para la sección completa del logo (Contenedor) */
+.footer__profile-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* CORREGIDO: Centra el logo y el texto horizontalmente */
+    text-align: center; /* Asegura que el texto multilinea también esté centrado */
+}
 
 /* ==================================== */
 
@@ -963,17 +1093,7 @@ body {
 
     }
 
-   
-
-    /* 3. Ajustes de Texto y Secciones */
-
-    .tagline-quote {
-
-        display: none; /* Ocultamos la cita */
-
-    }
-
-   
+ 
 
     .hero h1 {
 

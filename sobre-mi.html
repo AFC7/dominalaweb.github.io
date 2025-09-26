@@ -7,6 +7,7 @@
     <title>Sobre Mí - Andrés Felipe - DominaLaWeb</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -56,7 +57,7 @@
             </div>
 
             <div class="bio-image">
-                <img src="assets/images/andres-felipe-profile.jpg" alt="Foto de Andrés Felipe, creador de DominaLaWeb">
+                <img src="assets/images/andres-felipe-profile.jpg" alt="Foto de Andrés Felipe, creador de DominaLaWeb" loading="lazy">
             </div>
         </section>
 
@@ -64,21 +65,48 @@
             <h2>Hagámoslo Juntos: Nuestra Visión</h2>
             <p>DominaLaWeb es un proyecto que crece con cada lección y con cada duda que resuelvo. Si notas que algo
                 puede explicarse mejor o si tienes una idea para un nuevo tema (como Flexbox o Grid), por favor, dímelo.
-                <strong>El conocimiento es más poderoso cuando es libre y se construye en comunidad.</strong></p>
+                <strong>El conocimiento es más poderoso cuando es libre y se construye en comunidad.</strong>
+            </p>
             <p>Gracias por ser parte de este camino. ¡A codificar!</p>
         </section>
     </main>
 
-    <footer class="main-footer">
-        <div class="footer-content container">
-            <p>&copy; 2025 DominaLaWeb | Hecho con el 💖 para enseñar a la Mundo.</p>
-            <p class="author-info">
-                Diseño y desarrollo por:
-                <a href="https://afc7.github.io/afcaro7.github.io/" target="_blank">
-                    Andres Felipe Ingeniero Electrónico
+    <footer class="profile-footer">
+        <div class="footer__container container">
+
+            <div class="footer__content">
+                <a href="https://afc7.github.io/afcaro7.github.io/" target="_blank"
+                    class="footer__logo footer__profile-link">
+
+                    <img src="assets/images/logo-afc.png" alt="Logo Andrés F. Caro" class="footer__logo-img">
                 </a>
-            </p>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Navegación DominaLaWeb</h3>
+                <ul class="footer__links">
+                    <li><a href="index.html" class="footer__link">Inicio</a></li>
+                    <li><a href="lecciones/html-intro.html" class="footer__link">Curso HTML</a></li>
+                    <li><a href="lecciones/css-intro.html" class="footer__link">Curso CSS</a></li>
+                    <li><a href="sobre-mi.html" class="footer__link">Sobre Mí</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Mi Perfil Profesional</h3>
+                <div class="footer__social">
+                    <a href="https://www.linkedin.com/in/afcaro7" target="_blank" class="footer__social-link">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/AFC7" target="_blank" class="footer__social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+
         </div>
+
+        <p class="footer__copy">&copy; 2025 Andrés Felipe Caro Muñoz. Desarrollado con 💖 para enseñar al Mundo</p>
     </footer>
 
     <script src="assets/js/script.js"></script>
