@@ -157,7 +157,7 @@ body {
 
 /* ==================================== */
 
-/*                   */
+/*              3. HERO                 */
 
 /* ==================================== */
 
@@ -696,6 +696,121 @@ body {
 
     opacity: 0.9;
 
+}
+
+
+/* ==================================== */
+/* 7. ESTILOS PÁGINA SOBRE MÍ           */
+/* ==================================== */
+.bio-text h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: var(--color-text-dark);
+    margin-bottom: 5px;
+}
+
+.bio-text h2 {
+    font-size: 1.4rem;
+    color: var(--color-primary); /* El subtítulo usa el color primario */
+    margin-top: 0;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--color-border); /* Línea sutil para separar */
+}
+.bio-section {
+    display: flex;
+    gap: 40px;
+    align-items: center; /* Centra el contenido verticalmente */
+    padding: 50px 0;
+}
+
+.bio-text {
+    flex: 2; /* El texto ocupa el doble de espacio que la imagen */
+}
+
+.bio-image {
+    flex: 1;
+    text-align: center;
+}
+
+.bio-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%; /* Hace que la foto sea redonda (opcional, muy amigable) */
+    border: 5px solid var(--color-primary);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-vision {
+    padding-bottom: 50px;
+}
+
+/* Adaptación a Móvil para la página Sobre Mí */
+@media (max-width: 768px) {
+    .bio-section {
+        flex-direction: column-reverse; /* Pone la foto encima del texto en móvil */
+        text-align: center;
+    }
+    .bio-text, .bio-image {
+        flex: auto;
+        width: 100%;
+    }
+    .bio-image img {
+        max-width: 200px; /* Reduce el tamaño de la foto para móvil */
+        margin-bottom: 20px;
+    }
+    .contact-cta {
+        flex-direction: column;
+    }
+}
+
+
+/* Animación para toda la página Sobre Mí */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about-page-animate {
+    animation: slideInUp 0.8s ease-out forwards;
+    opacity: 0; /* Asegura que esté oculto al inicio */
+}
+
+
+/* ------------------------------------ */
+/* Contenedores Elevados (Moderno y Profesional) */
+/* ------------------------------------ */
+
+.bio-section,
+.project-vision {
+    /* Fondo blanco para que destaque del fondo general (var(--color-background)) */
+    background-color: var(--color-card-bg); 
+    padding: 40px; 
+    border-radius: 12px; /* Bordes suaves */
+    /* Sombra más profunda y profesional */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); 
+    margin-bottom: 30px; /* Separación entre contenedores */
+}
+
+/* Mejora el estilo de la imagen del perfil */
+.bio-image img {
+    /* Añadir un efecto de transición sutil al pasar el ratón */
+    transition: transform 0.4s ease-in-out; 
+}
+
+.bio-image img:hover {
+    transform: scale(1.03); /* Ligeramente más grande al pasar el ratón */
+}
+
+/* Ajuste para que la separación sea uniforme */
+.bio-section {
+    padding-top: 50px;
 }
 
 
