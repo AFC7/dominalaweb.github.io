@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 1: ¿Qué es CSS? - DominaLaWeb</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="logo">🚀 DominaLaWeb</div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="html-intro.html">HTML</a></li>
+                <li><a href="css-intro.html" class="active">CSS</a></li>
+                <li><a href="../sobre-mi.html">Sobre Mí</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container lesson-page">
+        <aside class="sidebar">
+            <h2>Curso de CSS Básico</h2>
+            <nav class="lesson-nav">
+                <ul>
+                    <li><a href="css-intro.html" class="active">1. ¿Qué es CSS? (Tú Aquí)</a></li>
+                    <li><a href="#">2. La Regla CSS: Selector, Propiedad, Valor</a></li>
+                    <li><a href="#">3. Selectores Comunes</a></li>
+                    <li><a href="#">4. El Modelo de Caja</a></li>
+                    <li><a href="#">5. Colores y Fuentes</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <article class="lesson-content">
+            <h1>Lección 1: ¿Qué es CSS y cómo da vida a HTML?</h1>
+            <p>Si HTML es el esqueleto de tu web, **CSS** (Cascading Style Sheets) es la **piel, la ropa, la pintura** y
+                toda la decoración. CSS es lo que hace que tu web se vea bien, define los colores, las tipografías, los
+                espacios y la posición de los elementos.</p>
+
+            <hr>
+
+            <section>
+                <h2>Anatomía de una Regla CSS</h2>
+                <p>Una regla CSS es una instrucción que le dice a un elemento HTML cómo debe lucir. Se compone de un
+                    **Selector**, una **Propiedad** y un **Valor**.</p>
+
+                <div class="code-block">
+                    <pre><code>
+p {                    &lt;!-- Selector: Aplica al elemento &lt;p&gt; --&gt;
+  color: #3498db;      &lt;!-- Propiedad: color; Valor: #3498db --&gt;
+  font-size: 16px;     &lt;!-- Propiedad: font-size; Valor: 16px --&gt;
+  margin-top: 20px;    &lt;!-- Indica el espacio exterior (margen) que habrá encima de un elemento HTML --&gt;
+}
+                    </code></pre>
+                </div>
+
+                <p class="challenge-tip"><strong>💡 Importante:</strong> La parte más difícil de CSS suele ser entender
+                    qué selector usar para modificar el elemento correcto. ¡Lo veremos a fondo!</p>
+            </section>
+
+            <div class="lesson-navigation">
+                <a href="#" class="nav-button next">Siguiente Lección: Selectores →</a>
+            </div>
+        </article>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content container">
+            <p>&copy; 2025 DominaLaWeb | Hecho con el 💖 para enseñar a la Mundo.</p>
+            <p class="author-info">
+                Diseño y desarrollo por:
+                <a href="https://afc7.github.io/afcaro7.github.io/" target="_blank">
+                    Andres Felipe Ingeniero Electrónico
+                </a>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
