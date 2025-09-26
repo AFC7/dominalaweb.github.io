@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 6: Listas y Tablas - DominaLaWeb</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <span class="site-name">🚀 DominaLaWeb</span>
+        </div>
+        <button class="menu-toggle" aria-label="Abrir Menú">
+            ☰
+        </button>
+        <nav class="main-nav" id="mainMenu">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="html-intro.html" class="active">HTML</a></li>
+                <li><a href="css-intro.html">CSS</a></li>
+                <li><a href="../sobre-mi.html">Sobre Mí</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container lesson-page">
+        <aside class="sidebar">
+            <h2>Curso de HTML Básico</h2>
+            <nav class="lesson-nav">
+                <ul>
+                    <li><a href="html-intro.html">1. ¿Qué es HTML?</a></li>
+                    <li><a href="html-tags.html">2. Tags y Elementos</a></li>
+                    <li><a href="html-head-body.html">3. La Estructura Head y Body</a></li>
+                    <li><a href="html-paragraphs-headings.html">4. Párrafos y Encabezados</a></li>
+                    <li><a href="html-links-images.html">5. Enlaces e Imágenes</a></li>
+                    <li><a href="html-lists.html" class="active">6. Listas y Tablas</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <article class="lesson-content">
+            <h1>Lección 6: Organizando Datos con Listas y Tablas</h1>
+            <p>El HTML no solo sirve para colocar texto; también es una herramienta poderosa para estructurar datos complejos. Aprenderás a usar listas para menús y pasos, y tablas para datos tabulares.</p>
+
+            <hr>
+
+            <section>
+                <h2>1. Listas: Ordenadas y Desordenadas</h2>
+                <p>Existen dos tipos principales de listas, y ambas usan la etiqueta "<code>&lt;li&gt;</code>" (list item) para cada elemento dentro de ellas:</p>
+                
+                <h3>Listas Desordenadas (&lt;ul&gt;)</h3>
+                <p>Las listas desordenadas (Unordered List), creadas con la etiqueta "<code>&lt;ul&gt;</code>", se usan cuando el orden de los elementos no importa. Por defecto, el navegador usa puntos (viñetas).</p>
+
+                <div class="code-block">
+                    <pre><code>
+&lt;ul&gt;
+    &lt;li&gt;Café&lt;/li&gt;
+    &lt;li&gt;Té&lt;/li&gt;
+    &lt;li&gt;Leche&lt;/li&gt;
+&lt;/ul&gt;
+                    </code></pre>
+                </div>
+                
+                <h3>Listas Ordenadas (&lt;ol&gt;)</h3>
+                <p>Las listas ordenadas (Ordered List), creadas con "<code>&lt;ol&gt;</code>", se usan cuando el orden es importante (ej., pasos de una receta o un ranking). Por defecto, el navegador usa números.</p>
+
+                <div class="code-block">
+                    <pre><code>
+&lt;ol&gt;
+    &lt;li&gt;Paso uno: Abrir el editor.&lt;/li&gt;
+    &lt;li&gt;Paso dos: Escribir el código.&lt;/li&gt;
+    &lt;li&gt;Paso tres: Guardar y probar.&lt;/li&gt;
+&lt;/ol&gt;
+                    </code></pre>
+                </div>
+            </section>
+            
+            <section>
+                <h2>2. Tablas: Organizando Datos Tabulares</h2>
+                <p>La etiqueta "<code>&lt;table&gt;</code>" es un elemento complejo diseñado para mostrar datos que se relacionan en filas y columnas (como hojas de cálculo o estadísticas). No la uses para crear diseños (¡eso es trabajo de CSS!).</p>
+
+                <h3>Estructura de una Tabla Básica</h3>
+                <p>Una tabla se divide en:</p>
+                <ul>
+                    <li><strong><code>&lt;table&gt;</code></strong>: El contenedor de toda la tabla.</li>
+                    <li><strong><code>&lt;tr&gt;</code></strong> (Table Row): Define una fila de la tabla.</li>
+                    <li><strong><code>&lt;th&gt;</code></strong> (Table Header): Celdas de encabezado (generalmente en negrita).</li>
+                    <li><strong><code>&lt;td&gt;</code></strong> (Table Data): Celdas de datos normales.</li>
+                </ul>
+                
+                <div class="code-block">
+                    <pre><code>
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Nombre&lt;/th&gt;
+        &lt;th&gt;Lenguaje&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Andrés&lt;/td&gt;
+        &lt;td&gt;HTML/CSS&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Sofía&lt;/td&gt;
+        &lt;td&gt;JavaScript&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+                    </code></pre>
+                </div>
+
+                <p class="challenge-tip">
+                    <strong>¡Felicidades!</strong> Has completado el módulo esencial de HTML. El siguiente paso es el curso de CSS, donde aprenderás a hacer que toda esta estructura se vea increíble.
+                </p>
+            </section>
+
+            <div class="lesson-navigation">
+                <a href="html-links-images.html" class="nav-button prev">← Lección Anterior</a>
+                <a href="../css-intro.html" class="nav-button next">Ir a CSS Básico →</a>
+            </div>
+        </article>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content container">
+            <p>&copy; 2025 DominaLaWeb | Hecho con el 💖 para enseñar a la Mundo.</p>
+            <p class="author-info">
+                Diseño y desarrollo por: 
+                <a href="https://afc7.github.io/afcaro7.github.io/" target="_blank">
+                    Andres Felipe Ingeniero Electrónico
+                </a>
+            </p>
+        </div>
+    </footer>
+    
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

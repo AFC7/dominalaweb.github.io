@@ -1,496 +1,925 @@
 /* --- Estilos del Botón de Menú --- */
+
 .menu-toggle {
+
     display: none; /* Por defecto, oculto en escritorio */
+
     background: none;
+
     border: none;
+
     font-size: 1.8rem;
+
     cursor: pointer;
+
     color: var(--color-text-dark);
+
 }
 
 
+
 /* ==================================== */
+
 /* 1. RESET Y TIPOGRAFÍA BASE           */
+
 /* ==================================== */
+
 :root {
+
     /* Colores limpios y amigables */
+
     --color-primary: #3498db;     /* Azul brillante para acentos */
+
     --color-secondary: #2ecc71;   /* Verde para CTA (Call to Action) */
+
     --color-text-dark: #2c3e50;   /* Texto oscuro principal */
+
     --color-text-light: #ecf0f1;  /* Texto claro (en fondo oscuro) */
+
     --color-background: #f8f9fa;  /* Fondo muy claro */
+
     --color-card-bg: #ffffff;     /* Fondo de tarjetas */
+
     --color-border: #e0e0e0;      /* Borde suave */
+
 }
+
 
 /* Reset básico para mejor consistencia */
+
 * {
+
     margin: 0;
+
     padding: 0;
+
     box-sizing: border-box; /* Fundamental para CSS: el padding y borde no aumentan el ancho */
+
 }
+
 
 body {
+
     font-family: 'Poppins', sans-serif; /* Fuente moderna y legible */
+
     line-height: 1.6;
+
     color: var(--color-text-dark);
+
     background-color: var(--color-background);
+
 }
+
 
 /* Contenedor centraliza el contenido */
+
 .container {
+
     max-width: 1200px;
+
     margin: 0 auto;
+
     padding: 0 20px;
+
 }
 
+
 /* ==================================== */
+
 /* 2. ENCABEZADO Y NAVEGACIÓN           */
+
 /* ==================================== */
+
 
 .main-header {
+
     background-color: var(--color-card-bg);
+
     border-bottom: 1px solid var(--color-border);
+
     padding: 15px 20px;
+
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
+
 }
+
 
 .logo {
+
     font-size: 1.8rem;
+
     font-weight: 600;
+
     color: var(--color-primary);
+
 }
+
 
 .main-nav ul {
+
     list-style: none;
+
     display: flex;
+
     gap: 25px;
+
 }
+
 
 .main-nav a {
+
     text-decoration: none;
+
     color: var(--color-text-dark);
+
     font-weight: 400;
+
     padding-bottom: 5px;
+
     transition: color 0.3s, border-bottom 0.3s;
+
 }
+
 
 .main-nav a:hover, .main-nav a.active {
+
     color: var(--color-primary);
+
     border-bottom: 2px solid var(--color-primary);
+
 }
 
 
+
 /* ==================================== */
+
 /*                   */
+
 /* ==================================== */
+
 
 .hero {
+
     text-align: center;
+
     padding: 80px 20px;
+
 }
+
 
 .hero h1 {
+
     font-size: 3rem;
+
     margin-bottom: 15px;
+
     color: var(--color-primary);
+
 }
+
 
 .tagline {
+
     font-size: 1.3rem;
+
     color: var(--color-text-dark);
+
     margin-bottom: 40px;
+
 }
 
+
 .cta-button {
+
     display: inline-block;
+
     background-color: var(--color-secondary);
+
     color: white;
+
     text-decoration: none;
+
     font-size: 1.2rem;
+
     font-weight: 600;
+
     padding: 15px 30px;
+
     border-radius: 8px; /* Bordes suaves */
+
     transition: background-color 0.3s, transform 0.2s;
+
 }
+
 
 .cta-button:hover {
+
     background-color: #27ae60; /* Verde un poco más oscuro */
+
     transform: translateY(-2px); /* Efecto sutil al pasar el ratón */
+
 }
+
 
 /* Agrupación y Espaciado de Botones */
+
 .cta-group {
+
     display: flex;
+
     justify-content: center; /* Centra los botones */
+
     gap: 20px; /* Espacio entre los dos botones */
+
     margin-top: 30px;
+
     flex-wrap: wrap; /* Importante para móviles */
+
 }
+
 
 /* Estilo Base para todos los botones CTA */
+
 .cta-button {
+
     /* Mantenemos el estilo base que ya tenías, pero quitamos el color de fondo aquí */
+
     display: inline-block;
+
     text-decoration: none;
+
     font-size: 1.15rem;
+
     font-weight: 600;
+
     padding: 15px 30px;
-    border-radius: 8px; 
+
+    border-radius: 8px;
+
     transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+
     text-align: center;
+
 }
 
+
 /* ------------------------------------ */
+
 /* Botón Primario (El que queremos que pulsen) */
+
 /* ------------------------------------ */
+
 .cta-button.primary {
+
     background-color: var(--color-secondary); /* Verde brillante */
+
     color: white;
+
     border: 2px solid var(--color-secondary);
+
     box-shadow: 0 4px 15px rgba(46, 204, 113, 0.4); /* Sombra que lo hace flotar */
+
 }
+
 
 .cta-button.primary:hover {
-    background-color: #27ae60; 
+
+    background-color: #27ae60;
+
     transform: translateY(-3px); /* Efecto de elevación más notable */
+
     box-shadow: 0 6px 20px rgba(46, 204, 113, 0.6);
+
 }
 
+
 /* ------------------------------------ */
+
 /* Botón Secundario (Opción alterna/Menos urgente) */
+
 /* ------------------------------------ */
+
 .cta-button.secondary {
+
     background-color: transparent; /* Fondo transparente o blanco */
+
     color: var(--color-primary); /* Texto azul (tu color principal) */
+
     border: 2px solid var(--color-primary);
+
     box-shadow: none;
+
 }
+
 
 .cta-button.secondary:hover {
+
     background-color: var(--color-primary);
+
     color: white; /* Invierte los colores al pasar el ratón */
+
     transform: none; /* Quitamos la elevación para que solo se eleve el primario */
+
 }
 
+
 /* ==================================== */
+
 /* 4. SECCIÓN DE VENTAJA (TARJETAS)     */
+
 /* ==================================== */
+
 
 .advantages {
+
     padding: 40px 0;
+
     text-align: center;
+
 }
+
 
 .advantages h2 {
+
     margin-bottom: 30px;
+
     font-size: 2rem;
+
     color: var(--color-text-dark);
+
 }
+
 
 .advantage-list {
+
     display: flex;
+
     gap: 30px;
+
     justify-content: center;
+
     flex-wrap: wrap; /* Para que funcione bien en móvil */
+
 }
+
 
 .card {
+
     background-color: var(--color-card-bg);
+
     padding: 30px;
+
     border-radius: 10px;
+
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Sombra suave */
+
     flex: 1 1 300px; /* Flexbox para que se ajusten bien */
+
     text-align: left;
+
 }
+
 
 .card h3 {
+
     color: var(--color-primary);
+
     margin-bottom: 10px;
+
 }
 
 
+
 /* ==================================== */
+
 /* 5. PIE DE PÁGINA (FOOTER) - PROFESIONAL */
+
 /* ==================================== */
+
 
 .main-footer {
+
     padding: 30px 20px;
+
     margin-top: 50px;
+
     background-color: var(--color-text-dark); /* Fondo oscuro (Negro/Gris Oscuro) */
+
     color: var(--color-text-light); /* Letras claras */
+
     font-size: 0.95rem;
+
 }
+
 
 .footer-content {
+
     display: flex;
+
     justify-content: space-between; /* Distribuye el contenido a los lados */
+
     align-items: center;
+
     flex-wrap: wrap; /* Para que funcione bien en móvil, poniendo los elementos uno debajo del otro */
+
     gap: 15px;
+
 }
+
 
 .main-footer p {
+
     margin: 0;
+
 }
+
 
 .main-footer .author-info a {
+
     color: var(--color-primary); /* Destaca el enlace del autor con el color principal */
+
     text-decoration: none;
+
     font-weight: 600;
+
     transition: color 0.3s;
+
 }
+
 
 .main-footer .author-info a:hover {
+
     color: #4dc2ff; /* Un tono más claro al pasar el ratón */
+
     text-decoration: underline;
+
 }
+
 
 /* MEDIAS QUERIES para móviles: Asegura que la información se apile */
+
 @media (max-width: 768px) {
+
     .footer-content {
+
         flex-direction: column; /* Apila los elementos en vertical */
+
         text-align: center;
+
     }
+
     .footer-content p {
+
         margin: 5px 0;
+
     }
+
 }
+
 /* ==================================== */
+
 /* 6. ESTILOS ESPECÍFICOS DE LA LECCIÓN */
+
 /* ==================================== */
+
 
 .lesson-page {
+
     display: flex; /* Habilita Flexbox para poner contenido y sidebar lado a lado */
+
     gap: 40px;
+
     padding-top: 40px;
+
     min-height: 80vh; /* Asegura que el contenido ocupe la mayor parte de la ventana */
+
 }
+
 
 /* --- Barra Lateral (Sidebar) --- */
+
 .sidebar {
+
     flex-shrink: 0; /* No permite que la barra se encoja */
+
     width: 250px;
+
     padding: 20px;
+
     border-right: 1px solid var(--color-border);
+
     background-color: var(--color-card-bg); /* Fondo blanco */
+
     border-radius: 5px;
+
 }
+
 
 .sidebar h2 {
+
     font-size: 1.4rem;
+
     color: var(--color-primary);
+
     border-bottom: 2px solid var(--color-border);
+
     padding-bottom: 10px;
+
     margin-bottom: 20px;
+
 }
+
 
 .lesson-nav ul {
+
     list-style: none;
+
     padding: 0;
+
 }
+
 
 .lesson-nav li {
+
     margin-bottom: 8px;
+
 }
+
 
 .lesson-nav a {
+
     display: block;
+
     text-decoration: none;
+
     color: var(--color-text-dark);
+
     padding: 8px 10px;
+
     border-radius: 4px;
+
     transition: background-color 0.2s;
+
     font-size: 0.95rem;
+
 }
+
 
 .lesson-nav a:hover, .lesson-nav a.active {
+
     background-color: var(--color-primary);
+
     color: var(--color-text-light);
+
 }
+
 
 /* --- Contenido de la Lección --- */
+
 .lesson-content {
+
     flex-grow: 1; /* Permite que el contenido tome el espacio restante */
+
     padding-bottom: 40px;
+
 }
+
 
 .lesson-content h1 {
+
     font-size: 2.5rem;
+
     margin-bottom: 20px;
+
     color: var(--color-text-dark);
+
 }
+
 
 .lesson-content h2 {
+
     margin-top: 30px;
+
     margin-bottom: 15px;
+
     color: var(--color-primary);
+
     border-left: 4px solid var(--color-primary);
+
     padding-left: 10px;
+
 }
+
 
 .challenge-tip {
+
     background-color: #e8f5e9; /* Un color suave para destacar la nota */
+
     border-left: 5px solid var(--color-secondary);
+
     padding: 15px;
+
     margin: 20px 0;
+
     border-radius: 4px;
+
 }
+
 
 /* --- Bloque de Código --- */
+
 .code-block {
+
     background-color: #2c3e50; /* Un color oscuro para el código, como estándar */
+
     color: white;
+
     padding: 15px;
+
     border-radius: 8px;
+
     overflow-x: auto; /* Permite scroll horizontal en móviles */
+
     margin: 20px 0;
+
 }
+
 
 .code-block pre {
+
     margin: 0;
+
     font-family: monospace;
+
     font-size: 0.9rem;
+
 }
+
 
 /* --- Navegación de Lecciones (Abajo) --- */
+
 .lesson-navigation {
+
     display: flex;
+
     justify-content: flex-end; /* Alinea el botón a la derecha */
+
     margin-top: 40px;
+
 }
+
 
 .nav-button {
+
     display: inline-block;
+
     padding: 10px 20px;
+
     text-decoration: none;
+
     background-color: var(--color-primary);
+
     color: white;
+
     border-radius: 5px;
+
     transition: opacity 0.3s;
+
 }
+
 
 .nav-button:hover {
+
     opacity: 0.9;
+
 }
 
 
+
 /* ==================================== */
+
 /* MEDIA QUERY: TABLET (Hasta 992px)    */
+
 /* ==================================== */
+
 @media (max-width: 992px) {
+
     /* 1. Ajuste General del Contenedor */
+
     .container {
+
         padding: 0 15px; /* Reduce un poco el padding lateral */
+
     }
+
 
     /* 2. Lecciones: Ajuste de Barra Lateral */
+
     .lesson-page {
+
         gap: 25px; /* Reduce el espacio entre el sidebar y el contenido */
+
     }
 
+
     .sidebar {
+
         width: 200px; /* Reduce ligeramente el ancho de la barra lateral */
+
     }
+
 }
+
 /* ==================================== */
+
 /* MEDIA QUERY: MÓVIL (Hasta 768px)     */
+
 /* ==================================== */
+
 @media (max-width: 768px) {
-    
+
+   
+
     /* 1. CABECERA: Habilita el Botón y Controla el Flujo */
+
     .main-header {
+
         /* Permite que el NAV (que tendrá 100% de ancho) salte a la línea de abajo */
-        flex-wrap: wrap; 
+
+        flex-wrap: wrap;
+
         padding: 15px; /* Ajusta el padding para móviles */
+
     }
+
 
     /* Muestra el botón de hamburguesa */
+
     .menu-toggle {
-        display: block; 
+
+        display: block;
+
     }
-    
+
+   
+
     /* Estado por defecto: El menú está oculto en móviles */
+
     .main-nav {
-        display: none; 
+
+        display: none;
+
         width: 100%; /* El menú siempre toma el ancho completo */
+
         order: 10; /* Asegura que el menú aparezca debajo del logo y el botón */
+
         border-top: 1px solid var(--color-border);
+
         padding-top: 10px;
+
     }
+
 
     /* 🔥 CLASE ACTIVA: Sobrescribe el display: none; al hacer clic (Manejo con JS) */
+
     .main-nav.active {
-        display: block; 
+
+        display: block;
+
     }
+
 
     /* Estilo Vertical para los Enlaces del Menú Principal */
+
     .main-nav ul {
-        flex-direction: column; 
+
+        flex-direction: column;
+
         gap: 0;
+
     }
+
 
     .main-nav li {
+
         border-bottom: 1px solid var(--color-border); /* Línea divisoria entre enlaces */
+
         text-align: center;
+
     }
-    
+
+   
+
     .main-nav a {
+
         padding: 15px 0; /* Aumenta el área de toque */
+
         width: 100%;
+
         display: block;
+
     }
+
 
     /* 2. LAYOUT PRINCIPAL: Apilar Sidebar y Contenido */
+
     .lesson-page {
-        flex-direction: column; 
+
+        flex-direction: column;
+
         gap: 20px;
+
     }
+
 
     .sidebar {
-        width: 100%; 
+
+        width: 100%;
+
         border-right: none;
-        border-bottom: 1px solid var(--color-border); 
+
+        border-bottom: 1px solid var(--color-border);
+
         padding: 15px;
+
     }
-    
+
+   
+
     /* 3. Ajustes de Texto y Secciones */
+
     .tagline-quote {
+
         display: none; /* Ocultamos la cita */
+
     }
-    
+
+   
+
     .hero h1 {
-        font-size: 2.2rem; 
+
+        font-size: 2.2rem;
+
     }
-    
+
+   
+
     .advantage-list {
+
         flex-direction: column;
+
         gap: 20px;
+
     }
-    
+
+   
+
     .card {
-        flex: 1 1 100%; 
+
+        flex: 1 1 100%;
+
     }
-    
+
+   
+
     /* Revisa los estilos del footer por si necesitas flex-direction: column; */
+
     .footer-content {
-        flex-direction: column; 
+
+        flex-direction: column;
+
         text-align: center;
+
     }
+
 }
+
 
 /* 4. Estilo extra para mejorar la interacción en dispositivos táctiles */
+
 @media (hover: none) and (pointer: coarse) {
+
     /* No es necesario repetir los estilos .main-nav a, ya están cubiertos arriba */
+
     .lesson-nav a {
-        padding: 12px 10px; 
+
+        padding: 12px 10px;
+
     }
+
 }
 
+
 /* Dentro de @media (max-width: 768px) {...} */
+
 .cta-group {
+
     flex-direction: column; /* Apila los botones verticalmente */
+
     gap: 15px;
-}
+
+} 

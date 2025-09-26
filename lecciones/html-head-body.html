@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 3: Head y Body - DominaLaWeb</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <span class="site-name">🚀 DominaLaWeb</span>
+        </div>
+        <button class="menu-toggle" aria-label="Abrir Menú">
+            ☰
+        </button>
+        <nav class="main-nav" id="mainMenu">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="html-intro.html" class="active">HTML</a></li>
+                <li><a href="css-intro.html">CSS</a></li>
+                <li><a href="../sobre-mi.html">Sobre Mí</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container lesson-page">
+        <aside class="sidebar">
+            <h2>Curso de HTML Básico</h2>
+            <nav class="lesson-nav">
+                <ul>
+                    <li><a href="html-intro.html">1. ¿Qué es HTML?</a></li>
+                    <li><a href="html-tags.html">2. Tags y Elementos</a></li>
+                    <li><a href="html-head-body.html" class="active">3. La Estructura Head y Body</a></li>
+                    <li><a href="html-paragraphs-headings.html">4. Párrafos y Encabezados</a></li>
+                    <li><a href="html-links-images.html">5. Enlaces e Imágenes</a></li>
+                    <li><a href="html-lists.html">6. Listas y Tablas</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <article class="lesson-content">
+            <h1>Lección 3: La División Fundamental: &lt;head&gt; y &lt;body&gt;</h1>
+            <p>Todo documento HTML se divide en dos secciones principales, como un iceberg: la punta visible y la masa que está oculta. Estas son las etiquetas "<code>&lt;head&gt;</code>" y "<code>&lt;body&gt;</code>".</p>
+            <hr>
+            <section>
+                <h2>1. La Etiqueta &lt;head&gt;: Información para el Navegador</h2>
+                <p>El "<code>&lt;head&gt;</code>" contiene "metadatos", es decir, información sobre el documento que "no se muestra directamente" al usuario en la ventana del navegador. Esta información es crucial para el navegador, los motores de búsqueda (como Google) y las redes sociales.</p>
+                
+                <h3>Elementos Clave dentro del &lt;head&gt;</h3>
+                <ul>
+                    <li><strong><code>&lt;title&gt;</code></strong>: El texto que aparece en la pestaña del navegador. ¡Es vital para el SEO!</li>
+                    <li><strong><code>&lt;meta charset="UTF-8"&gt;</code></strong>: Define la codificación de caracteres, permitiendo que se muestren tildes y eñes correctamente.</li>
+                    <li><strong><code>&lt;meta name="viewport" ...&gt;</code></strong>: Necesario para que tu web se vea bien en móviles (diseño "responsive2.</li>
+                    <li><strong><code>&lt;link rel="stylesheet" href="..."&gt;</code></strong>: Enlaza tus archivos de estilos CSS.</li>
+                </ul>
+
+                <div class="code-block">
+                    <pre><code>
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Aprende HTML y CSS - DominaLaWeb&lt;/title&gt;
+    &lt;link rel="stylesheet" href="../assets/css/style.css"&gt;
+&lt;/head&gt;
+                    </code></pre>
+                </div>
+            </section>
+            
+            <section>
+                <h2>2. La Etiqueta &lt;body&gt;: El Contenido Visible</h2>
+                <p>El "<code>&lt;body&gt;</code>" contiene "todo" el contenido que los usuarios realmente ven e interactúan en la ventana del navegador: textos, imágenes, enlaces, botones, formularios, etc.</p>
+
+                <p class="challenge-tip">
+                    <strong>💡 Piénsalo así:</strong> Si tienes que ver o tocar el contenido, debe ir dentro del <code>&lt;body&gt;</code>. Si es información técnica o configuración para el navegador, va en el <code>&lt;head&gt;</code>.
+                </p>
+                
+                <div class="code-block">
+                    <pre><code>
+&lt;body&gt;
+    &lt;h1&gt;¡Bienvenidos a mi web!&lt;/h1&gt;
+    &lt;p&gt;Este párrafo es visible.&lt;/p&gt;
+&lt;/body&gt;
+                    </code></pre>
+                </div>
+            </section>
+
+            <div class="lesson-navigation">
+                <a href="html-tags.html" class="nav-button prev">Lección Anterior</a>
+                <a href="html-paragraphs-headings.html" class="nav-button next">Siguiente Lección</a>
+            </div>
+        </article>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content container">
+            <p>&copy; 2025 DominaLaWeb | Hecho con el 💖 para enseñar a la Mundo.</p>
+            <p class="author-info">
+                Diseño y desarrollo por: 
+                <a href="https://afc7.github.io/afcaro7.github.io/" target="_blank">
+                    Andres Felipe Ingeniero Electrónico
+                </a>
+            </p>
+        </div>
+    </footer>
+    
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

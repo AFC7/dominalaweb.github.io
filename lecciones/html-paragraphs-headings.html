@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 4: Párrafos y Encabezados - DominaLaWeb</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <span class="site-name">🚀 DominaLaWeb</span>
+        </div>
+        <button class="menu-toggle" aria-label="Abrir Menú">
+            ☰
+        </button>
+        <nav class="main-nav" id="mainMenu">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="html-intro.html" class="active">HTML</a></li>
+                <li><a href="css-intro.html">CSS</a></li>
+                <li><a href="../sobre-mi.html">Sobre Mí</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container lesson-page">
+        <aside class="sidebar">
+            <h2>Curso de HTML Básico</h2>
+            <nav class="lesson-nav">
+                <ul>
+                    <li><a href="html-intro.html">1. ¿Qué es HTML?</a></li>
+                    <li><a href="html-tags.html">2. Tags y Elementos</a></li>
+                    <li><a href="html-head-body.html">3. La Estructura Head y Body</a></li>
+                    <li><a href="html-paragraphs-headings.html" class="active">4. Párrafos y Encabezados</a></li>
+                    <li><a href="html-links-images.html">5. Enlaces e Imágenes</a></li>
+                    <li><a href="html-lists.html">6. Listas y Tablas</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <article class="lesson-content">
+            <h1>Lección 4: La Jerarquía de Contenido: Párrafos y Encabezados</h1>
+            <p>En HTML, la forma en que estructuramos el texto es <strong>vital</strong>. No solo por la apariencia
+                visual, sino porque los motores de búsqueda y las tecnologías de accesibilidad (lectores de pantalla) lo
+                utilizan para entender la importancia y el orden del contenido.</p>
+            <hr>
+            <section>
+                <h2>1. Encabezados: Definición de la Jerarquía</h2>
+                <p>Los <strong>Encabezados</strong> (de <code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code>) definen la
+                    <strong>estructura y jerarquía</strong> del texto. El <code>&lt;h1&gt;</code> es el más
+                    <strong>importante</strong> (título principal de la página) y solo debe usarse <strong>una
+                        vez</strong> por página. Los números más altos (<code>&lt;h2&gt;</code>,
+                    <code>&lt;h3&gt;</code>, etc.) se usan para subtítulos.</p>
+
+                <h3>Reglas de Oro de los Encabezados</h3>
+                <ul>
+                    <li>Solo <strong>un <code>&lt;h1&gt;</code></strong> por página.</li>
+                    <li>Usa la jerarquía correcta: no saltes de <code>&lt;h2&gt;</code> a <code>&lt;h4&gt;</code>.</li>
+                    <li>No uses encabezados solo para hacer el texto más grande; usa CSS para eso.</li>
+                </ul>
+
+                <div class="code-block">
+                    <pre><code>
+&lt;h1&gt;Título Principal del Artículo (Solo uno)&lt;/h1&gt;
+&lt;h2&gt;Sección Principal (Primer Subtítulo)&lt;/h2&gt;
+&lt;h3&gt;Sub-Sección de la Sección Principal&lt;/h3&gt;
+&lt;h4&gt;Detalle en Profundidad&lt;/h4&gt;
+            </code></pre>
+                </div>
+            </section>
+
+            <section>
+                <h2>2. Párrafos: El Contenido Principal</h2>
+                <p>La etiqueta <code>&lt;p&gt;</code> se utiliza para cualquier bloque de texto de extensión. Es el
+                    caballo de batalla del contenido de texto y representa una unidad completa de pensamiento o
+                    información.</p>
+
+                <p class="challenge-tip">
+                    <strong>💡 ¡Ojo!</strong> HTML ignora los saltos de línea y los espacios extra que pones en tu
+                    código. Si quieres un nuevo párrafo, <strong>siempre</strong> debes abrir una nueva etiqueta
+                    <code>&lt;p&gt;</code>.
+                </p>
+
+                <div class="code-block">
+                    <pre><code>
+&lt;p&gt;Este es un párrafo de texto. El navegador lo mostrará como un bloque completo.&lt;/p&gt;
+
+&lt;p&gt;Aunque este segundo párrafo está justo debajo en el código, el navegador le dará un espacio vertical para separarlo del anterior.&lt;/p&gt;
+            </code></pre>
+                </div>
+            </section>
+
+            <div class="lesson-navigation">
+                <a href="html-head-body.html" class="nav-button prev">Lección Anterior</a>
+                <a href="html-links-images.html" class="nav-button next">Siguiente Lección</a>
+            </div>
+        </article>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content container">
+            <p>&copy; 2025 DominaLaWeb | Hecho con el 💖 para enseñar a la Mundo.</p>
+            <p class="author-info">
+                Diseño y desarrollo por:
+                <a href="https://afc7.github.io/afcaro7.github.io/" target="_blank">
+                    Andres Felipe Ingeniero Electrónico
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+</body>
+
+</html>
