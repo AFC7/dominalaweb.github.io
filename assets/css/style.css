@@ -1,3 +1,14 @@
+/* --- Estilos del Botón de Menú --- */
+.menu-toggle {
+    display: none; /* Por defecto, oculto en escritorio */
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--color-text-dark);
+}
+
+
 /* ==================================== */
 /* 1. RESET Y TIPOGRAFÍA BASE           */
 /* ==================================== */
@@ -309,4 +320,117 @@ body {
 
 .nav-button:hover {
     opacity: 0.9;
+}
+
+
+/* ==================================== */
+/* MEDIA QUERY: TABLET (Hasta 992px)    */
+/* ==================================== */
+@media (max-width: 992px) {
+    /* 1. Ajuste General del Contenedor */
+    .container {
+        padding: 0 15px; /* Reduce un poco el padding lateral */
+    }
+
+    /* 2. Lecciones: Ajuste de Barra Lateral */
+    .lesson-page {
+        gap: 25px; /* Reduce el espacio entre el sidebar y el contenido */
+    }
+
+    .sidebar {
+        width: 200px; /* Reduce ligeramente el ancho de la barra lateral */
+    }
+}
+/* ==================================== */
+/* MEDIA QUERY: MÓVIL (Hasta 768px)     */
+/* ==================================== */
+@media (max-width: 768px) {
+    
+    /* 1. CABECERA: Habilita el Botón y Controla el Flujo */
+    .main-header {
+        /* Permite que el NAV (que tendrá 100% de ancho) salte a la línea de abajo */
+        flex-wrap: wrap; 
+        padding: 15px; /* Ajusta el padding para móviles */
+    }
+
+    /* Muestra el botón de hamburguesa */
+    .menu-toggle {
+        display: block; 
+    }
+    
+    /* Estado por defecto: El menú está oculto en móviles */
+    .main-nav {
+        display: none; 
+        width: 100%; /* El menú siempre toma el ancho completo */
+        order: 10; /* Asegura que el menú aparezca debajo del logo y el botón */
+        border-top: 1px solid var(--color-border);
+        padding-top: 10px;
+    }
+
+    /* 🔥 CLASE ACTIVA: Sobrescribe el display: none; al hacer clic (Manejo con JS) */
+    .main-nav.active {
+        display: block; 
+    }
+
+    /* Estilo Vertical para los Enlaces del Menú Principal */
+    .main-nav ul {
+        flex-direction: column; 
+        gap: 0;
+    }
+
+    .main-nav li {
+        border-bottom: 1px solid var(--color-border); /* Línea divisoria entre enlaces */
+        text-align: center;
+    }
+    
+    .main-nav a {
+        padding: 15px 0; /* Aumenta el área de toque */
+        width: 100%;
+        display: block;
+    }
+
+    /* 2. LAYOUT PRINCIPAL: Apilar Sidebar y Contenido */
+    .lesson-page {
+        flex-direction: column; 
+        gap: 20px;
+    }
+
+    .sidebar {
+        width: 100%; 
+        border-right: none;
+        border-bottom: 1px solid var(--color-border); 
+        padding: 15px;
+    }
+    
+    /* 3. Ajustes de Texto y Secciones */
+    .tagline-quote {
+        display: none; /* Ocultamos la cita */
+    }
+    
+    .hero h1 {
+        font-size: 2.2rem; 
+    }
+    
+    .advantage-list {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .card {
+        flex: 1 1 100%; 
+    }
+    
+    /* Revisa los estilos del footer por si necesitas flex-direction: column; */
+    .footer-content {
+        flex-direction: column; 
+        text-align: center;
+    }
+}
+
+/* 4. Estilo extra para mejorar la interacción en dispositivos táctiles */
+@media (hover: none) and (pointer: coarse) {
+    /* No es necesario repetir los estilos .main-nav a, ya están cubiertos arriba */
+    .lesson-nav a {
+        padding: 12px 10px; 
+    }
 }

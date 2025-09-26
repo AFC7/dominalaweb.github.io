@@ -4,18 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lección 1: La Estructura de HTML - DominaLaWeb</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Lección 1: ¿Qué es HTML? - DominaLaWeb</title>
+    <link rel="stylesheet" href="../assets/css/style.css"> 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <header class="main-header">
-        <div class="logo">🚀 DominaLaWeb</div>
-        <nav class="main-nav">
+        <div class="logo"><span class="site-name">🚀 DominaLaWeb</span></div>
+        
+        <button class="menu-toggle" aria-label="Abrir Menú">
+            ☰
+        </button>
+
+        <nav class="main-nav" id="mainMenu"> 
             <ul>
-                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../index.html">Inicio</a></li> 
                 <li><a href="html-intro.html" class="active">HTML</a></li>
                 <li><a href="css-intro.html">CSS</a></li>
                 <li><a href="../sobre-mi.html">Sobre Mí</a></li>
@@ -30,7 +35,7 @@
                 <ul>
                     <li><a href="html-intro.html" class="active">1. ¿Qué es HTML?</a></li>
                     <li><a href="html-tags.html">2. Tags y Elementos</a></li>
-                    <li><a href="#">3. La Estructura Head y Body</a></li>
+                    <li><a href="html-head-body.html">3. La Estructura Head y Body</a></li>
                     <li><a href="#">4. Párrafos y Encabezados</a></li>
                     <li><a href="#">5. Enlaces e Imágenes</a></li>
                 </ul>
@@ -52,19 +57,19 @@
 
                 <div class="code-block">
                     <pre><code>
-&lt;!DOCTYPE html&gt;               &lt;!-- Indica la versión de HTML (siempre es HTML5) --&gt;
-&lt;html lang="es"&gt;             &lt;!-- Es el contenedor principal del documento --&gt;
-    &lt;head&gt;
-        &lt;meta charset="UTF-8"&gt;   &lt;!-- Configuración de caracteres --&gt;
-        &lt;title&gt;Mi Primera Web&lt;/title&gt; &lt;!-- Título que aparece en la pestaña del navegador --&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;!-- ¡Aquí va todo el contenido visible de tu página! --&gt;
-        &lt;h1&gt;Hola Mundo&lt;/h1&gt;
-        &lt;p&gt;Este es mi primer párrafo.&lt;/p&gt;
-    &lt;/body&gt;
+&lt;!DOCTYPE html&gt;               &lt;!-- Indica la versión de HTML (siempre es HTML5) --&gt;
+&lt;html lang="es"&gt;             &lt;!-- Es el contenedor principal del documento --&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;   &lt;!-- Configuración de caracteres --&gt;
+        &lt;title&gt;Mi Primera Web&lt;/title&gt; &lt;!-- Título que aparece en la pestaña del navegador --&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!-- ¡Aquí va todo el contenido visible de tu página! --&gt;
+        &lt;h1&gt;Hola Mundo&lt;/h1&gt;
+        &lt;p&gt;Este es mi primer párrafo.&lt;/p&gt;
+    &lt;/body&gt;
 &lt;/html&gt;
-                    </code></pre>
+                    </code></pre>
                 </div>
 
                 <p class="challenge-tip"><strong>💡 Reto Rápido:</strong> Copia este código, guárdalo como
@@ -72,7 +77,7 @@
             </section>
 
             <div class="lesson-navigation">
-                <a href="html-tags.html" class="nav-button next">Siguiente Lección: Tags y Elementos →</a>
+                <a href="html-tags.html" class="nav-button next">Siguiente Lección: Tags y Elementos →</a> 
             </div>
         </article>
     </main>
@@ -88,6 +93,8 @@
             </p>
         </div>
     </footer>
+    
+    <script src="../assets/js/script.js"></script> 
 </body>
 
 </html>

@@ -12,8 +12,19 @@
 <body>
 
     <header class="main-header">
-        <div class="logo">🚀 DominaLaWeb</div>
-        <nav class="main-nav">
+        <div class="logo">
+            <span class="site-name">🚀 DominaLaWeb</span>
+            <blockquote class="tagline-quote">
+                "La web no solo es lo que podemos hacer con ella, sino lo que nos hace hacer."
+                <cite>— Tim Berners-Lee</cite>
+            </blockquote>
+        </div>
+
+        <button class="menu-toggle" aria-label="Abrir Menú">
+            ☰
+        </button>
+
+        <nav class="main-nav" id="mainMenu">
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="html-intro.html">HTML</a></li>
@@ -52,12 +63,12 @@
 
                 <div class="code-block">
                     <pre><code>
-p {                    &lt;!-- Selector: Aplica al elemento &lt;p&gt; --&gt;
-  color: #3498db;      &lt;!-- Propiedad: color; Valor: #3498db --&gt;
-  font-size: 16px;     &lt;!-- Propiedad: font-size; Valor: 16px --&gt;
-  margin-top: 20px;    &lt;!-- Indica el espacio exterior (margen) que habrá encima de un elemento HTML --&gt;
+p {                    &lt;!-- Selector: Aplica al elemento &lt;p&gt; --&gt;
+  color: #3498db;      &lt;!-- Propiedad: color; Valor: #3498db --&gt;
+  font-size: 16px;     &lt;!-- Propiedad: font-size; Valor: 16px --&gt;
+  margin-top: 20px;    &lt;!-- Indica el espacio exterior (margen) que habrá encima de un elemento HTML --&gt;
 }
-                    </code></pre>
+                    </code></pre>
                 </div>
 
                 <p class="challenge-tip"><strong>💡 Importante:</strong> La parte más difícil de CSS suele ser entender
@@ -81,6 +92,8 @@ p {                    &lt;!-- Selector: Aplica al elemento &lt;p&gt; --&gt;
             </p>
         </div>
     </footer>
+    
+    <script src="../assets/js/script.js"></script> 
 </body>
 
 </html>

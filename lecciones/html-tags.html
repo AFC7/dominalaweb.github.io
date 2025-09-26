@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lección 2: Tags y Elementos en HTML -DominaLaWeb</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Lección 2: Tags y Elementos en HTML - DominaLaWeb</title>
+    <link rel="stylesheet" href="../assets/css/style.css"> 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
@@ -15,7 +15,12 @@
         <div class="logo">
             <span class="site-name">🚀 DominaLaWeb</span>
         </div>
-        <nav class="main-nav">
+        
+        <button class="menu-toggle" aria-label="Abrir Menú">
+            ☰
+        </button>
+        
+        <nav class="main-nav" id="mainMenu"> 
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="html-intro.html" class="active">HTML</a></li>
@@ -32,37 +37,37 @@
                 <ul>
                     <li><a href="html-intro.html">1. ¿Qué es HTML?</a></li>
                     <li><a href="html-tags.html" class="active">2. Tags y Elementos</a></li>
-                    <li><a href="#">3. La Estructura Head y Body</a></li>
-                    <li><a href="#">4. Párrafos y Encabezados</a></li>
-                    <li><a href="#">5. Enlaces e Imágenes</a></li>
+                    <li><a href="html-head-body.html">3. La Estructura Head y Body</a></li>
+                    <li><a href="html-paragraphs-headings.html">4. Párrafos y Encabezados</a></li>
+                    <li><a href="html-links-images.html">5. Enlaces e Imágenes</a></li>
                 </ul>
             </nav>
         </aside>
 
         <article class="lesson-content">
             <h1>Lección 2: La Diferencia Clave entre un Tag y un Elemento</h1>
-            <p>En HTML, los términos **Tag** (etiqueta) y **Elemento** se usan a menudo de forma intercambiable, ¡pero
+            <p>En HTML, los términos <strong>Tag</strong> (etiqueta) y <strong>Elemento</strong> se usan a menudo de forma intercambiable, ¡pero
                 no son lo mismo! Entender esta diferencia te ayudará a leer y escribir código con más precisión.</p>
 
             <hr>
 
             <section>
                 <h2>1. El Tag (Etiqueta): Los Marcadores</h2>
-                <p>Un **Tag** es la sintaxis de apertura o cierre, las letras encerradas en corchetes angulares (menor
+                <p>Un <strong>Tag</strong> es la sintaxis de apertura o cierre, las letras encerradas en corchetes angulares (menor
                     que `<` y mayor que `>`). Los Tags son las instrucciones que le damos al navegador. Casi todos
-                        vienen en pares:</p>
+                    vienen en pares:</p>
 
                 <div class="code-block">
                     <pre><code>
-&lt;p&gt;      &lt;!-- Tag de Apertura --&gt;
-&lt;/p&gt;    &lt;!-- Tag de Cierre (siempre lleva un slash "/") --&gt;
-                    </code></pre>
+&lt;p&gt;      &lt;!-- Tag de Apertura --&gt;
+&lt;/p&gt;    &lt;!-- Tag de Cierre (siempre lleva un slash "/") --&gt;
+                    </code></pre>
                 </div>
             </section>
 
             <section>
                 <h2>2. El Elemento: La Unidad Completa</h2>
-                <p>Un **Elemento** es la combinación de un Tag de apertura, el Tag de cierre y **todo el contenido** que
+                <p>Un <strong>Elemento</strong> es la combinación de un Tag de apertura, el Tag de cierre y <strong>todo el contenido</strong> que
                     se encuentra entre ellos. El elemento es la pieza de información completa que el navegador
                     interpreta y muestra.</p>
 
@@ -71,20 +76,20 @@
 &lt;p&gt;Esto es el contenido del párrafo.&lt;/p&gt;
 
 &lt;!-- La línea de arriba es el Elemento completo: Tag de Apertura + Contenido + Tag de Cierre --&gt;
-                    </code></pre>
+                    </code></pre>
                 </div>
             </section>
 
             <section>
                 <h2>3. Elementos Vacíos (Self-Closing Tags)</h2>
-                <p>No todos los Tags vienen en pares. Algunos elementos son **vacíos** (o autodeterminados) porque su
+                <p>No todos los Tags vienen en pares. Algunos elementos son <strong>vacíos</strong> (o autodeterminados) porque su
                     propósito es solo insertar algo en la página, y no tienen contenido que encerrar.</p>
 
                 <div class="code-block">
                     <pre><code>
-&lt;br&gt;    &lt;!-- Para insertar un salto de línea --&gt;
+&lt;br&gt;    &lt;!-- Para insertar un salto de línea --&gt;
 &lt;img src="imagen.jpg" alt="Descripción"&gt; &lt;!-- Para insertar una imagen --&gt;
-                    </code></pre>
+                    </code></pre>
                 </div>
                 <p class="challenge-tip"><strong>💡 Recuerda:</strong> Si un elemento no necesita encerrar contenido
                     (como un salto de línea o una imagen), probablemente sea un elemento vacío y solo necesite un Tag de
@@ -93,15 +98,15 @@
 
             <section>
                 <h2>4. ¿Qué son los Atributos?</h2>
-                <p>Los **Atributos** son información extra que se añade al **Tag de apertura** para modificar el
-                    comportamiento o la apariencia del Elemento. Siempre vienen en pares de **nombre="valor"**.</p>
+                <p>Los <strong>Atributos</strong> son información extra que se añade al <strong>Tag de apertura</strong> para modificar el
+                    comportamiento o la apariencia del Elemento. Siempre vienen en pares de <strong>nombre="valor"</strong>.</p>
 
                 <div class="code-block">
                     <pre><code>
 &lt;p class="resaltado"&gt;
 &lt;a href="https://ejemplo.com" target="_blank"&gt;
 &lt;img src="foto.jpg" alt="Mi Foto"&gt;
-                    </code></pre>
+                    </code></pre>
                 </div>
                 <p>En el ejemplo del enlace <code>&lt;a&gt;</code>, <strong><code>href</code></strong> es el atributo
                     (nombre) y <strong><code>https://ejemplo.com</code></strong> es el valor (la dirección a la que
@@ -110,15 +115,15 @@
 
 
             <div class="lesson-navigation">
-                <a href="html-intro.html" class="nav-button prev">←Lección Anterior</a>
-                <a href="#" class="nav-button next">Siguiente Lección: Head y Body →</a>
+                <a href="html-intro.html" class="nav-button prev">← Lección Anterior</a>
+                <a href="html-head-body.html" class="nav-button next">Siguiente Lección: Head y Body →</a>
             </div>
         </article>
     </main>
 
     <footer class="main-footer">
         <div class="footer-content container">
-            <p>&copy; 2025 DominaLaWeb | Hecho con el 💖 para enseñar a la Mundo.</p>
+            <p>&copy; 2025 DominaLaWeb | Hecho con el 💖 para enseñar al Mundo.</p>
             <p class="author-info">
                 Diseño y desarrollo por:
                 <a href="https://afc7.github.io/afcaro7.github.io/" target="_blank">
@@ -127,5 +132,7 @@
             </p>
         </div>
     </footer>
+    
+    <script src="../assets/js/script.js"></script> 
 </body>
 </html>
