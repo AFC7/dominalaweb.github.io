@@ -84,7 +84,7 @@ body {
 
 
 /* ==================================== */
-/* 3. HERO Y BOTÓN CTA                  */
+/*                   */
 /* ==================================== */
 
 .hero {
@@ -119,6 +119,60 @@ body {
 .cta-button:hover {
     background-color: #27ae60; /* Verde un poco más oscuro */
     transform: translateY(-2px); /* Efecto sutil al pasar el ratón */
+}
+
+/* Agrupación y Espaciado de Botones */
+.cta-group {
+    display: flex;
+    justify-content: center; /* Centra los botones */
+    gap: 20px; /* Espacio entre los dos botones */
+    margin-top: 30px;
+    flex-wrap: wrap; /* Importante para móviles */
+}
+
+/* Estilo Base para todos los botones CTA */
+.cta-button {
+    /* Mantenemos el estilo base que ya tenías, pero quitamos el color de fondo aquí */
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.15rem;
+    font-weight: 600;
+    padding: 15px 30px;
+    border-radius: 8px; 
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    text-align: center;
+}
+
+/* ------------------------------------ */
+/* Botón Primario (El que queremos que pulsen) */
+/* ------------------------------------ */
+.cta-button.primary {
+    background-color: var(--color-secondary); /* Verde brillante */
+    color: white;
+    border: 2px solid var(--color-secondary);
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.4); /* Sombra que lo hace flotar */
+}
+
+.cta-button.primary:hover {
+    background-color: #27ae60; 
+    transform: translateY(-3px); /* Efecto de elevación más notable */
+    box-shadow: 0 6px 20px rgba(46, 204, 113, 0.6);
+}
+
+/* ------------------------------------ */
+/* Botón Secundario (Opción alterna/Menos urgente) */
+/* ------------------------------------ */
+.cta-button.secondary {
+    background-color: transparent; /* Fondo transparente o blanco */
+    color: var(--color-primary); /* Texto azul (tu color principal) */
+    border: 2px solid var(--color-primary);
+    box-shadow: none;
+}
+
+.cta-button.secondary:hover {
+    background-color: var(--color-primary);
+    color: white; /* Invierte los colores al pasar el ratón */
+    transform: none; /* Quitamos la elevación para que solo se eleve el primario */
 }
 
 /* ==================================== */
@@ -433,4 +487,10 @@ body {
     .lesson-nav a {
         padding: 12px 10px; 
     }
+}
+
+/* Dentro de @media (max-width: 768px) {...} */
+.cta-group {
+    flex-direction: column; /* Apila los botones verticalmente */
+    gap: 15px;
 }
