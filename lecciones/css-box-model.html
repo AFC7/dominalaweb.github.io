@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 5: El Modelo de Caja - DominaLaWeb</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <span class="site-name">🚀 DominaLaWeb</span>
+        </div>
+        <button class="menu-toggle" aria-label="Abrir Menú">
+            ☰
+        </button>
+        <nav class="main-nav" id="mainMenu">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="html-intro.html">HTML</a></li>
+                <li><a href="css-intro.html" class="active">CSS</a></li>
+                <li><a href="../sobre-mi.html">Sobre Mí</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container lesson-page">
+        <aside class="sidebar">
+            <h2>Curso de CSS Básico</h2>
+            <nav class="lesson-nav">
+                <ul>
+                    <li><a href="css-intro.html">1. ¿Qué es CSS?</a></li>
+                    <li><a href="css-syntax.html">2. Sintaxis CSS</a></li>
+                    <li><a href="css-methods.html">3. Tres Formas de Añadir CSS</a></li>
+                    <li><a href="css-selectors.html">4. Selectores Comunes</a></li>
+                    <li><a href="css-box-model.html" class="active">5. El Modelo de Caja</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <article class="lesson-content">
+            <h1>Lección 5: Entendiendo el Modelo de Caja (Box Model)</h1>
+<p>En CSS, cada elemento HTML que ves en una página es tratado como una <strong>caja rectangular</strong>. El Modelo de Caja es el concepto más importante para controlar la posición, el espaciado y el tamaño de los elementos en la web. ¡Si dominas esto, dominas el <em>layout</em>!</p>
+
+<hr>
+
+<section>
+    <h2>1. Las Cuatro Partes de la Caja</h2>
+    <p>La "caja" de cada elemento está compuesta por cuatro capas, ordenadas de adentro hacia afuera:</p>
+    
+    <ol>
+        <li><strong>Content (Contenido):</strong> El área real donde se encuentra el texto, imagen, o video. Su tamaño se define con las propiedades <strong><code>width</code></strong> y <strong><code>height</code></strong>.</li>
+        <li><strong>Padding (Relleno):</strong> El espacio <strong>interno</strong> alrededor del contenido. Se usa para dar aire o espacio entre el contenido y el borde.</li>
+        <li><strong>Border (Borde):</strong> Una línea que rodea al padding y al contenido. Se usa para crear separaciones visuales.</li>
+        <li><strong>Margin (Margen):</strong> El espacio <strong>externo</strong> alrededor del borde. Se usa para crear espacio entre la caja actual y otras cajas vecinas.</li>
+    </ol>
+</section>
+
+<section>
+    <h2>2. Controlando el Espaciado: Padding y Margin</h2>
+    <p>Ambas propiedades (Padding y Margin) se pueden definir de varias maneras, afectando los cuatro lados (top, right, bottom, left) de la caja. El uso más común es la <strong>notación abreviada</strong>:</p>
+
+    <h3>Notación Abreviada:</h3>
+    <ul>
+        <li><strong>Un valor:</strong> Aplica a los 4 lados (ej., <code>padding: 20px;</code>).</li>
+        <li><strong>Dos valores:</strong> Aplica a (Top/Bottom) y (Left/Right) (ej., <code>margin: 10px 15px;</code>).</li>
+        <li><strong>Cuatro valores:</strong> Aplica en el orden de las manecillas del reloj: Top, Right, Bottom, Left (ej., <code>padding: 5px 10px 15px 20px;</code>).</li>
+    </ul>
+
+    <div class="code-block">
+        <pre><code>
+.mi-caja {
+    width: 300px;
+    background-color: #f0f0f0;
+
+    /* Espacio interno (Relleno) */
+    padding: 20px; 
+    
+    /* Borde */
+    border: 1px solid #333; 
+
+    /* Espacio externo (Margen) */
+    margin: 10px auto; /* 10px arriba/abajo, auto para centrar horizontalmente */
+}
+        </code></pre>
+    </div>
+</section>
+
+<section>
+    <h2>3. El Atributo box-sizing (¡La Regla Secreta!)</h2>
+    <p>Por defecto, cuando defines el <code>width</code> de una caja, el <code>padding</code> y el <code>border</code> se <strong>añaden</strong> a ese ancho, haciendo que la caja real sea más grande de lo que esperabas. Esto causa muchos problemas de diseño.</p>
+
+    <p>La solución es usar <strong><code>box-sizing: border-box;</code></strong>. Esta propiedad le dice al navegador que el <code>width</code> que especificas debe <strong>incluir</strong> el padding y el border, facilitando enormemente el control del tamaño.</p>
+
+    <p class="challenge-tip">
+        <strong>⭐ Práctica Profesional:</strong> Casi todos los desarrolladores usan esta regla para todos los elementos en su CSS base:
+        <div class="code-block">
+            <pre><code>
+* { 
+    box-sizing: border-box; 
+}
+            </code></pre>
+        </div>
+    </p>
+</section>
+
+
+            <div class="lesson-navigation">
+                <a href="css-selectors.html" class="nav-button prev">Lección Anterior</a>
+                <a href="css-box-model.html" class="nav-button next">¡Fin del Módulo Básico!</a>
+            </div>
+        </article>
+    </main>
+
+      <footer class="main-footer">
+        <div class="footer-content container">
+            <p>&copy; 2025 DominaLaWeb | Hecho con el 💖 para enseñar a la Mundo.</p>
+            <p class="author-info">
+                Diseño y desarrollo por: 
+                <a href="https://afc7.github.io/afcaro7.github.io/" target="_blank">
+                    Andres Felipe Ingeniero Electrónico
+                </a>
+            </p>
+        </div>
+    </footer>
+    
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>
