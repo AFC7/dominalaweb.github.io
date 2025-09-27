@@ -15,11 +15,9 @@
         <div class="logo">
             <span class="site-name">🚀 DominaLaWeb</span>
         </div>
-
         <button class="menu-toggle" aria-label="Abrir Menú">
             ☰
         </button>
-
         <nav class="main-nav" id="mainMenu">
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
@@ -35,48 +33,74 @@
             <h2>Curso de CSS Básico</h2>
             <nav class="lesson-nav">
                 <ul>
-                    <li><a href="css-intro.html" class="active">1. ¿Qué es CSS? (Tú Aquí)</a></li>
-                    <li><a href="#">2. La Regla CSS: Selector, Propiedad, Valor</a></li>
-                    <li><a href="#">3. Selectores Comunes</a></li>
-                    <li><a href="#">4. El Modelo de Caja</a></li>
-                    <li><a href="#">5. Colores y Fuentes</a></li>
+                    <li><a href="css-intro.html" class="active">1. ¿Qué es CSS?</a></li>
+                    <li><a href="css-syntax.html">2. Sintaxis CSS</a></li>
+                    <li><a href="css-methods.html">3. Tres Formas de Añadir CSS</a></li>
+                    <li><a href="css-selectors.html">4. Selectores Comunes</a></li>
+                    <li><a href="css-box-model.html">5. El Modelo de Caja</a></li>
                 </ul>
             </nav>
         </aside>
 
         <article class="lesson-content">
-            <h1>Lección 1: ¿Qué es CSS y cómo da vida a HTML?</h1>
-            <p>Si HTML es el esqueleto de tu web, "CSS" (Cascading Style Sheets) es la "piel, la ropa, la pintura" y
-                toda la decoración. CSS es lo que hace que tu web se vea bien, define los colores, las tipografías, los
-                espacios y la posición de los elementos.</p>
+            <h1>Lección 1: ¿Qué es CSS y Por Qué Es Vital?</h1>
+            <p>Si has completado el módulo de HTML, ya tienes el <strong>esqueleto</strong> de una página web. Ahora, es
+                el momento
+                de vestirla, pintarla y darle estilo. De eso se encarga <strong>CSS</strong> (Cascading Style Sheets).
+            </p>
+
 
             <hr>
+
             <section>
-                <h2>Anatomía de una Regla CSS</h2>
-                <p>Una regla CSS es una instrucción que le dice a un elemento HTML cómo debe lucir. Se compone de un
-                    "Selector", una "Propiedad" y un "Valor".</p>
+                <h2>1. CSS: El Estilista de la Web</h2>
+                <p>CSS es un lenguaje de <strong>estilo</strong> que se utiliza para describir la presentación de un
+                    documento
+                    escrito en HTML. En términos sencillos, le dice al navegador cómo debe verse el contenido,
+                    incluyendo:</p>
+                <ul>
+                    <li><strong>Colores:</strong> Del texto, del fondo, de los enlaces.</li>
+                    <li><strong>Tipografía:</strong> Fuentes, tamaños de letra y espacios entre líneas.</li>
+                    <li><strong>Diseño (Layout):</strong> La posición de los elementos (si van al lado o debajo de
+                        otros) y cómo se
+                        adaptan a la pantalla.</li>
+                </ul>
+            </section>
 
-                <div class="code-block">
-                    <pre><code>
-p {                    &lt;!-- Selector: Aplica al elemento &lt;p&gt; --&gt;
-  color: #3498db;      &lt;!-- Propiedad: color; Valor: #3498db --&gt;
-  font-size: 16px;     &lt;!-- Propiedad: font-size; Valor: 16px --&gt;
-  margin-top: 20px;    &lt;!-- Indica el espacio exterior (margen) que habrá encima de un elemento HTML --&gt;
-}
-                    </code></pre>
-                </div>
+            <section>
+                <h2>2. Separación de Preocupaciones (The Golden Rule)</h2>
+                <p>La práctica moderna del desarrollo web se basa en la separación clara de responsabilidades:</p>
+                <ul>
+                    <li><strong>HTML:</strong> Se ocupa de la <strong>Estructura</strong> (qué es cada cosa: un título,
+                        un párrafo, una imagen).
+                    </li>
+                    <li><strong>CSS:</strong> Se ocupa de la <strong>Presentación</strong> (cómo se ve: rojo, grande,
+                        centrado).</li>
+                </ul>
+                <p class="challenge-tip">
+                    <strong>💡 Regla de Oro:</strong> Nunca uses HTML (como el antiguo atributo "color" dentro de una
+                    etiqueta) para controlar el estilo. ¡Eso es trabajo exclusivo de CSS!
+                </p>
+            </section>
 
-                <p class="challenge-tip"><strong>💡 Importante:</strong> La parte más difícil de CSS suele ser entender
-                    qué selector usar para modificar el elemento correcto. ¡Lo veremos a fondo!</p>
+            <section>
+                <h2>3. El Concepto de "Cascada"</h2>
+                <p>La 'C' en CSS significa <strong>Cascada</strong>. Esto describe cómo el navegador decide qué reglas
+                    aplicar cuando
+                    hay múltiples estilos que intentan afectar al mismo elemento. Las reglas más específicas y las
+                    últimas cargadas suelen "cascadear" (anular) las reglas anteriores.</p>
+                <p>Entender la Cascada es esencial para evitar frustraciones cuando una regla de estilo no se aplica
+                    como esperas. ¡Lo veremos a fondo en las lecciones futuras!</p>
             </section>
 
             <div class="lesson-navigation">
-                <a href="#" class="nav-button next">Siguiente Lección </a>
+                <a href="../lecciones/html-lists.html" class="nav-button prev">Módulo HTML Completo</a>
+                <a href="css-syntax.html" class="nav-button next">Siguiente Lección</a>
             </div>
         </article>
     </main>
 
-    <footer class="main-footer">
+   <footer class="main-footer">
         <div class="footer-content container">
             <p>&copy; 2025 DominaLaWeb | Hecho con el 💖 para enseñar al Mundo</p>
             <p class="author-info">

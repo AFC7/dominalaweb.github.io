@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 2: La Sintaxis CSS - DominaLaWeb</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <span class="site-name">🚀 DominaLaWeb</span>
+        </div>
+        <button class="menu-toggle" aria-label="Abrir Menú">
+            ☰
+        </button>
+        <nav class="main-nav" id="mainMenu">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="html-intro.html">HTML</a></li>
+                <li><a href="css-intro.html" class="active">CSS</a></li>
+                <li><a href="../sobre-mi.html">Sobre Mí</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container lesson-page">
+        <aside class="sidebar">
+            <h2>Curso de CSS Básico</h2>
+            <nav class="lesson-nav">
+                <ul>
+                    <li><a href="css-intro.html">1. ¿Qué es CSS?</a></li>
+                    <li><a href="css-syntax.html" class="active">2. Sintaxis CSS</a></li>
+                    <li><a href="css-methods.html">3. Tres Formas de Añadir CSS</a></li>
+                    <li><a href="css-selectors.html">4. Selectores Comunes</a></li>
+                    <li><a href="css-box-model.html">5. El Modelo de Caja</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <article class="lesson-content">
+            <h1>Lección 2: Descomponiendo la Regla CSS</h1>
+<p>La sintaxis de CSS es lógica y repetitiva, lo cual es excelente. Toda la magia del estilo ocurre dentro de una estructura fundamental que llamamos <strong>Regla CSS</strong>. Entender sus tres partes es clave para escribir código CSS sin errores.</p>
+
+<hr>
+
+<section>
+    <h2>1. La Anatomía de una Regla CSS</h2>
+    <p>Una Regla CSS completa consta de un <strong>Selector</strong> y un bloque de <strong>Declaraciones</strong>. Observa este ejemplo, que intentaremos desglosar:</p>
+
+    <div class="code-block">
+        <pre><code>
+p {
+    color: blue;
+    font-size: 16px;
+}
+        </code></pre>
+    </div>
+</section>
+
+<section>
+    <h2>2. El Selector</h2>
+    <p>El <strong>Selector</strong> es la primera parte de la regla (en el ejemplo anterior, es la "p"). Es la herramienta que utiliza CSS para <strong>apuntar</strong> a los elementos HTML que quieres estilizar. Piensa en el selector como la <strong>dirección</strong> que le das al navegador.</p>
+    <p>Puede seleccionar elementos por su nombre (etiqueta), como <strong><code>&lt;p&gt;</code></strong> o <strong><code>&lt;h1&gt;</code></strong>, o por atributos más específicos como clases e IDs, que veremos más adelante.</p>
+</section>
+
+<section>
+    <h2>3. El Bloque de Declaración</h2>
+    <p>El <strong>Bloque de Declaración</strong> contiene una o más declaraciones, y siempre está encerrado entre llaves <strong><code>{}</code></strong>. Este bloque le dice al navegador <em>qué</em> estilos aplicar a los elementos seleccionados.</p>
+    
+    <h3>Declaración: Propiedad y Valor</h3>
+    <p>Cada declaración es un par de <strong>Propiedad: Valor</strong>:</p>
+    <ul>
+        <li><strong>Propiedad:</strong> Es el aspecto del elemento que deseas cambiar (ej., <strong><code>color</code></strong>, <strong><code>font-size</code></strong>, <strong><code>margin</code></strong>).</li>
+        <li><strong>Valor:</strong> Es la configuración específica que deseas aplicar a esa propiedad (ej., <strong><code>blue</code></strong>, <strong><code>16px</code></strong>, <strong><code>20px</code></strong>).</li>
+    </ul>
+    <p class="challenge-tip">
+        <strong>💡 ¡Regla de Puntuación!</strong> Cada declaración debe terminar con un <strong>punto y coma (<code>;</code>)</strong>. Olvidarlo es el error más común en CSS y puede romper los estilos siguientes.
+    </p>
+</section>
+
+
+            <div class="lesson-navigation">
+                <a href="css-intro.html" class="nav-button prev">Lección Anterior</a>
+                <a href="css-methods.html" class="nav-button next">Siguiente Lección</a>
+            </div>
+        </article>
+    </main>
+
+   <footer class="main-footer">
+        <div class="footer-content container">
+            <p>&copy; 2025 DominaLaWeb | Hecho con el 💖 para enseñar al Mundo</p>
+            <p class="author-info">
+                Diseño y desarrollo por:
+               <a href="https://afc7.github.io/afcaro7.github.io/" target="_blank" rel="noopener noreferrer">
+
+                    Andres Felipe Ingeniero Electrónico
+                </a>
+            </p>
+        </div>
+    </footer>
+    
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

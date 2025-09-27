@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 3: Métodos de CSS - DominaLaWeb</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <span class="site-name">🚀 DominaLaWeb</span>
+        </div>
+        <button class="menu-toggle" aria-label="Abrir Menú">
+            ☰
+        </button>
+        <nav class="main-nav" id="mainMenu">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="html-intro.html">HTML</a></li>
+                <li><a href="css-intro.html" class="active">CSS</a></li>
+                <li><a href="../sobre-mi.html">Sobre Mí</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container lesson-page">
+        <aside class="sidebar">
+            <h2>Curso de CSS Básico</h2>
+            <nav class="lesson-nav">
+                <ul>
+                    <li><a href="css-intro.html">1. ¿Qué es CSS?</a></li>
+                    <li><a href="css-syntax.html">2. Sintaxis CSS</a></li>
+                    <li><a href="css-methods.html" class="active">3. Tres Formas de Añadir CSS</a></li>
+                    <li><a href="css-selectors.html">4. Selectores Comunes</a></li>
+                    <li><a href="css-box-model.html">5. El Modelo de Caja</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <article class="lesson-content">
+            <h1>Lección 3: Tres Formas de Añadir CSS a HTML</h1>
+            <p>Hay tres maneras fundamentales de vincular los estilos CSS a tu estructura HTML. Entender sus pros,
+                contras y dónde usarlas es esencial para organizar tu proyecto de forma profesional.</p>
+
+            <hr>
+
+            <section>
+                <h2>1. CSS Externo (Recomendado ⭐)</h2>
+                <p>El método profesional y más común. Consiste en escribir todo tu código CSS en un <strong>archivo
+                        separado</strong> (como <code>style.css</code>) y vincularlo a tu documento HTML usando la
+                    etiqueta <code>&lt;link&gt;</code> en la sección <code>&lt;head&gt;</code>.</p>
+
+                <h3>Ventajas:</h3>
+                <ul>
+                    <li><strong>Separación de Responsabilidades:</strong> Mantiene el HTML limpio y el CSS en su propio
+                        archivo.</li>
+                    <li><strong>Mantenibilidad:</strong> Puedes cambiar el estilo de <strong>todo</strong> tu sitio web
+                        modificando un solo archivo CSS.</li>
+                    <li><strong>Velocidad:</strong> El navegador almacena en caché el archivo CSS, haciendo que las
+                        páginas posteriores carguen más rápido.</li>
+                </ul>
+
+                <div class="code-block">
+                    <pre><code>
+&lt;head&gt;
+    &lt;!-- La forma en que DominaLaWeb aplica estilos --&gt;
+    &lt;link rel="stylesheet" href="../assets/css/style.css"&gt;
+&lt;/head&gt;
+            </code></pre>
+                </div>
+            </section>
+
+            <section>
+                <h2>2. CSS Interno (o Embebido)</h2>
+                <p>Este método implica escribir las reglas CSS dentro de la etiqueta <code>&lt;style&gt;</code>, la cual
+                    se coloca directamente en la sección <code>&lt;head&gt;</code> del documento HTML.</p>
+
+                <h3>Uso Ideal:</h3>
+                <p>Es útil cuando tienes <strong>estilos únicos</strong> que solo se aplican a una página y que son muy
+                    pequeños. No se recomienda para estilos que se repiten en todo el sitio.</p>
+
+                <div class="code-block">
+                    <pre><code>
+&lt;head&gt;
+    &lt;style&gt;
+        h1 {
+            color: purple; /* Solo afecta al h1 de esta página */
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+            </code></pre>
+                </div>
+            </section>
+
+            <section>
+                <h2>3. CSS en Línea (Inline)</h2>
+                <p>El CSS en línea aplica estilos directamente a un elemento HTML individual usando el atributo
+                    <strong><code>style</code></strong> dentro de la etiqueta.</p>
+
+                <h3>Desventajas:</h3>
+                <p>Este método <strong>no se recomienda</strong> para el desarrollo web profesional. Rompe la separación
+                    de HTML y CSS, es difícil de mantener y es muy poco flexible, ya que el estilo solo afecta a esa
+                    etiqueta específica.</p>
+
+                <div class="code-block">
+                    <pre><code>
+&lt;p style="color: orange; font-weight: bold;"&gt;
+    Este texto tiene estilos en línea.
+&lt;/p&gt;
+            </code></pre>
+                </div>
+            </section>
+
+            <section>
+                <h2>Resumen de Prioridad</h2>
+                <p>Si intentas estilizar un mismo párrafo con los tres métodos, el navegador dará prioridad al que sea
+                    <strong>más cercano al elemento</strong>: CSS en Línea siempre gana sobre Interno y Externo.</p>
+            </section>
+
+            <div class="lesson-navigation">
+                <a href="css-syntax.html" class="nav-button prev">Lección Anterior</a>
+                <a href="css-selectors.html" class="nav-button next">Siguiente Lección</a>
+            </div>
+        </article>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content container">
+            <p>&copy; 2025 DominaLaWeb | Hecho con el 💖 para enseñar al Mundo</p>
+            <p class="author-info">
+                Diseño y desarrollo por:
+               <a href="https://afc7.github.io/afcaro7.github.io/" target="_blank" rel="noopener noreferrer">
+
+                    Andres Felipe Ingeniero Electrónico
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+</body>
+
+</html>
