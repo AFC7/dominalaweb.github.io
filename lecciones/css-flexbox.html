@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 6: Flexbox - DominaLaWeb</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <span class="site-name">🚀 DominaLaWeb</span>
+        </div>
+        <button class="menu-toggle" aria-label="Abrir Menú">
+            ☰
+        </button>
+        <nav class="main-nav" id="mainMenu">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="html-intro.html">HTML</a></li>
+                <li><a href="css-intro.html">CSS Básico</a></li>
+                <li><a href="css-avanzado-intro.html" class="active">CSS Avanzado</a></li>
+                <li><a href="../sobre-mi.html">Sobre Mí</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container lesson-page">
+        <aside class="sidebar">
+            <h2>Módulo: CSS Avanzado</h2>
+            <nav class="lesson-nav">
+                <ul>
+                    <li><a href="css-avanzado-intro.html">Introducción al Layout</a></li>
+                    <li><a href="css-flexbox.html" class="active">6. Flexbox</a></li>
+                    <li><a href="css-grid.html">7. CSS Grid</a></li>
+                    <li><a href="css-responsive-units.html">8. Unidades Responsivas</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <article class="lesson-content">
+            <h1>Lección 6: Dominando Flexbox para Layouts Flexibles</h1>
+            <p><strong>Flexbox</strong> (Módulo de Caja Flexible) es una de las características más importantes de CSS moderno. Es un sistema de <strong>una dimensión</strong> diseñado para distribuir elementos en una fila o columna y asegurar que el espaciado sea eficiente, sin importar el tamaño de la pantalla.</p>
+
+            <hr>
+
+            <section>
+                <h2>1. El Contenedor Flex (Flex Container)</h2>
+                <p>Para activar Flexbox, solo necesitas aplicar <strong><code>display: flex;</code></strong> al elemento padre (contenedor) que contiene los elementos que deseas organizar. Los elementos hijos dentro de él se convierten automáticamente en <strong>ítems flex (flex items)</strong>.</p>
+                
+
+                <div class="code-block">
+                    <pre><code>
+.contenedor {
+    display: flex; /* ¡Activa Flexbox! */
+    justify-content: center; /* Alinea ítems horizontalmente al centro */
+    align-items: center; /* Alinea ítems verticalmente al centro */
+}
+                    </code></pre>
+                </div>
+            </section>
+            
+            <section>
+                <h2>2. Propiedades de Alineación Clave</h2>
+                <p>El poder de Flexbox reside en dos propiedades principales aplicadas al <strong>contenedor</strong>:</p>
+
+                <ul>
+                    <li><strong><code>justify-content</code></strong>: Controla la alineación y el espaciado a lo largo del <strong>eje principal</strong> (por defecto, horizontal). Valores comunes son <strong><code>space-between</code></strong>, <strong><code>center</code></strong>, y <strong><code>flex-start</code></strong>.</li>
+                    <li><strong><code>align-items</code></strong>: Controla la alineación a lo largo del <strong>eje transversal</strong> (por defecto, vertical). Valores comunes son <strong><code>center</code></strong>, <strong><code>flex-start</code></strong>, y <strong><code>stretch</code></strong>.</li>
+                </ul>
+                
+                <p class="challenge-tip">
+                    <strong>💡 Concepto Clave:</strong> Por defecto, Flexbox intenta poner todos los ítems en una <strong>sola fila</strong>. Si quieres que los ítems salten a una nueva línea si no caben, usa <strong><code>flex-wrap: wrap;</code></strong> en el contenedor.
+                </p>
+            </section>
+            
+            <section>
+                <h2>3. Propiedades para Ítems Flex</h2>
+                <p>También puedes controlar cómo se comportan los elementos hijos (ítems) dentro del contenedor:</p>
+                <ul>
+                    <li><strong><code>flex-grow</code></strong>: Define si el ítem debe <strong>crecer</strong> para ocupar el espacio extra disponible (ej., <code>flex-grow: 1;</code>).</li>
+                    <li><strong><code>flex-shrink</code></strong>: Define si el ítem puede <strong>encogerse</strong> cuando no hay espacio suficiente.</li>
+                    <li><strong><code>order</code></strong>: Te permite cambiar el <strong>orden visual</strong> de un ítem sin alterar el orden en el HTML, usando números enteros.</li>
+                </ul>
+            </section>
+
+            <div class="lesson-navigation">
+                <a href="css-box-model.html" class="nav-button prev">Lección Anterior</a>
+                <a href="css-grid.html" class="nav-button next">Siguiente Lección</a>
+            </div>
+        </article>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content container">
+            <p>&copy; 2025 DominaLaWeb | Hecho con el 💖 para enseñar al Mundo</p>
+            <p class="author-info">
+                Diseño y desarrollo por: 
+                <a href="https://afc7.github.io/afcaro7.github.io/" target="_blank" rel="noopener noreferrer">
+                    Andres Felipe Ingeniero Electrónico
+                </a>
+            </p>
+        </div>
+    </footer>
+    
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

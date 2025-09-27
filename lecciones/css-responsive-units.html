@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 8: Unidades Responsivas - DominaLaWeb</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <span class="site-name">🚀 DominaLaWeb</span>
+        </div>
+        <button class="menu-toggle" aria-label="Abrir Menú">
+            ☰
+        </button>
+        <nav class="main-nav" id="mainMenu">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="html-intro.html">HTML</a></li>
+                <li><a href="css-intro.html">CSS Básico</a></li>
+                <li><a href="css-avanzado-intro.html" class="active">CSS Avanzado</a></li>
+                <li><a href="../sobre-mi.html">Sobre Mí</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container lesson-page">
+        <aside class="sidebar">
+            <h2>Módulo: CSS Avanzado</h2>
+            <nav class="lesson-nav">
+                <ul>
+                    <li><a href="css-avanzado-intro.html">Introducción al Layout</a></li>
+                    <li><a href="css-flexbox.html">6. Flexbox</a></li>
+                    <li><a href="css-grid.html">7. CSS Grid</a></li>
+                    <li><a href="css-responsive-units.html" class="active">8. Unidades Responsivas</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <article class="lesson-content">
+            <h1>Lección 8: Dominando las Unidades Responsivas (rem, em, vw/vh)</h1>
+            <p>Para construir sitios web verdaderamente responsivos (que escalan bien en cualquier dispositivo), debemos dejar de depender de los píxeles (<strong><code>px</code></strong>) para el texto y los tamaños de caja y usar unidades relativas.</p>
+
+            <hr>
+
+            <section>
+                <h2>1. Unidades Relativas al Texto (em y rem)</h2>
+                <p>Estas unidades son fundamentales para una tipografía accesible y escalable:</p>
+                <ul>
+                    <li><strong><code>em</code></strong>: Es relativo al <strong>tamaño de fuente del elemento padre</strong>. Si el padre tiene 20px, <code>1em</code> será 20px. Esto puede ser complejo de calcular en cascada.</li>
+                    <li><strong><code>rem</code></strong> (Root em): Es relativo al <strong>tamaño de fuente del elemento raíz</strong> (el elemento <code>&lt;html&gt;</code>). Si la fuente base del <code>&lt;html&gt;</code> es 16px, <code>2rem</code> siempre será 32px, sin importar el padre.</li>
+                </ul>
+                <p class="challenge-tip">
+                    <strong>⭐ Práctica Profesional:</strong> Usa <strong><code>rem</code></strong> para el tamaño de las fuentes, padding y margin. Esto asegura que si un usuario cambia el tamaño de fuente base de su navegador, todo el layout escale proporcionalmente.
+                </p>
+            </section>
+            
+            <section>
+                <h2>2. Unidades Relativas al Viewport (vw y vh)</h2>
+                <p>Estas unidades son perfectas para elementos que deben depender del tamaño total de la pantalla del usuario (viewport).</p>
+                <ul>
+                    <li><strong><code>vw</code></strong> (Viewport Width): Representa el <strong>1% del ancho del viewport</strong> (pantalla). Si la pantalla tiene 1000px de ancho, <code>10vw</code> son 100px.</li>
+                    <li><strong><code>vh</code></strong> (Viewport Height): Representa el <strong>1% de la altura del viewport</strong>. Es útil para hacer que una sección o imagen ocupe la pantalla completa.</li>
+                </ul>
+
+                <div class="code-block">
+                    <pre><code>
+.pantalla-completa {
+    /* El elemento ocupa el 100% del alto de la pantalla del usuario */
+    height: 100vh; 
+}
+
+.titulo-ajustable {
+    /* El tamaño de la fuente se ajusta a la mitad del ancho de la pantalla (¡ideal para titulares!) */
+    font-size: 5vw; 
+}
+                    </code></pre>
+                </div>
+            </section>
+
+            <div class="lesson-navigation">
+                <a href="css-grid.html" class="nav-button prev">Lección Anterior</a>
+                <a href="#" class="nav-button next">Módulo Completo</a>
+            </div>
+        </article>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content container">
+            <p>&copy; 2025 DominaLaWeb | Hecho con el 💖 para enseñar al Mundo</p>
+            <p class="author-info">
+                Diseño y desarrollo por: 
+                <a href="https://afc7.github.io/afcaro7.github.io/" target="_blank" rel="noopener noreferrer">
+                    Andres Felipe Ingeniero Electrónico
+                </a>
+            </p>
+        </div>
+    </footer>
+    
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

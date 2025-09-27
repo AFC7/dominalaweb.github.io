@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción a CSS Avanzado - DominaLaWeb</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <span class="site-name">🚀 DominaLaWeb</span>
+        </div>
+        <button class="menu-toggle" aria-label="Abrir Menú">
+            ☰
+        </button>
+        <nav class="main-nav" id="mainMenu">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="html-intro.html">HTML</a></li>
+                <li><a href="css-intro.html">CSS Básico</a></li>
+                <li><a href="css-avanzado-intro.html" class="active">CSS Avanzado</a></li>
+                <li><a href="../sobre-mi.html">Sobre Mí</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container lesson-page">
+        <aside class="sidebar">
+            <h2>Módulo: CSS Avanzado</h2>
+            <nav class="lesson-nav">
+                <ul>
+                    <li><a href="css-avanzado-intro.html" class="active">Introducción al Layout</a></li>
+                    <li><a href="css-flexbox.html">6. Flexbox</a></li>
+                    <li><a href="css-grid.html">7. CSS Grid</a></li>
+                    <li><a href="css-responsive-units.html">8. Unidades Responsivas</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <article class="lesson-content">
+            <h1>Bienvenido al Módulo de CSS Avanzado</h1>
+            <p>Has dominado la sintaxis, los selectores y el Modelo de Caja. ¡Felicidades! Ahora es el momento de pasar
+                del estilizado individual a la creación de <strong>diseños complejos y responsivos</strong>.</p>
+
+            <hr>
+
+            <section>
+                <h2>El Layout Moderno: De Cajas a Contenedores Inteligentes</h2>
+                <p>Históricamente, posicionar elementos en la web era difícil (usando floats y posicionamiento). Hoy,
+                    tenemos dos herramientas increíbles que resuelven todos los problemas de <strong>layout</strong>:</p>
+
+                <ul>
+                    <li><strong><code>Flexbox</code>:</strong> Perfecto para alinear y distribuir elementos en una
+                        <strong>sola dimensión</strong> (fila o columna). Es ideal para barras de navegación o
+                        componentes individuales.</li>
+                    <li><strong><code>CSS Grid</code>:</strong> La herramienta definitiva para diseños bidimensionales.
+                        Te permite crear <strong>completas</strong>  (cabeceras, barras laterales, pies de página) en
+                        filas y columnas al mismo tiempo.</li>
+                </ul>
+
+                <p class="challenge-tip">
+                    <strong>💡 Conseguirás:</strong> Al finalizar este módulo, podrás diseñar sitios web profesionales
+                    que se ven perfectos en cualquier teléfono, tablet o monitor.
+                </p>
+            </section>
+
+            <div class="lesson-navigation">
+                <a href="css-box-model.html" class="nav-button prev">Módulo Básico Completo</a>
+                <a href="css-flexbox.html" class="nav-button next">Empezar Lección</a>
+            </div>
+        </article>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content container">
+            <p>&copy; 2025 DominaLaWeb | Hecho con el 💖 para enseñar a la Mundo</p>
+            <p class="author-info">
+                Diseño y desarrollo por:
+                <a href="https://afc7.github.io/afcaro7.github.io/" target="_blank">
+                    Andres Felipe Ingeniero Electrónico
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+</body>
+
+</html>
