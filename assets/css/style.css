@@ -2,7 +2,8 @@
 
 .menu-toggle {
 
-    display: none; /* Por defecto, oculto en escritorio */
+    display: none;
+    /* Por defecto, oculto en escritorio */
 
     background: none;
 
@@ -28,21 +29,63 @@
 
     /* Colores limpios y amigables */
 
-    --color-primary: #3498db;     /* Azul brillante para acentos */
+    --color-primary: #3498db;
+    /* Azul brillante para acentos */
 
-    --color-secondary: #2ecc71;   /* Verde para CTA (Call to Action) */
+    --color-secondary: #2ecc71;
+    /* Verde para CTA (Call to Action) */
 
-    --color-text-dark: #2c3e50;   /* Texto oscuro principal */
+    --color-text-dark: #2c3e50;
+    /* Texto oscuro principal */
 
-    --color-text-light: #ecf0f1;  /* Texto claro (en fondo oscuro) */
+    --color-text-light: #ecf0f1;
+    /* Texto claro (en fondo oscuro) */
 
-    --color-background: #f8f9fa;  /* Fondo muy claro */
+    --color-background: #f8f9fa;
+    /* Fondo muy claro */
 
-    --color-card-bg: #ffffff;     /* Fondo de tarjetas */
+    --color-card-bg: #ffffff;
+    /* Fondo de tarjetas */
 
-    --color-border: #e0e0e0;      /* Borde suave */
+    --color-border: #e0e0e0;
+    /* Borde suave */
 
 }
+
+
+
+/* Contenedor centrado y adaptable */
+.image-container {
+    display: flex;
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
+    margin: 2rem auto;
+    /* Centra el bloque en la página */
+    max-width: 900px;
+    /* Ancho máximo para pantallas grandes */
+    padding: 1rem;
+    background-color: #3498db;
+    /* Fondo claro opcional */
+    border-radius: 12px;
+    /* Bordes suaves */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil */
+}
+
+/* Imagen responsiva */
+.image-container img {
+    max-width: 100%;
+    /* Se adapta al ancho del contenedor */
+    height: auto;
+    /* Mantiene proporciones */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    object-fit: contain;
+    /* Ajuste elegante dentro del contenedor */
+}
+
 
 
 /* Reset básico para mejor consistencia */
@@ -53,14 +96,16 @@
 
     padding: 0;
 
-    box-sizing: border-box; /* Fundamental para CSS: el padding y borde no aumentan el ancho */
+    box-sizing: border-box;
+    /* Fundamental para CSS: el padding y borde no aumentan el ancho */
 
 }
 
 
 body {
 
-    font-family: 'Poppins', sans-serif; /* Fuente moderna y legible */
+    font-family: 'Poppins', sans-serif;
+    /* Fuente moderna y legible */
 
     line-height: 1.6;
 
@@ -145,7 +190,8 @@ body {
 }
 
 
-.main-nav a:hover, .main-nav a.active {
+.main-nav a:hover,
+.main-nav a.active {
 
     color: var(--color-primary);
 
@@ -209,7 +255,8 @@ body {
 
     padding: 15px 30px;
 
-    border-radius: 8px; /* Bordes suaves */
+    border-radius: 8px;
+    /* Bordes suaves */
 
     transition: background-color 0.3s, transform 0.2s;
 
@@ -218,9 +265,11 @@ body {
 
 .cta-button:hover {
 
-    background-color: #27ae60; /* Verde un poco más oscuro */
+    background-color: #27ae60;
+    /* Verde un poco más oscuro */
 
-    transform: translateY(-2px); /* Efecto sutil al pasar el ratón */
+    transform: translateY(-2px);
+    /* Efecto sutil al pasar el ratón */
 
 }
 
@@ -231,13 +280,16 @@ body {
 
     display: flex;
 
-    justify-content: center; /* Centra los botones */
+    justify-content: center;
+    /* Centra los botones */
 
-    gap: 20px; /* Espacio entre los dos botones */
+    gap: 20px;
+    /* Espacio entre los dos botones */
 
     margin-top: 30px;
 
-    flex-wrap: wrap; /* Importante para móviles */
+    flex-wrap: wrap;
+    /* Importante para móviles */
 
 }
 
@@ -275,13 +327,15 @@ body {
 
 .cta-button.primary {
 
-    background-color: var(--color-secondary); /* Verde brillante */
+    background-color: var(--color-secondary);
+    /* Verde brillante */
 
     color: white;
 
     border: 2px solid var(--color-secondary);
 
-    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.4); /* Sombra que lo hace flotar */
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.4);
+    /* Sombra que lo hace flotar */
 
 }
 
@@ -290,7 +344,8 @@ body {
 
     background-color: #27ae60;
 
-    transform: translateY(-3px); /* Efecto de elevación más notable */
+    transform: translateY(-3px);
+    /* Efecto de elevación más notable */
 
     box-shadow: 0 6px 20px rgba(46, 204, 113, 0.6);
 
@@ -305,9 +360,11 @@ body {
 
 .cta-button.secondary {
 
-    background-color: transparent; /* Fondo transparente o blanco */
+    background-color: transparent;
+    /* Fondo transparente o blanco */
 
-    color: var(--color-primary); /* Texto azul (tu color principal) */
+    color: var(--color-primary);
+    /* Texto azul (tu color principal) */
 
     border: 2px solid var(--color-primary);
 
@@ -320,9 +377,11 @@ body {
 
     background-color: var(--color-primary);
 
-    color: white; /* Invierte los colores al pasar el ratón */
+    color: white;
+    /* Invierte los colores al pasar el ratón */
 
-    transform: none; /* Quitamos la elevación para que solo se eleve el primario */
+    transform: none;
+    /* Quitamos la elevación para que solo se eleve el primario */
 
 }
 
@@ -362,7 +421,8 @@ body {
 
     justify-content: center;
 
-    flex-wrap: wrap; /* Para que funcione bien en móvil */
+    flex-wrap: wrap;
+    /* Para que funcione bien en móvil */
 
 }
 
@@ -375,9 +435,11 @@ body {
 
     border-radius: 10px;
 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Sombra suave */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    /* Sombra suave */
 
-    flex: 1 1 300px; /* Flexbox para que se ajusten bien */
+    flex: 1 1 300px;
+    /* Flexbox para que se ajusten bien */
 
     text-align: left;
 
@@ -407,9 +469,11 @@ body {
 
     margin-top: 50px;
 
-    background-color: var(--color-text-dark); /* Fondo oscuro (Negro/Gris Oscuro) */
+    background-color: var(--color-text-dark);
+    /* Fondo oscuro (Negro/Gris Oscuro) */
 
-    color: var(--color-text-light); /* Letras claras */
+    color: var(--color-text-light);
+    /* Letras claras */
 
     font-size: 0.95rem;
 
@@ -420,11 +484,13 @@ body {
 
     display: flex;
 
-    justify-content: space-between; /* Distribuye el contenido a los lados */
+    justify-content: space-between;
+    /* Distribuye el contenido a los lados */
 
     align-items: center;
 
-    flex-wrap: wrap; /* Para que funcione bien en móvil, poniendo los elementos uno debajo del otro */
+    flex-wrap: wrap;
+    /* Para que funcione bien en móvil, poniendo los elementos uno debajo del otro */
 
     gap: 15px;
 
@@ -440,7 +506,8 @@ body {
 
 .main-footer .author-info a {
 
-    color: var(--color-primary); /* Destaca el enlace del autor con el color principal */
+    color: var(--color-primary);
+    /* Destaca el enlace del autor con el color principal */
 
     text-decoration: none;
 
@@ -453,7 +520,8 @@ body {
 
 .main-footer .author-info a:hover {
 
-    color: #4dc2ff; /* Un tono más claro al pasar el ratón */
+    color: #4dc2ff;
+    /* Un tono más claro al pasar el ratón */
 
     text-decoration: underline;
 
@@ -466,7 +534,8 @@ body {
 
     .footer-content {
 
-        flex-direction: column; /* Apila los elementos en vertical */
+        flex-direction: column;
+        /* Apila los elementos en vertical */
 
         text-align: center;
 
@@ -489,13 +558,15 @@ body {
 
 .lesson-page {
 
-    display: flex; /* Habilita Flexbox para poner contenido y sidebar lado a lado */
+    display: flex;
+    /* Habilita Flexbox para poner contenido y sidebar lado a lado */
 
     gap: 40px;
 
     padding-top: 40px;
 
-    min-height: 80vh; /* Asegura que el contenido ocupe la mayor parte de la ventana */
+    min-height: 80vh;
+    /* Asegura que el contenido ocupe la mayor parte de la ventana */
 
 }
 
@@ -504,7 +575,8 @@ body {
 
 .sidebar {
 
-    flex-shrink: 0; /* No permite que la barra se encoja */
+    flex-shrink: 0;
+    /* No permite que la barra se encoja */
 
     width: 250px;
 
@@ -512,7 +584,8 @@ body {
 
     border-right: 1px solid var(--color-border);
 
-    background-color: var(--color-card-bg); /* Fondo blanco */
+    background-color: var(--color-card-bg);
+    /* Fondo blanco */
 
     border-radius: 5px;
 
@@ -569,7 +642,8 @@ body {
 }
 
 
-.lesson-nav a:hover, .lesson-nav a.active {
+.lesson-nav a:hover,
+.lesson-nav a.active {
 
     background-color: var(--color-primary);
 
@@ -582,7 +656,8 @@ body {
 
 .lesson-content {
 
-    flex-grow: 1; /* Permite que el contenido tome el espacio restante */
+    flex-grow: 1;
+    /* Permite que el contenido tome el espacio restante */
 
     padding-bottom: 40px;
 
@@ -617,7 +692,8 @@ body {
 
 .challenge-tip {
 
-    background-color: #e8f5e9; /* Un color suave para destacar la nota */
+    background-color: #e8f5e9;
+    /* Un color suave para destacar la nota */
 
     border-left: 5px solid var(--color-secondary);
 
@@ -634,7 +710,8 @@ body {
 
 .code-block {
 
-    background-color: #2c3e50; /* Un color oscuro para el código, como estándar */
+    background-color: #2c3e50;
+    /* Un color oscuro para el código, como estándar */
 
     color: white;
 
@@ -642,7 +719,8 @@ body {
 
     border-radius: 8px;
 
-    overflow-x: auto; /* Permite scroll horizontal en móviles */
+    overflow-x: auto;
+    /* Permite scroll horizontal en móviles */
 
     margin: 20px 0;
 
@@ -666,7 +744,8 @@ body {
 
     display: flex;
 
-    justify-content: flex-end; /* Alinea el botón a la derecha */
+    justify-content: flex-end;
+    /* Alinea el botón a la derecha */
 
     margin-top: 40px;
 
@@ -711,21 +790,26 @@ body {
 
 .bio-text h2 {
     font-size: 1.4rem;
-    color: var(--color-primary); /* El subtítulo usa el color primario */
+    color: var(--color-primary);
+    /* El subtítulo usa el color primario */
     margin-top: 0;
     margin-bottom: 25px;
     padding-bottom: 10px;
-    border-bottom: 1px solid var(--color-border); /* Línea sutil para separar */
+    border-bottom: 1px solid var(--color-border);
+    /* Línea sutil para separar */
 }
+
 .bio-section {
     display: flex;
     gap: 40px;
-    align-items: center; /* Centra el contenido verticalmente */
+    align-items: center;
+    /* Centra el contenido verticalmente */
     padding: 50px 0;
 }
 
 .bio-text {
-    flex: 2; /* El texto ocupa el doble de espacio que la imagen */
+    flex: 2;
+    /* El texto ocupa el doble de espacio que la imagen */
 }
 
 .bio-image {
@@ -736,7 +820,8 @@ body {
 .bio-image img {
     max-width: 100%;
     height: auto;
-    border-radius: 50%; /* Hace que la foto sea redonda (opcional, muy amigable) */
+    border-radius: 50%;
+    /* Hace que la foto sea redonda (opcional, muy amigable) */
     border: 5px solid var(--color-primary);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -748,17 +833,23 @@ body {
 /* Adaptación a Móvil para la página Sobre Mí */
 @media (max-width: 768px) {
     .bio-section {
-        flex-direction: column-reverse; /* Pone la foto encima del texto en móvil */
+        flex-direction: column-reverse;
+        /* Pone la foto encima del texto en móvil */
         text-align: center;
     }
-    .bio-text, .bio-image {
+
+    .bio-text,
+    .bio-image {
         flex: auto;
         width: 100%;
     }
+
     .bio-image img {
-        max-width: 200px; /* Reduce el tamaño de la foto para móvil */
+        max-width: 200px;
+        /* Reduce el tamaño de la foto para móvil */
         margin-bottom: 20px;
     }
+
     .contact-cta {
         flex-direction: column;
     }
@@ -771,6 +862,7 @@ body {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -779,7 +871,8 @@ body {
 
 .about-page-animate {
     animation: slideInUp 0.8s ease-out forwards;
-    opacity: 0; /* Asegura que esté oculto al inicio */
+    opacity: 0;
+    /* Asegura que esté oculto al inicio */
 }
 
 
@@ -790,22 +883,25 @@ body {
 .bio-section,
 .project-vision {
     /* Fondo blanco para que destaque del fondo general (var(--color-background)) */
-    background-color: var(--color-card-bg); 
-    padding: 40px; 
-    border-radius: 12px; /* Bordes suaves */
+    background-color: var(--color-card-bg);
+    padding: 40px;
+    border-radius: 12px;
+    /* Bordes suaves */
     /* Sombra más profunda y profesional */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); 
-    margin-bottom: 30px; /* Separación entre contenedores */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+    /* Separación entre contenedores */
 }
 
 /* Mejora el estilo de la imagen del perfil */
 .bio-image img {
     /* Añadir un efecto de transición sutil al pasar el ratón */
-    transition: transform 0.4s ease-in-out; 
+    transition: transform 0.4s ease-in-out;
 }
 
 .bio-image img:hover {
-    transform: scale(1.03); /* Ligeramente más grande al pasar el ratón */
+    transform: scale(1.03);
+    /* Ligeramente más grande al pasar el ratón */
 }
 
 /* Ajuste para que la separación sea uniforme */
@@ -819,24 +915,30 @@ body {
 /* ==================================== */
 
 .profile-footer {
-    background-color: var(--color-text-dark); /* Fondo oscuro */
-    color: var(--color-text-light); /* Texto claro */
-    padding: 50px 0 0; /* Espacio superior */
+    background-color: var(--color-text-dark);
+    /* Fondo oscuro */
+    color: var(--color-text-light);
+    /* Texto claro */
+    padding: 50px 0 0;
+    /* Espacio superior */
     margin-top: 50px;
 }
 
 .footer__container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales en PC */
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columnas iguales en PC */
     gap: 3rem;
     padding-bottom: 40px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separador sutil */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    /* Separador sutil */
 }
 
 .footer__title {
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
-    color: var(--color-primary); /* Títulos en color primario */
+    color: var(--color-primary);
+    /* Títulos en color primario */
 }
 
 /* Logo y Texto Principal */
@@ -847,6 +949,7 @@ body {
     font-weight: 600;
     font-size: 1.5rem;
 }
+
 .footer__logo .site-name {
     display: block;
     margin-bottom: 5px;
@@ -884,7 +987,8 @@ body {
 }
 
 .footer__social-link:hover {
-    color: var(--color-secondary); /* Usa el color secundario para el hover de redes */
+    color: var(--color-secondary);
+    /* Usa el color secundario para el hover de redes */
 }
 
 /* Copyright Final */
@@ -901,48 +1005,59 @@ body {
 /* ------------------------------------ */
 @media (max-width: 768px) {
     .footer__container {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas en Tablet */
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columnas en Tablet */
         padding: 0 20px 30px;
     }
 }
 
 @media (max-width: 576px) {
     .footer__container {
-        grid-template-columns: 1fr; /* 1 columna en Móvil */
+        grid-template-columns: 1fr;
+        /* 1 columna en Móvil */
         text-align: center;
     }
+
     .footer__content {
         margin-bottom: 20px;
     }
+
     .footer__social {
-        justify-content: center; /* Centra los iconos en móvil */
+        justify-content: center;
+        /* Centra los iconos en móvil */
     }
 }
 
 /* Estilos para el Logo en el Footer de la página Sobre Mí */
 
 .footer__logo-img {
-    max-width: 200px; /* AUMENTADO: Logo más grande (ajusta a tu gusto) */
+    max-width: 200px;
+    /* AUMENTADO: Logo más grande (ajusta a tu gusto) */
     height: auto;
-    display: block; 
+    display: block;
     margin-bottom: 10px;
-    margin-left: auto;   /* NUEVO: Mantiene el logo centrado dentro de su contenedor */
+    margin-left: auto;
+    /* NUEVO: Mantiene el logo centrado dentro de su contenedor */
     margin-right: auto;
 }
 
 /* Ajusta el tamaño de la fuente para el nombre */
 .footer__logo .site-name {
-    font-size: 1.4rem; /* AUMENTADO: Nombre más grande */
+    font-size: 1.4rem;
+    /* AUMENTADO: Nombre más grande */
     display: block;
-    font-weight: 700; /* Asegura que el nombre resalte */
+    font-weight: 700;
+    /* Asegura que el nombre resalte */
 }
 
 /* Estilos para la sección completa del logo (Contenedor) */
 .footer__profile-link {
     display: flex;
     flex-direction: column;
-    align-items: center; /* CORREGIDO: Centra el logo y el texto horizontalmente */
-    text-align: center; /* Asegura que el texto multilinea también esté centrado */
+    align-items: center;
+    /* CORREGIDO: Centra el logo y el texto horizontalmente */
+    text-align: center;
+    /* Asegura que el texto multilinea también esté centrado */
 }
 
 /* ==================================== */
@@ -957,7 +1072,8 @@ body {
 
     .container {
 
-        padding: 0 15px; /* Reduce un poco el padding lateral */
+        padding: 0 15px;
+        /* Reduce un poco el padding lateral */
 
     }
 
@@ -966,14 +1082,16 @@ body {
 
     .lesson-page {
 
-        gap: 25px; /* Reduce el espacio entre el sidebar y el contenido */
+        gap: 25px;
+        /* Reduce el espacio entre el sidebar y el contenido */
 
     }
 
 
     .sidebar {
 
-        width: 200px; /* Reduce ligeramente el ancho de la barra lateral */
+        width: 200px;
+        /* Reduce ligeramente el ancho de la barra lateral */
 
     }
 
@@ -987,7 +1105,7 @@ body {
 
 @media (max-width: 768px) {
 
-   
+
 
     /* 1. CABECERA: Habilita el Botón y Controla el Flujo */
 
@@ -997,7 +1115,8 @@ body {
 
         flex-wrap: wrap;
 
-        padding: 15px; /* Ajusta el padding para móviles */
+        padding: 15px;
+        /* Ajusta el padding para móviles */
 
     }
 
@@ -1010,7 +1129,7 @@ body {
 
     }
 
-   
+
 
     /* Estado por defecto: El menú está oculto en móviles */
 
@@ -1018,9 +1137,11 @@ body {
 
         display: none;
 
-        width: 100%; /* El menú siempre toma el ancho completo */
+        width: 100%;
+        /* El menú siempre toma el ancho completo */
 
-        order: 10; /* Asegura que el menú aparezca debajo del logo y el botón */
+        order: 10;
+        /* Asegura que el menú aparezca debajo del logo y el botón */
 
         border-top: 1px solid var(--color-border);
 
@@ -1051,17 +1172,19 @@ body {
 
     .main-nav li {
 
-        border-bottom: 1px solid var(--color-border); /* Línea divisoria entre enlaces */
+        border-bottom: 1px solid var(--color-border);
+        /* Línea divisoria entre enlaces */
 
         text-align: center;
 
     }
 
-   
+
 
     .main-nav a {
 
-        padding: 15px 0; /* Aumenta el área de toque */
+        padding: 15px 0;
+        /* Aumenta el área de toque */
 
         width: 100%;
 
@@ -1093,7 +1216,7 @@ body {
 
     }
 
- 
+
 
     .hero h1 {
 
@@ -1101,7 +1224,7 @@ body {
 
     }
 
-   
+
 
     .advantage-list {
 
@@ -1111,7 +1234,7 @@ body {
 
     }
 
-   
+
 
     .card {
 
@@ -1119,7 +1242,7 @@ body {
 
     }
 
-   
+
 
     /* Revisa los estilos del footer por si necesitas flex-direction: column; */
 
@@ -1153,8 +1276,72 @@ body {
 
 .cta-group {
 
-    flex-direction: column; /* Apila los botones verticalmente */
+    flex-direction: column;
+    /* Apila los botones verticalmente */
 
     gap: 15px;
 
-} 
+}
+
+
+/* ==================================== */
+
+/*         SECCION DE QUIZ              */
+
+/* ==================================== */
+
+.quiz-section {
+  margin-top: 3rem;
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.quiz-section h2 {
+  text-align: center;
+  color: #3498db;
+  margin-bottom: 1.5rem;
+}
+
+.quiz-question {
+  margin-bottom: 1.5rem;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+.quiz-question p {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.quiz-question label {
+  display: block;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+#checkQuiz {
+  display: block;
+  width: 100%;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#checkQuiz:hover {
+  background-color: #217dbb;
+}
+
+.quiz-result {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 1rem;
+}
