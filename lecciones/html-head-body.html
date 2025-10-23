@@ -88,6 +88,47 @@
                 </div>
             </section>
 
+            <section class="quiz-section">
+                <h2>Cuestionario: Comprueba tus conocimientos en esta sección</h2>
+            
+                <div class="quiz-container">
+            
+                    <!-- Pregunta 1 -->
+                    <div class="quiz-question">
+                        <p>1. ¿Cuál es la principal función de la etiqueta <code>&lt;head&gt;</code> en un documento HTML?</p>
+                        <label><input type="radio" name="q1" value="a"> Mostrar el contenido principal de la página al
+                            usuario.</label><br>
+                        <label><input type="radio" name="q1" value="b"> Contener los metadatos y configuraciones que el navegador
+                            utiliza para procesar la página.</label><br>
+                        <label><input type="radio" name="q1" value="c"> Mostrar imágenes, botones y enlaces.</label>
+                    </div>
+            
+                    <!-- Pregunta 2 -->
+                    <div class="quiz-question">
+                        <p>2. ¿Qué etiqueta dentro del <code>&lt;head&gt;</code> define el texto que aparece en la pestaña del
+                            navegador?</p>
+                        <label><input type="radio" name="q2" value="a"> &lt;meta&gt;</label><br>
+                        <label><input type="radio" name="q2" value="b"> &lt;link&gt;</label><br>
+                        <label><input type="radio" name="q2" value="c"> &lt;title&gt;</label>
+                    </div>
+            
+                    <!-- Pregunta 3 -->
+                    <div class="quiz-question">
+                        <p>3. ¿Qué tipo de contenido debe ir dentro de la etiqueta <code>&lt;body&gt;</code>?</p>
+                        <label><input type="radio" name="q3" value="a"> Solo los metadatos del sitio.</label><br>
+                        <label><input type="radio" name="q3" value="b"> El contenido visible e interactivo que los usuarios pueden
+                            ver y usar.</label><br>
+                        <label><input type="radio" name="q3" value="c"> Configuraciones para motores de búsqueda y
+                            navegadores.</label>
+                    </div>
+            
+                    <button id="checkQuiz">Comprobar respuestas</button>
+                    <p id="quizResult" class="quiz-result"></p>
+                </div>
+            </section>
+
+
+
             <div class="lesson-navigation">
                 <a href="html-tags.html" class="nav-button prev">Lección Anterior</a>
                 <a href="html-paragraphs-headings.html" class="nav-button next">Siguiente Lección</a>
@@ -109,6 +150,7 @@
     </footer>
     
     <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/Q3.js"> </script>
 
 </body>
 </html>
