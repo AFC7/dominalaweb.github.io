@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 1: ¿Qué es HTML? - DominaLaWeb</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <span class="site-name">🚀 DominaLaWeb</span>
+        </div>
+        <button class="menu-toggle" aria-label="Abrir Menú">
+            ☰
+        </button>
+        <nav class="main-nav" id="mainMenu">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="html-intro.html" class="active">HTML</a></li>
+                <li><a href="css-intro.html">CSS Básico</a></li>
+                <li><a href="css-avanzado-intro.html">CSS Avanzado</a></li>
+                <li><a href="../Recursos/Recursos-intro.html">Recursos</a></li>
+                <li><a href="../sobre-mi.html">Sobre Mí</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container lesson-page">
+        <aside class="sidebar">
+            <h2>Curso de HTML Básico</h2>
+            <nav class="lesson-nav">
+                <ul>
+                    <li><a href="html-intro.html" class="active">1. ¿Qué es HTML?</a></li>
+                    <li><a href="html-tags.html">2. Tags y Elementos</a></li>
+                    <li><a href="html-head-body.html">3. La Estructura Head y Body</a></li>
+                    <li><a href="html-paragraphs-headings.html">4. Párrafos y Encabezados</a></li>
+                    <li><a href="html-links-images.html">5. Enlaces e Imágenes</a></li>
+                    <li><a href="html-lists.html">6. Listas y Tablas</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <article class="lesson-content">
+            <h1>Lección 1: ¿Qué es HTML y por qué lo necesitamos?</h1>
+            <p><strong>HTML</strong>, o "HyperText Markup Language", es el esqueleto de toda página web. No es un
+                lenguaje de programación, sino un lenguaje de "Etiquetas" que le dice al navegador dónde están los
+                textos, imágenes, videos y enlaces. Piensa en él como los cimientos de una casa.</p>
+            <hr>
+            <section>
+                <h2>La Estructura Básica de un Documento HTML</h2>
+                <p>Todo documento HTML debe tener una estructura estándar para que los navegadores lo entiendan
+                    correctamente.</p>
+
+                <div class="code-block">
+                    <pre><code>
+&lt;!DOCTYPE html&gt;                &lt;!-- Indica la versión de HTML (siempre es HTML5) --&gt;
+&lt;html lang="es"&gt;               &lt;!-- Es el contenedor principal del documento --&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt; &lt;!-- Configuración de caracteres --&gt;
+        &lt;title&gt;Mi Primera Web&lt;/title&gt; &lt;!-- Título que aparece en la pestaña del navegador --&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!-- ¡Aquí va todo el contenido visible de tu página! --&gt;
+        &lt;h1&gt;Hola Mundo&lt;/h1&gt;
+        &lt;p&gt;Este es mi primer párrafo.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                    </code></pre>
+                </div>
+
+                <p class="challenge-tip"><strong>💡 Reto Rápido:</strong> Copia este código, guárdalo como
+                    <code>prueba.html</code> y ábrelo en tu navegador. ¡Acabas de crear tu primera web!
+                </p>
+            </section>
+
+            <section class="quiz-section">
+                <h2>Cuestionario: Comprueba tus conocimientos en esta sección</h2>
+
+                <div class="quiz-container">
+                    <div class="quiz-question">
+                        <p>1. ¿Qué significa HTML?</p>
+                        <label><input type="radio" name="q1" value="a"> HyperText Markup Language</label><br>
+                        <label><input type="radio" name="q1" value="b"> HighText Machine Language</label><br>
+                        <label><input type="radio" name="q1" value="c"> Hyper Transfer Markup Link</label>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p>5. ¿Qué función cumple <code>&lt;!DOCTYPE html&gt;</code> ?</p>
+                        <label><input type="radio" name="q2" value="a"> Indicar el tipo de documento (HTML5)</label><br>
+                        <label><input type="radio" name="q2" value="b"> Mostrar el título de la página</label><br>
+                        <label><input type="radio" name="q2" value="c"> Añadir comentarios al código</label>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p>3. ¿Cuál de las siguientes afirmaciones es correcta?</p>
+                        <label><input type="radio" name="q3" value="a"> HTML es un lenguaje de programación</label><br>
+                        <label><input type="radio" name="q3" value="b"> HTML define la estructura de una página
+                            web</label><br>
+                        <label><input type="radio" name="q3" value="c"> HTML se usa para dar estilo a los textos</label>
+                    </div>
+
+                    <button id="checkQuiz">Comprobar respuestas</button>
+                    <p id="quizResult" class="quiz-result"></p>
+                </div>
+            </section>
+
+            <div class="lesson-navigation">
+                <a href="html-tags.html" class="nav-button next">Siguiente Lección</a>
+            </div>
+        </article>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content container">
+            <p>&copy; 2025 DominaLaWeb | Hecho con el 💖 para enseñar al Mundo</p>
+            <p class="author-info">
+                Diseño y desarrollo por:
+                <a href="https://afc7.github.io/afcaro7.github.io/" target="_blank" rel="noopener noreferrer">
+
+                    Andres Felipe Ingeniero Electrónico
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/Q1.js"> </script>
+</body>
+
+</html>
