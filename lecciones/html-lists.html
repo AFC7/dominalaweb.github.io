@@ -24,6 +24,7 @@
                 <li><a href="html-intro.html" class="active">HTML</a></li>
                 <li><a href="css-intro.html">CSS Básico</a></li>
                 <li><a href="css-avanzado-intro.html">CSS Avanzado</a></li>
+                <li><a href="../Recursos/Recursos-intro.html">Recursos</a></li>
                 <li><a href="../sobre-mi.html">Sobre Mí</a></li>
             </ul>
         </nav>
@@ -60,29 +61,34 @@
                 <p>Las listas desordenadas (Unordered List), creadas con la etiqueta "<code>&lt;ul&gt;</code>", se usan
                     cuando el orden de los elementos no importa. Por defecto, el navegador usa puntos (viñetas).</p>
 
-                <div class="code-block">
-                    <pre><code>
+                 <div class="code-container">
+                <pre id="codigo-tag">
 &lt;ul&gt;
     &lt;li&gt;Café&lt;/li&gt;
     &lt;li&gt;Té&lt;/li&gt;
     &lt;li&gt;Leche&lt;/li&gt;
 &lt;/ul&gt;
-                    </code></pre>
-                </div>
-
+                    </pre>
+                <button class="btn-copiar" onclick="copiarCodigo('codigo-tag', this)">
+                    Copiar Código
+                </button>
+            </div>
                 <h3>Listas Ordenadas (&lt;ol&gt;)</h3>
                 <p>Las listas ordenadas (Ordered List), creadas con "<code>&lt;ol&gt;</code>", se usan cuando el orden
                     es importante (ej., pasos de una receta o un ranking). Por defecto, el navegador usa números.</p>
 
-                <div class="code-block">
-                    <pre><code>
+                  <div class="code-container">
+                <pre id="codigo-tag">
 &lt;ol&gt;
     &lt;li&gt;Paso uno: Abrir el editor.&lt;/li&gt;
     &lt;li&gt;Paso dos: Escribir el código.&lt;/li&gt;
     &lt;li&gt;Paso tres: Guardar y probar.&lt;/li&gt;
 &lt;/ol&gt;
-                    </code></pre>
-                </div>
+                    </pre>
+                <button class="btn-copiar" onclick="copiarCodigo('codigo-tag', this)">
+                    Copiar Código
+                </button>
+            </div>
             </section>
 
             <section>
@@ -101,8 +107,8 @@
                     <li><strong><code>&lt;td&gt;</code></strong> (Table Data): Celdas de datos normales.</li>
                 </ul>
 
-                <div class="code-block">
-                    <pre><code>
+                  <div class="code-container">
+                <pre id="codigo-tag">
 &lt;table&gt;
     &lt;tr&gt;
         &lt;th&gt;Nombre&lt;/th&gt;
@@ -117,8 +123,11 @@
         &lt;td&gt;JavaScript&lt;/td&gt;
     &lt;/tr&gt;
 &lt;/table&gt;
-                    </code></pre>
-                </div>
+                     </pre>
+                <button class="btn-copiar" onclick="copiarCodigo('codigo-tag', this)">
+                    Copiar Código
+                </button>
+            </div>
 
                 <section class="quiz-section">
                     <h2>Cuestionario: Comprueba tus conocimientos en esta sección</h2>
@@ -188,7 +197,7 @@
         </div>
     </footer>
 
-   <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/script.js"></script>
     <script src="../assets/js/Q6.js"> </script>
 
 </body>

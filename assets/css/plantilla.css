@@ -1,0 +1,52 @@
+/* 
+
+    HTML CSS 
+
+    Result
+    Skip Results Iframe
+
+EDIT ON */
+
+/* html,body{
+  background:#f8f9fa;
+  margin:0;
+} */
+/* .centered{
+  width:400px;
+  height:400px;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  background:#f8f9fa;
+  filter: blur(10px) contrast(20);
+} */
+.blob-1,.blob-2{
+  width:70px;
+  height:70px;
+  position:sticky;
+  background:#3498db;
+  border-radius:50%;
+  top:76%;left:50%;
+  transform:translate(-50%,-50%);
+}
+.blob-1{
+  left:20%;
+  animation:osc-l 2.5s ease infinite;
+}
+.blob-2{
+  left:80%;
+  animation:osc-r 2.5s ease infinite;
+  background:#3498db;
+}
+ @keyframes osc-l{
+  0%{left:70%;}
+  50%{left:50%;}
+  100%{left:30%;}
+}
+@keyframes osc-r{
+  0%{left:30%;}
+  50%{left:50%;}
+  100%{left:70%;}
+} 
+

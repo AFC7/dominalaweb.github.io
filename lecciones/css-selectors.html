@@ -19,11 +19,12 @@
             ☰
         </button>
         <nav class="main-nav" id="mainMenu">
-            <ul>
+           <ul>
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="html-intro.html">HTML</a></li>
                 <li><a href="css-intro.html" class="active">CSS Básico</a></li>
                 <li><a href="css-avanzado-intro.html">CSS Avanzado</a></li>
+                <li><a href="../Recursos/Recursos-intro.html">Recursos</a></li>
                 <li><a href="../sobre-mi.html">Sobre Mí</a></li>
             </ul>
         </nav>
@@ -66,8 +67,8 @@
                     a <strong>múltiples elementos</strong> diferentes, sin importar el tipo de etiqueta. En CSS, se
                     antepone un <strong>punto (<code>.</code>)</strong> al nombre de la clase.</p>
 
-                <div class="code-block">
-                    <pre><code>
+                <div class="code-container">
+                <pre id="codigo-tag">
 /* En HTML */
 &lt;p class="destacado"&gt;Texto importante.&lt;/p&gt;
 &lt;h2 class="destacado"&gt;Título importante.&lt;/h2&gt;
@@ -77,8 +78,11 @@
     color: green;
     font-weight: bold;
 }
-                    </code></pre>
-                </div>
+                     </pre>
+                <button class="btn-copiar" onclick="copiarCodigo('codigo-tag', this)">
+                    Copiar Código
+                </button>
+            </div>
             </section>
 
             <section>
@@ -87,8 +91,8 @@
                     específico en toda la página. En CSS, se antepone un <strong>símbolo de almohadilla
                         (<code>#</code>)</strong> al nombre del ID. Recuerda: úsalo solo una vez por documento HTML.</p>
 
-                <div class="code-block">
-                    <pre><code>
+                <div class="code-container">
+                <pre id="codigo-tag">
 /* En HTML */
 &lt;div id="barra-lateral"&gt; ... &lt;/div&gt;
 
@@ -97,8 +101,11 @@
     width: 250px;
     background-color: #f0f0f0;
 }
-                    </code></pre>
-                </div>
+                     </pre>
+                <button class="btn-copiar" onclick="copiarCodigo('codigo-tag', this)">
+                    Copiar Código
+                </button>
+            </div>
             </section>
 
             <section class="quiz-section">
@@ -117,7 +124,8 @@
 
                     <div class="quiz-question">
                         <p>2. ¿Qué símbolo se usa en CSS para seleccionar un <strong>elemento único</strong> por su
-                            <strong>ID</strong>?</p>
+                            <strong>ID</strong>?
+                        </p>
                         <label><input type="radio" name="q2" value="a"> Un punto (<code>.</code>)</label><br>
                         <label><input type="radio" name="q2" value="b"> El nombre de la etiqueta (ej.
                             <code>div</code>)</label><br>

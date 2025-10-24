@@ -1,7 +1,22 @@
+
+
+
+
 .lesson-4 .lesson-content {
-  max-width: 900px;
-  font-size: 1rem;
+    max-width: 900px;
+    font-size: 1rem;
 }
+
+/* Quita lineas de link de TODOS los enlaces en TODOS sus estados */
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: inherit; 
+    /* Uso !important para asegurar que anule cualquier valor por defecto del navegador */
+}
+
 
 
 
@@ -29,7 +44,7 @@
 
 /* ==================================== */
 
-/* 1. RESET Y TIPOGRAFÍA BASE           */
+/* 1. RESET Y TIPOGRAFÍA BASE           */
 
 /* ==================================== */
 
@@ -139,7 +154,7 @@ body {
 
 /* ==================================== */
 
-/* 2. ENCABEZADO Y NAVEGACIÓN           */
+/* 2. ENCABEZADO Y NAVEGACIÓN           */
 
 /* ==================================== */
 
@@ -185,7 +200,7 @@ body {
 
 .main-nav a {
 
-    text-decoration: none;
+    /* text-decoration: none; */
 
     color: var(--color-text-dark);
 
@@ -203,7 +218,9 @@ body {
 
     color: var(--color-primary);
 
-    border-bottom: 2px solid var(--color-primary);
+    /* CORREGIDO: Esto era un borde inferior. Lo he eliminado para quitar la línea, 
+       pero puedes cambiarlo por otra decoración si lo deseas. */
+    /* border-bottom: 2px solid var(--color-primary); */
 
 }
 
@@ -211,7 +228,7 @@ body {
 
 /* ==================================== */
 
-/*              3. HERO                 */
+/*              3. HERO                 */
 
 /* ==================================== */
 
@@ -255,7 +272,7 @@ body {
 
     color: white;
 
-    text-decoration: none;
+    /* text-decoration: none; */
 
     font-size: 1.2rem;
 
@@ -310,7 +327,7 @@ body {
 
     display: inline-block;
 
-    text-decoration: none;
+    /* text-decoration: none; */
 
     font-size: 1.15rem;
 
@@ -393,10 +410,36 @@ body {
 
 }
 
+/* ------------------------------------ */
+/* Botón Terciario (Opción de baja prioridad, diseño 'Fantasma') */
+/* ------------------------------------ */
+.cta-button.tertiary {
+    /* Fondo muy claro, pero no completamente transparente */
+    background-color: var(--color-background); 
+    color: var(--color-primary);
+    
+    /* Borde sutil del color primario */
+    border: 1px solid var(--color-primary); 
+    
+    box-shadow: none;
+}
+
+.cta-button.tertiary:hover {
+    /* Al pasar el ratón, invertimos colores para dar feedback */
+    background-color: var(--color-primary); 
+    color: white; 
+    
+    /* Efecto de elevación más sutil para diferenciarlo del primario */
+    transform: translateY(-1px);
+    
+    /* Sombra sutil para la elevación */
+    box-shadow: 0 2px 5px rgba(52, 152, 219, 0.3); 
+}
+
 
 /* ==================================== */
 
-/* 4. SECCIÓN DE VENTAJA (TARJETAS)     */
+/* 4. SECCIÓN DE VENTAJA (TARJETAS)     */
 
 /* ==================================== */
 
@@ -517,7 +560,7 @@ body {
     color: var(--color-primary);
     /* Destaca el enlace del autor con el color principal */
 
-    text-decoration: none;
+     /* text-decoration: none; */
 
     font-weight: 600;
 
@@ -531,7 +574,8 @@ body {
     color: #4dc2ff;
     /* Un tono más claro al pasar el ratón */
 
-    text-decoration: underline;
+    /* CORREGIDO: Quita el subrayado que aparecía al pasar el ratón en el footer */
+    /* text-decoration: none; */
 
 }
 
@@ -635,7 +679,7 @@ body {
 
     display: block;
 
-    text-decoration: none;
+    /* text-decoration: none; */
 
     color: var(--color-text-dark);
 
@@ -766,7 +810,7 @@ body {
 
     padding: 10px 20px;
 
-    text-decoration: none;
+    /* text-decoration: none; */
 
     background-color: var(--color-primary);
 
@@ -783,13 +827,13 @@ body {
 
 .nav-button:hover {
 
-    opacity: 0.9;
+    opacity: 0.5;
 
 }
 
 
 /* ==================================== */
-/* 7. ESTILOS PÁGINA SOBRE MÍ           */
+/* 7. ESTILOS PÁGINA SOBRE MÍ           */
 /* ==================================== */
 .bio-text h1 {
     font-size: 2.8rem;
@@ -954,7 +998,7 @@ body {
 /* Logo y Texto Principal */
 .footer__logo {
     display: inline-block;
-    text-decoration: none;
+    /* text-decoration: none; */
     color: white;
     font-weight: 600;
     font-size: 1.5rem;
@@ -973,7 +1017,7 @@ body {
 
 .footer__link {
     display: block;
-    text-decoration: none;
+    /* text-decoration: none; */
     color: var(--color-text-light);
     margin-bottom: 0.75rem;
     font-size: 0.9rem;
@@ -1072,7 +1116,7 @@ body {
 
 /* ==================================== */
 
-/* MEDIA QUERY: TABLET (Hasta 992px)    */
+/* MEDIA QUERY: TABLET (Hasta 992px)    */
 
 /* ==================================== */
 
@@ -1109,7 +1153,7 @@ body {
 
 /* ==================================== */
 
-/* MEDIA QUERY: MÓVIL (Hasta 768px)     */
+/* MEDIA QUERY: MÓVIL (Hasta 768px)     */
 
 /* ==================================== */
 
@@ -1296,62 +1340,111 @@ body {
 
 /* ==================================== */
 
-/*         SECCION DE QUIZ              */
+/*         SECCION DE QUIZ              */
 
 /* ==================================== */
 
 .quiz-section {
-  margin-top: 3rem;
-  background-color: #f8f9fa;
-  padding: 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-top: 3rem;
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .quiz-section h2 {
-  text-align: center;
-  color: #3498db;
-  margin-bottom: 1.5rem;
+    text-align: center;
+    color: #3498db;
+    margin-bottom: 1.5rem;
 }
 
 .quiz-question {
-  margin-bottom: 1.5rem;
-  background: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 0.75rem;
-  padding: 1rem;
+    margin-bottom: 1.5rem;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 0.75rem;
+    padding: 1rem;
 }
 
 .quiz-question p {
-  font-weight: 600;
-  margin-bottom: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
 }
 
 .quiz-question label {
-  display: block;
-  cursor: pointer;
-  padding: 4px 0;
+    display: block;
+    cursor: pointer;
+    padding: 4px 0;
 }
 
 #checkQuiz {
-  display: block;
-  width: 100%;
-  background-color: #3498db;
-  color: white;
-  border: none;
-  padding: 0.75rem;
-  border-radius: 0.5rem;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+    display: block;
+    width: 100%;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 #checkQuiz:hover {
-  background-color: #217dbb;
+    background-color: #217dbb;
 }
 
 .quiz-result {
-  text-align: center;
-  font-weight: bold;
-  margin-top: 1rem;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+
+/* ================Contenedor Recursos==================== */
+
+.recurso-caja {
+    margin-bottom: 1.5rem;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 0.75rem;
+    padding: 1rem;
+}
+/* Estilo del Contenedor de Código */
+.code-container {
+    position: relative; /* CLAVE: El padre debe ser relativo para que el hijo (botón) sea absoluto */
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f4f4ff; /* Fondo para todo el contenedor */
+}
+
+/* Estilo del bloque PRE que contiene el texto */
+.code-container pre {
+    padding: 20px 15px 15px 15px; /* Deja espacio para el botón de copia arriba */
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin: 0; /* Elimina márgenes internos */
+}
+
+/* Estilo para el botón de Copiar */
+.btn-copiar {
+    position: absolute; 
+    top: 5px;
+    right: 5px;
+    padding: 5px 10px;
+    background-color: #007bff; /* Color primario de DominaLaWeb */
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.85rem; /* Tamaño discreto */
+    font-weight: 600;
+    z-index: 10;
+    transition: background-color 0.3s;
+}
+
+.btn-copiar:hover {
+    background-color: #0056b3;
 }

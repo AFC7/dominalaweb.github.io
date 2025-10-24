@@ -19,11 +19,12 @@
             ☰
         </button>
         <nav class="main-nav" id="mainMenu">
-            <ul>
+           <ul>
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="html-intro.html">HTML</a></li>
                 <li><a href="css-intro.html" class="active">CSS Básico</a></li>
                 <li><a href="css-avanzado-intro.html">CSS Avanzado</a></li>
+                <li><a href="../Recursos/Recursos-intro.html">Recursos</a></li>
                 <li><a href="../sobre-mi.html">Sobre Mí</a></li>
             </ul>
         </nav>
@@ -67,13 +68,16 @@
                     páginas posteriores carguen más rápido.</li>
             </ul>
 
-            <div class="code-block">
-                <pre><code>
+              <div class="code-container">
+                <pre id="codigo-tag">
 &lt;head&gt;
     &lt;!-- La forma en que DominaLaWeb aplica estilos --&gt;
     &lt;link rel="stylesheet" href="../assets/css/style.css"&gt;
 &lt;/head&gt;
-            </code></pre>
+             </pre>
+                <button class="btn-copiar" onclick="copiarCodigo('codigo-tag', this)">
+                    Copiar Código
+                </button>
             </div>
             </section>
 
@@ -86,8 +90,8 @@
                 <p>Es útil cuando tienes <strong>estilos únicos</strong> que solo se aplican a una página y que son muy
                     pequeños. No se recomienda para estilos que se repiten en todo el sitio.</p>
 
-                <div class="code-block">
-                    <pre><code>
+                <div class="code-container">
+                <pre id="codigo-tag">
 &lt;head&gt;
     &lt;style&gt;
         h1 {
@@ -95,8 +99,11 @@
         }
     &lt;/style&gt;
 &lt;/head&gt;
-            </code></pre>
-                </div>
+             </pre>
+                <button class="btn-copiar" onclick="copiarCodigo('codigo-tag', this)">
+                    Copiar Código
+                </button>
+            </div>
             </section>
 
             <section>
@@ -110,13 +117,16 @@
                     de HTML y CSS, es difícil de mantener y es muy poco flexible, ya que el estilo solo afecta a esa
                     etiqueta específica.</p>
 
-                <div class="code-block">
-                    <pre><code>
+                <div class="code-container">
+                <pre id="codigo-tag">
 &lt;p style="color: orange; font-weight: bold;"&gt;
     Este texto tiene estilos en línea.
 &lt;/p&gt;
-            </code></pre>
-                </div>
+             </pre>
+                <button class="btn-copiar" onclick="copiarCodigo('codigo-tag', this)">
+                    Copiar Código
+                </button>
+            </div>
             </section>
 
             <section>
@@ -169,8 +179,6 @@
                     <p id="quizResult" class="quiz-result"></p>
                 </div>
             </section>
-
-
 
             <div class="lesson-navigation">
                 <a href="css-syntax.html" class="nav-button prev">Lección Anterior</a>

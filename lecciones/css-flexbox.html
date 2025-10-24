@@ -19,11 +19,12 @@
             ☰
         </button>
         <nav class="main-nav" id="mainMenu">
-            <ul>
+              <ul>
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="html-intro.html">HTML</a></li>
                 <li><a href="css-intro.html">CSS Básico</a></li>
                 <li><a href="css-avanzado-intro.html" class="active">CSS Avanzado</a></li>
+                <li><a href="../Recursos/Recursos-intro.html">Recursos</a></li>
                 <li><a href="../sobre-mi.html">Sobre Mí</a></li>
             </ul>
         </nav>
@@ -57,15 +58,18 @@
                     se convierten automáticamente en <strong>ítems flex (flex items)</strong>.</p>
 
 
-                <div class="code-block">
-                    <pre><code>
+                <div class="code-container">
+                <pre id="codigo-tag">
 .contenedor {
     display: flex; /* ¡Activa Flexbox! */
     justify-content: center; /* Alinea ítems horizontalmente al centro */
     align-items: center; /* Alinea ítems verticalmente al centro */
 }
-                    </code></pre>
-                </div>
+                     </pre>
+                <button class="btn-copiar" onclick="copiarCodigo('codigo-tag', this)">
+                    Copiar Código
+                </button>
+            </div>
             </section>
 
             <section>
@@ -77,11 +81,13 @@
                     <li><strong><code>justify-content</code></strong>: Controla la alineación y el espaciado a lo largo
                         del <strong>eje principal</strong> (por defecto, horizontal). Valores comunes son
                         <strong><code>space-between</code></strong>, <strong><code>center</code></strong>, y
-                        <strong><code>flex-start</code></strong>.</li>
+                        <strong><code>flex-start</code></strong>.
+                    </li>
                     <li><strong><code>align-items</code></strong>: Controla la alineación a lo largo del <strong>eje
                             transversal</strong> (por defecto, vertical). Valores comunes son
                         <strong><code>center</code></strong>, <strong><code>flex-start</code></strong>, y
-                        <strong><code>stretch</code></strong>.</li>
+                        <strong><code>stretch</code></strong>.
+                    </li>
                 </ul>
 
                 <p class="challenge-tip">
@@ -110,7 +116,8 @@
                 <div class="quiz-container">
 
                     <div class="quiz-question">
-                        <p>1. ¿Cuál propiedad se debe aplicar al <b>elemento padre</b> (contenedor) para activar Flexbox?
+                        <p>1. ¿Cuál propiedad se debe aplicar al <b>elemento padre</b> (contenedor) para activar
+                            Flexbox?
                         </p>
                         <label><input type="radio" name="q1" value="a"> <code>display: inline;</code></label><br>
                         <label><input type="radio" name="q1" value="b"> <code>display: flex;</code></label><br>
@@ -118,7 +125,8 @@
                     </div>
 
                     <div class="quiz-question">
-                        <p>2. ¿Cuál propiedad de alineación controla el espaciado a lo largo del <b>eje principal</b> (por
+                        <p>2. ¿Cuál propiedad de alineación controla el espaciado a lo largo del <b>eje principal</b>
+                            (por
                             defecto, horizontal)?</p>
                         <label><input type="radio" name="q2" value="a"> <code>align-items</code></label><br>
                         <label><input type="radio" name="q2" value="b"> <code>flex-wrap</code></label><br>

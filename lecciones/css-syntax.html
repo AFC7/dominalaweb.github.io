@@ -19,11 +19,12 @@
             ☰
         </button>
         <nav class="main-nav" id="mainMenu">
-            <ul>
+           <ul>
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="html-intro.html">HTML</a></li>
                 <li><a href="css-intro.html" class="active">CSS Básico</a></li>
                 <li><a href="css-avanzado-intro.html">CSS Avanzado</a></li>
+                <li><a href="../Recursos/Recursos-intro.html">Recursos</a></li>
                 <li><a href="../sobre-mi.html">Sobre Mí</a></li>
             </ul>
         </nav>
@@ -57,13 +58,17 @@
                     <strong>Declaraciones</strong>. Observa este ejemplo, que intentaremos desglosar:
                 </p>
 
-                <div class="code-block">
-                    <pre><code>
+                <div class="code-container">
+                <pre id="codigo-tag">
 h1 {
     color: blue;
     font-size: 12px;
 }
-        </code></pre>
+        </pre>
+                <button class="btn-copiar" onclick="copiarCodigo('codigo-tag', this)">
+                    Copiar Código
+                </button>
+            </div>
             </section>
 
             <section>
@@ -112,7 +117,7 @@ h1 {
 
             <section class="quiz-section">
                 <h2>Cuestionario: Comprueba tus conocimientos</h2>
-            
+
                 <div class="quiz-container">
                     <div class="quiz-question">
                         <p>1. ¿Cuál es la estructura básica de una regla CSS?</p>
@@ -120,14 +125,14 @@ h1 {
                         <label><input type="radio" name="q1" value="b"> Propiedad + Valor</label><br>
                         <label><input type="radio" name="q1" value="c"> Selector + Bloque de Declaraciones</label>
                     </div>
-            
+
                     <div class="quiz-question">
                         <p>2. ¿Qué símbolo se usa para abrir un bloque de declaración?</p>
                         <label><input type="radio" name="q2" value="a"> ( )</label><br>
                         <label><input type="radio" name="q2" value="b"> { }</label><br>
                         <label><input type="radio" name="q2" value="c"> [ ]</label>
                     </div>
-            
+
                     <button id="checkQuiz">Comprobar respuestas</button>
                     <p id="quizResult" class="quiz-result"></p>
                 </div>

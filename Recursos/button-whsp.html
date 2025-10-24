@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos - DominaLaWeb</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/wp.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <span class="site-name">🚀 DominaLaWeb</span>
+        </div>
+        <button class="menu-toggle" aria-label="Abrir Menú">
+            ☰
+        </button>
+        <nav class="main-nav" id="mainMenu">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../lecciones/html-intro.html">HTML</a></li>
+                <li><a href="../lecciones/css-intro.html">CSS Básico</a></li>
+                <li><a href="../lecciones/css-avanzado-intro.html">CSS Avanzado</a></li>
+                <li><a href="Recursos-intro.html" class="active">Recursos</a></li>
+                <li><a href="../sobre-mi.html">Sobre Mí</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container lesson-page">
+        <aside class="sidebar">
+            <h2>Recursos</h2>
+            <nav class="lesson-nav">
+                <ul>
+                    <li><a href="Recursos-intro.html">Recursos</a></li>
+                    <li><a href="button-whsp.html" class="active">¿Cómo añadir boton de Whatsapp?</a></li>
+
+                </ul>
+            </nav>
+        </aside>
+
+        <article class="lesson-content">
+            <h1>Implementando el Botón Flotante de WhatsApp </h1>
+            <p> El botón de WhatsApp es una herramienta esencial para mejorar la <b style="color: #007bff;">comunicación
+                    directa</b> con tus usuarios. Al ser <b style="color: #007bff;">flotante</b> (fijo), garantiza que
+                la opción de contacto siempre esté visible, sin importar en qué parte de la página se encuentre el
+                visitante.
+            </p>
+            <hr>
+            <section>
+                <h2>Paso 1: El HTML (Estructura y Enlace)</h2>
+                <p>Insertaremos un enlace &lt;a&gt; con una clase para el estilo (whatsapp-button) y el ícono de
+                    WhatsApp con un link en head. Este código debe ir idealmente justo antes de la
+                    etiqueta de cierre `&lt;/body&gt;`.</p>
+
+                <div class="code-container">
+                    <pre id="codigo-html-whastapp">
+                &lt;head&gt;
+                &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                &lt;!-- Botón Flotante de WhatsApp --&gt;
+                &lt;a href="https://wa.me/573XXXXXXXXX?text=mensaje." class="whatsapp-float-btn" target="_blank"&gt;
+                &lt;i class="fa fa-whatsapp icono-whatsapp"&gt;&lt;/i&gt; &lt;!--Icono de WhatsApp--&gt; 
+                &lt;/a&gt;
+                &lt;/body&gt;
+                    </pre>
+                    <button class="btn-copiar" onclick="copiarCodigo('codigo-html-whastapp', this)">
+                        Copiar Código HTML
+                    </button>
+                </div>
+
+                <a href="archivos/htmlwhats.html" class="btn-descarga" download="htmlwhats.html">Descarga Recurso html&raquo;</a>
+                <p class="challenge-tip whatsapp-tip"><strong>💡 Importante:</strong> Reemplaza
+                    <b><code>573XXXXXXXXX</code></b> por tu número de teléfono y el código de país (sin el signo
+                    <code>+</code>, espacios o guiones). Asegúrate de que el mensaje predefinido use<b><code>%20</code></b>  en
+                    lugar de espacios.
+                </p>
+
+                <h2>Paso 2: El CSS (Estilo y Posicionamiento)</h2>
+                <p>El poder de hacerlo flotante reside en la propiedad <b
+                        style="color: #007bff;">position: fixed;</b>.</p>
+
+                  <div class="code-container">
+                <pre id="codigo-tag">
+<pre>
+/* ===== Botón Flotante de WhatsApp - Escritorio (Desktop) ===== */
+.whatsapp-float-btn {
+    position: fixed;
+    /* Tamaño y Posición */
+    width: 65px; /* Tamaño ligeramente más conservador y estándar */
+    height: 65px;
+    bottom: 45px;
+    right: 45px;
+ /* Estilo del Círculo */
+    background-color: #25D366;
+    color: #FFF;
+    border-radius: 50%; /* CLAVE: Usar 50% para un círculo perfecto */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+    z-index: 1000;
+    
+    /* Centrado del Icono */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem; /* Tamaño de icono proporcionado para 65px */
+    
+    /* Animación */
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float-btn:hover {
+    transform: scale(1.1);
+}
+
+/* ===== Botón Flotante de WhatsApp - Móvil (Mobile) ===== */
+@media (max-width: 768px) { /* Usamos un media query para aplicar los cambios */
+    .whatsapp-float-btn {
+        width: 50px; /* Reducción de 65px a 50px */
+        height: 50px;
+        bottom: 20px; /* Posición más cerca del borde en móvil */
+        right: 20px;
+        /* CLAVE: Ajuste del tamaño de fuente a un valor proporcional 
+        (aproximadamente la mitad de la altura/ancho) */
+        font-size: 1.5rem; /* Ajustado de 2.5rem a 1.5rem (o 1.7rem máximo) */
+    }
+}
+ </pre>
+                <button class="btn-copiar" onclick="copiarCodigo('codigo-tag', this)">
+                    Copiar Código
+                </button>
+            </div>
+
+                <h2>Propiedades Clave del CSS:</h2>
+
+<ul>
+    <li><code>position: fixed;</code>: Fija el elemento a la ventana del navegador, sin importar el desplazamiento.</li>
+    <li><code>bottom: 20px;</code> y <code>right: 20px;</code>: Determinan la ubicación del elemento en pantalla.</li>
+    <li><code>z-index: 1000;</code>: Asegura que el botón esté por encima de otros elementos.</li>
+    <li><code>border-radius: 50%;</code>: Le da forma circular junto con un <code>width</code> y <code>height</code> iguales.</li>
+    <li><code>@media (max-width: 768px)</code>: Permite adaptar el tamaño del botón a pantallas pequeñas.</li>
+</ul>
+<hr>
+
+            </section>
+
+
+
+            <div class="lesson-navigation">                
+                <a href="Recursos-intro.html" class="nav-button next">Recurso Anterior</a>
+                <a href="plantilla.html" class="nav-button next">Siguiente Recurso </a>
+            </div>
+        </article>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content container">
+            <p>&copy; 2025 DominaLaWeb | Hecho con el 💖 para enseñar al Mundo</p>
+            <p class="author-info">
+                Diseño y desarrollo por:
+                <a href="https://afc7.github.io/afcaro7.github.io/" target="_blank" rel="noopener noreferrer">
+
+                    Andres Felipe Ingeniero Electrónico
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+
+  <a href="https://wa.me/573106180550?text=Hola%20Andrés,%20si%20pude%20agregar%20el%20boton%20de%20whatsapp." class="whatsapp-float-btn" target="_blank">
+         <i class="fa fa-whatsapp icono-whatsapp"></i>
+    </a>
+</body>
+
+</html>

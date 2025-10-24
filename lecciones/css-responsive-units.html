@@ -19,11 +19,12 @@
             ☰
         </button>
         <nav class="main-nav" id="mainMenu">
-            <ul>
+              <ul>
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="html-intro.html">HTML</a></li>
                 <li><a href="css-intro.html">CSS Básico</a></li>
                 <li><a href="css-avanzado-intro.html" class="active">CSS Avanzado</a></li>
+                <li><a href="../Recursos/Recursos-intro.html">Recursos</a></li>
                 <li><a href="../sobre-mi.html">Sobre Mí</a></li>
             </ul>
         </nav>
@@ -82,8 +83,8 @@
                     </li>
                 </ul>
 
-                <div class="code-block">
-                    <pre><code>
+                <div class="code-container">
+                <pre id="codigo-tag">
 .pantalla-completa {
     /* El elemento ocupa el 100% del alto de la pantalla del usuario */
     height: 100vh; 
@@ -93,8 +94,11 @@
     /* El tamaño de la fuente se ajusta a la mitad del ancho de la pantalla (¡ideal para titulares!) */
     font-size: 5vw; 
 }
-                    </code></pre>
-                </div>
+                     </pre>
+                <button class="btn-copiar" onclick="copiarCodigo('codigo-tag', this)">
+                    Copiar Código
+                </button>
+            </div>
             </section>
 
             <section class="quiz-section">
@@ -134,7 +138,7 @@
 
             <div class="lesson-navigation">
                 <a href="css-grid.html" class="nav-button prev">Lección Anterior</a>
-                <a href="#" class="nav-button next">Módulo Completo</a>
+                <a href="../Recursos/Recursos-intro.html" class="nav-button next">Recursos</a>
             </div>
         </article>
     </main>

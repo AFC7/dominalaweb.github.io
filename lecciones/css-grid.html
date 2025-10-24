@@ -19,11 +19,12 @@
             ☰
         </button>
         <nav class="main-nav" id="mainMenu">
-            <ul>
+              <ul>
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="html-intro.html">HTML</a></li>
                 <li><a href="css-intro.html">CSS Básico</a></li>
                 <li><a href="css-avanzado-intro.html" class="active">CSS Avanzado</a></li>
+                <li><a href="../Recursos/Recursos-intro.html">Recursos</a></li>
                 <li><a href="../sobre-mi.html">Sobre Mí</a></li>
             </ul>
         </nav>
@@ -54,7 +55,8 @@
             <section>
                 <h2>1. Activación de Grid</h2>
                 <p>Al igual que Flexbox, activas Grid en el elemento padre (contenedor) usando
-                    <strong><code>display: grid;</code></strong>.</p>
+                    <strong><code>display: grid;</code></strong>.
+                </p>
 
                 <h3>Definición de Columnas y Filas</h3>
                 <p>La magia de Grid comienza al definir la estructura de la cuadrícula:</p>
@@ -64,8 +66,8 @@
                     <li><strong><code>grid-template-rows</code></strong>: Define la altura de las filas.</li>
                 </ul>
 
-                <div class="code-block">
-                    <pre><code>
+                <div class="code-container">
+                <pre id="codigo-tag">
 .contenedor-grid {
     display: grid; 
     /* Crea 3 columnas: la primera de 200px, y las otras dos iguales con el espacio restante */
@@ -73,13 +75,16 @@
     grid-template-rows: 100px auto; /* 2 filas */
     gap: 10px; /* Espacio entre las celdas */
 }
-                    </code></pre>
-                </div>
+                     </pre>
+                <button class="btn-copiar" onclick="copiarCodigo('codigo-tag', this)">
+                    Copiar Código
+                </button>
+            </div>
             </section>
 
             <section>
                 <h2>2. La Unidad "fr" (Fracción)</h2>
-                <p>La unidad **<code>fr</code>** (fracción) es exclusiva de Grid y hace que sea increíblemente flexible.
+                <p>La unidad <b><code>fr</code></b> (fracción) es exclusiva de Grid y hace que sea increíblemente flexible.
                     La unidad <code>1fr</code> significa "una parte del espacio libre restante".</p>
 
                 <p>Por ejemplo, si tienes <code>grid-template-columns: 1fr 2fr 1fr;</code>, el espacio libre se divide
@@ -92,16 +97,19 @@
                 <p>Puedes posicionar los elementos hijos (ítems) en la cuadrícula usando líneas o nombres, o hacer que
                     un elemento ocupe varias celdas (span):</p>
 
-                <div class="code-block">
-                    <pre><code>
+                <div class="code-container">
+                <pre id="codigo-tag">
 .item-cabecera {
     /* Ocupa desde la línea 1 hasta la línea 4 (las 3 columnas) */
     grid-column: 1 / 4; 
     /* También puedes usar la palabra clave 'span' */
     /* grid-column: span 3; */
 }
-                    </code></pre>
-                </div>
+                     </pre>
+                <button class="btn-copiar" onclick="copiarCodigo('codigo-tag', this)">
+                    Copiar Código
+                </button>
+            </div>
             </section>
 
 
@@ -143,9 +151,8 @@
             </section>
 
             <div class="lesson-navigation">
-                <a href="css-flexbox.html" class="nav-button prev">← Lección Anterior</a>
-                <a href="css-responsive-units.html" class="nav-button next">Siguiente Lección: Unidades Responsivas
-                    →</a>
+                <a href="css-flexbox.html" class="nav-button prev">Lección Anterior</a>
+                <a href="css-responsive-units.html" class="nav-button next">Siguiente Lección</a>
             </div>
         </article>
     </main>

@@ -12,22 +12,23 @@
 <body>
 
     <header class="main-header">
-    <div class="logo">
-        <span class="site-name">🚀 DominaLaWeb</span>
-    </div>
-    <button class="menu-toggle" aria-label="Abrir Menú">
-        ☰
-    </button>
-    <nav class="main-nav" id="mainMenu">
-        <ul>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="html-intro.html" class="active">HTML</a></li>
-            <li><a href="css-intro.html">CSS Básico</a></li>
-            <li><a href="css-avanzado-intro.html">CSS Avanzado</a></li>
-            <li><a href="../sobre-mi.html">Sobre Mí</a></li>
-        </ul>
-    </nav>
-</header>
+        <div class="logo">
+            <span class="site-name">🚀 DominaLaWeb</span>
+        </div>
+        <button class="menu-toggle" aria-label="Abrir Menú">
+            ☰
+        </button>
+        <nav class="main-nav" id="mainMenu">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="html-intro.html" class="active">HTML</a></li>
+                <li><a href="css-intro.html">CSS Básico</a></li>
+                <li><a href="css-avanzado-intro.html">CSS Avanzado</a></li>
+                <li><a href="../Recursos/Recursos-intro.html">Recursos</a></li>
+                <li><a href="../sobre-mi.html">Sobre Mí</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main class="container lesson-page">
         <aside class="sidebar">
@@ -57,11 +58,14 @@
                     que "<" y mayor que ">" ). Los Tags son las instrucciones que le damos al navegador. Casi todos
                         vienen en pares:</p>
 
-                        <div class="code-block">
-                            <pre><code>
-&lt;p&gt; &lt;!-- Tag de Apertura --&gt;
-&lt;/p&gt; &lt;!-- Tag de Cierre (siempre lleva un slash "/") --&gt;
- </code></pre>
+                        <div class="code-container">
+                            <pre id="codigo-tag">
+    &lt;p&gt; &lt;!-- Tag de Apertura --&gt;
+    &lt;/p&gt; &lt;!-- Tag de Cierre (siempre lleva un slash "/") --&gt;
+                            </pre>
+                            <button class="btn-copiar" onclick="copiarCodigo('codigo-tag', this)">
+                                Copiar Código
+                            </button>
                         </div>
             </section>
 
@@ -72,12 +76,15 @@
                     se encuentra entre ellos. El elemento es la pieza de información completa que el navegador
                     interpreta y muestra.</p>
 
-                <div class="code-block">
-                    <pre><code>
+                 <div class="code-container">
+                    <pre id="codigo">
 &lt;p&gt;Esto es el contenido del párrafo.&lt;/p&gt;
 
 &lt;!-- La línea de arriba es el Elemento completo: Tag de Apertura + Contenido + Tag de Cierre --&gt;
-                    </code></pre>
+                    </pre>
+                    <button class="btn-copiar" onclick="copiarCodigo('codigo', this)">
+                        Copiar Código
+                    </button>
                 </div>
             </section>
 
@@ -87,12 +94,15 @@
                     porque su
                     propósito es solo insertar algo en la página, y no tienen contenido que encerrar.</p>
 
-                <div class="code-block">
-                    <pre><code>
-&lt;br&gt;    &lt;!-- Para insertar un salto de línea --&gt;
-&lt;img src="imagen.jpg" alt="Descripción"&gt; &lt;!-- Para insertar una imagen --&gt;
-                    </code></pre>
-                </div>
+            <div class="code-container">
+                <pre id="codigo-tag">
+ &lt;br&gt; &lt;!-- Para insertar un salto de línea --&gt;
+ &lt;img src="imagen.jpg" alt="Descripción"&gt; &lt;!-- Para insertar una imagen --&gt;
+            </pre>
+                <button class="btn-copiar" onclick="copiarCodigo('codigo-tag', this)">
+                    Copiar Código
+                </button>
+            </div>
                 <p class="challenge-tip"><strong>💡 Recuerda:</strong> Si un elemento no necesita encerrar contenido
                     (como un salto de línea o una imagen), probablemente sea un elemento vacío y solo necesite un Tag de
                     apertura.</p>
@@ -106,12 +116,15 @@
                     <strong>nombre="valor"</strong>.
                 </p>
 
-                <div class="code-block">
-                    <pre><code>
-&lt;p class="resaltado"&gt;
-&lt;a href="https://ejemplo.com" target="_blank"&gt;
-&lt;img src="foto.jpg" alt="Mi Foto"&gt;
-                    </code></pre>
+                <div class="code-container">
+                    <pre id="codigo-tag">
+    &lt;p class="resaltado"&gt;
+    &lt;a href="https://ejemplo.com" target="_blank"&gt;
+    &lt;img src="foto.jpg" alt="Mi Foto"&gt;
+                </pre>
+                    <button class="btn-copiar" onclick="copiarCodigo('codigo-tag', this)">
+                        Copiar Código
+                    </button>
                 </div>
                 <p>En el ejemplo del enlace <code>&lt;a&gt;</code>, <strong><code>href</code></strong> es el atributo
                     (nombre) y <strong><code>https://ejemplo.com</code></strong> es el valor (la dirección a la que
@@ -119,38 +132,47 @@
             </section>
 
             <section class="quiz-section">
-  <h2>Cuestionario: Comprueba tus conocimientos en esta sección</h2>
+                <h2>Cuestionario: Comprueba tus conocimientos en esta sección</h2>
 
-  <div class="quiz-container">
+                <div class="quiz-container">
 
-    <!-- Pregunta 1 -->
-    <div class="quiz-question">
-      <p>1. ¿Cuál es la diferencia principal entre un Tag y un Elemento en HTML?</p>
-      <label><input type="radio" name="q1" value="a"> Un Tag incluye apertura, contenido y cierre, mientras que un Elemento solo es la apertura.</label><br>
-      <label><input type="radio" name="q1" value="b"> Un Tag es la etiqueta (apertura o cierre), mientras que un Elemento es el conjunto completo de apertura, contenido y cierre.</label><br>
-      <label><input type="radio" name="q1" value="c"> No hay diferencia, ambos significan lo mismo.</label>
-    </div>
+                    <!-- Pregunta 1 -->
+                    <div class="quiz-question">
+                        <p>1. ¿Cuál es la diferencia principal entre un Tag y un Elemento en HTML?</p>
+                        <label><input type="radio" name="q1" value="a"> Un Tag incluye apertura, contenido y cierre,
+                            mientras que un Elemento solo es la apertura.</label><br>
+                        <label><input type="radio" name="q1" value="b"> Un Tag es la etiqueta (apertura o cierre),
+                            mientras que un Elemento es el conjunto completo de apertura, contenido y
+                            cierre.</label><br>
+                        <label><input type="radio" name="q1" value="c"> No hay diferencia, ambos significan lo
+                            mismo.</label>
+                    </div>
 
-    <!-- Pregunta 2 -->
-    <div class="quiz-question">
-      <p>2. ¿Qué caracteriza a los elementos vacíos o “self-closing tags”?</p>
-      <label><input type="radio" name="q2" value="a"> No pueden tener atributos.</label><br>
-      <label><input type="radio" name="q2" value="b"> Son elementos que no encierran contenido y solo tienen un tag de apertura.</label><br>
-      <label><input type="radio" name="q2" value="c"> Siempre deben tener contenido dentro de ellos.</label>
-    </div>
+                    <!-- Pregunta 2 -->
+                    <div class="quiz-question">
+                        <p>2. ¿Qué caracteriza a los elementos vacíos o “self-closing tags”?</p>
+                        <label><input type="radio" name="q2" value="a"> No pueden tener atributos.</label><br>
+                        <label><input type="radio" name="q2" value="b"> Son elementos que no encierran contenido y solo
+                            tienen un tag de apertura.</label><br>
+                        <label><input type="radio" name="q2" value="c"> Siempre deben tener contenido dentro de
+                            ellos.</label>
+                    </div>
 
-    <!-- Pregunta 3 -->
-    <div class="quiz-question">
-      <p>3. ¿Cuál de las siguientes afirmaciones sobre los atributos es correcta?</p>
-      <label><input type="radio" name="q3" value="a"> Los atributos se escriben en el tag de cierre.</label><br>
-      <label><input type="radio" name="q3" value="b"> Los atributos se colocan en el tag de apertura y siguen la estructura nombre="valor".</label><br>
-      <label><input type="radio" name="q3" value="c"> Los atributos no influyen en el comportamiento del elemento.</label>
-    </div>
+                    <!-- Pregunta 3 -->
+                    <div class="quiz-question">
+                        <p>3. ¿Cuál de las siguientes afirmaciones sobre los atributos es correcta?</p>
+                        <label><input type="radio" name="q3" value="a"> Los atributos se escriben en el tag de
+                            cierre.</label><br>
+                        <label><input type="radio" name="q3" value="b"> Los atributos se colocan en el tag de apertura y
+                            siguen la estructura nombre="valor".</label><br>
+                        <label><input type="radio" name="q3" value="c"> Los atributos no influyen en el comportamiento
+                            del elemento.</label>
+                    </div>
 
-    <button id="checkQuiz">Comprobar respuestas</button>
-    <p id="quizResult" class="quiz-result"></p>
-  </div>
-</section>
+                    <button id="checkQuiz">Comprobar respuestas</button>
+                    <p id="quizResult" class="quiz-result"></p>
+                </div>
+            </section>
 
 
             <div class="lesson-navigation">
@@ -160,12 +182,12 @@
         </article>
     </main>
 
-   <footer class="main-footer">
+    <footer class="main-footer">
         <div class="footer-content container">
             <p>&copy; 2025 DominaLaWeb | Hecho con el 💖 para enseñar al Mundo</p>
             <p class="author-info">
                 Diseño y desarrollo por:
-               <a href="https://afc7.github.io/afcaro7.github.io/" target="_blank" rel="noopener noreferrer">
+                <a href="https://afc7.github.io/afcaro7.github.io/" target="_blank" rel="noopener noreferrer">
 
                     Andres Felipe Ingeniero Electrónico
                 </a>

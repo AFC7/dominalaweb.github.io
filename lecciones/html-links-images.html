@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,23 +11,24 @@
 
 <body>
 
-     <header class="main-header">
-    <div class="logo">
-        <span class="site-name">🚀 DominaLaWeb</span>
-    </div>
-    <button class="menu-toggle" aria-label="Abrir Menú">
-        ☰
-    </button>
-    <nav class="main-nav" id="mainMenu">
-        <ul>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="html-intro.html" class="active">HTML</a></li>
-            <li><a href="css-intro.html">CSS Básico</a></li>
-            <li><a href="css-avanzado-intro.html">CSS Avanzado</a></li>
-            <li><a href="../sobre-mi.html">Sobre Mí</a></li>
-        </ul>
-    </nav>
-</header>
+    <header class="main-header">
+        <div class="logo">
+            <span class="site-name">🚀 DominaLaWeb</span>
+        </div>
+        <button class="menu-toggle" aria-label="Abrir Menú">
+            ☰
+        </button>
+        <nav class="main-nav" id="mainMenu">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="html-intro.html" class="active">HTML</a></li>
+                <li><a href="css-intro.html">CSS Básico</a></li>
+                <li><a href="css-avanzado-intro.html">CSS Avanzado</a></li>
+                <li><a href="../Recursos/Recursos-intro.html">Recursos</a></li>
+                <li><a href="../sobre-mi.html">Sobre Mí</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main class="container lesson-page">
         <aside class="sidebar">
@@ -45,90 +47,121 @@
 
         <article class="lesson-content">
             <h1>Lección 5: Navegación y Medios: Enlaces e Imágenes</h1>
-            <p>Si la estructura y el texto son el esqueleto de la web, los enlaces y las imágenes son los que la convierten en una red de información interconectada y visualmente atractiva.</p>
+            <p>Si la estructura y el texto son el esqueleto de la web, los enlaces y las imágenes son los que la
+                convierten en una red de información interconectada y visualmente atractiva.</p>
 
             <hr>
 
             <section>
                 <h2>1. Enlaces (Hyperlinks): La Etiqueta &lt;a&gt;</h2>
-                <p>La etiqueta <code>&lt;a&gt;</code> (del inglés "anchor") es la que permite a los usuarios navegar de una página a otra, ya sea dentro de tu propio sitio web o hacia un sitio externo. Sin ella, no habría internet tal y como lo conocemos.</p>
-                
-                <h3>El Atributo Clave: href</h3>
-                <p>El atributo más importante de <code>&lt;a&gt;</code> es <strong><code>href</code></strong> (Hypertext Reference), que define la dirección (URL) a la que debe ir el navegador cuando el usuario hace clic. El texto entre las etiquetas de apertura y cierre es lo que el usuario ve y pulsa.</p>
+                <p>La etiqueta <code>&lt;a&gt;</code> (del inglés "anchor") es la que permite a los usuarios navegar de
+                    una página a otra, ya sea dentro de tu propio sitio web o hacia un sitio externo. Sin ella, no
+                    habría internet tal y como lo conocemos.</p>
 
-                <div class="code-block">
-                    <pre><code>
+                <h3>El Atributo Clave: href</h3>
+                <p>El atributo más importante de <code>&lt;a&gt;</code> es <strong><code>href</code></strong> (Hypertext
+                    Reference), que define la dirección (URL) a la que debe ir el navegador cuando el usuario hace clic.
+                    El texto entre las etiquetas de apertura y cierre es lo que el usuario ve y pulsa.</p>
+
+                  <div class="code-container">
+                <pre id="codigo-tag">
 &lt;a href="https://www.google.com"&gt;Ir a Google&lt;/a&gt;
 &lt;a href="html-intro.html"&gt;Volver a la introducción de HTML&lt;/a&gt;
-                    </code></pre>
-                </div>
-                
-                <h3>Enlaces en Ventana Nueva (target="_blank")</h3>
-                <p>Si quieres que el enlace se abra en una pestaña o ventana nueva (algo común al enlazar a sitios externos), debes usar el atributo <strong><code>target="_blank"</code></strong>.</p>
+                     </pre>
+                <button class="btn-copiar" onclick="copiarCodigo('codigo-tag', this)">
+                    Copiar Código
+                </button>
+            </div>
 
-                <div class="code-block">
-                    <pre><code>
+                <h3>Enlaces en Ventana Nueva (target="_blank")</h3>
+                <p>Si quieres que el enlace se abra en una pestaña o ventana nueva (algo común al enlazar a sitios
+                    externos), debes usar el atributo <strong><code>target="_blank"</code></strong>.</p>
+
+                  <div class="code-container">
+                <pre id="codigo-tag">
 &lt;a href="https://ejemplo.com" target="_blank"&gt;Abrir en Pestaña Nueva&lt;/a&gt;
-                    </code></pre>
-                </div>
+                    </pre>
+                <button class="btn-copiar" onclick="copiarCodigo('codigo-tag', this)">
+                    Copiar Código
+                </button>
+            </div>
             </section>
-            
+
             <section>
                 <h2>2. Imágenes: La Etiqueta &lt;img&gt;</h2>
-                <p>La etiqueta <code>&lt;img&gt;</code> se utiliza para incrustar imágenes en tu documento HTML. Es una etiqueta "vacía" (o “self-closing”), lo que significa que no tiene una etiqueta de cierre.</p>
+                <p>La etiqueta <code>&lt;img&gt;</code> se utiliza para incrustar imágenes en tu documento HTML. Es una
+                    etiqueta "vacía" (o “self-closing”), lo que significa que no tiene una etiqueta de cierre.</p>
 
                 <h3>Atributos Esenciales: src y alt</h3>
                 <ul>
-                    <li><strong><code>src</code></strong> (Source): Define la ruta o dirección donde se encuentra el archivo de la imagen. Puede ser una ruta local (<code>../assets/imagen.jpg</code>) o una URL completa.</li>
-                    <li><strong><code>alt</code></strong> (Alternative Text): Este es el texto que se muestra si la imagen no se puede cargar y es <strong>crucial</strong> para la accesibilidad y para el SEO, ya que describe el contenido de la imagen a los motores de búsqueda y lectores de pantalla.</li>
+                    <li><strong><code>src</code></strong> (Source): Define la ruta o dirección donde se encuentra el
+                        archivo de la imagen. Puede ser una ruta local (<code>../assets/imagen.jpg</code>) o una URL
+                        completa.</li>
+                    <li><strong><code>alt</code></strong> (Alternative Text): Este es el texto que se muestra si la
+                        imagen no se puede cargar y es <strong>crucial</strong> para la accesibilidad y para el SEO, ya
+                        que describe el contenido de la imagen a los motores de búsqueda y lectores de pantalla.</li>
                 </ul>
-                
-                <div class="code-block">
-                    <pre><code>
+
+                 <div class="code-container">
+                <pre id="codigo-tag">
 &lt;img src="../assets/img/programacion.jpg" alt="Persona programando en una computadora"&gt;
-                    </code></pre>
-                </div>
+                     </pre>
+                <button class="btn-copiar" onclick="copiarCodigo('codigo-tag', this)">
+                    Copiar Código
+                </button>
+            </div>
 
                 <p class="challenge-tip">
-                    <strong>💡 ¡Importante sobre &lt;img&gt;!</strong> Nunca olvides el atributo <strong><code>alt</code></strong>. Si la imagen es puramente decorativa, puedes dejarlo vacío (<code>alt=""</code>), pero si aporta significado, debe ser descriptivo.
+                    <strong>💡 ¡Importante sobre &lt;img&gt;!</strong> Nunca olvides el atributo
+                    <strong><code>alt</code></strong>. Si la imagen es puramente decorativa, puedes dejarlo vacío
+                    (<code>alt=""</code>), pero si aporta significado, debe ser descriptivo.
                 </p>
-                
+
             </section>
 
 
             <section class="quiz-section">
-  <h2>Cuestionario: Comprueba tus conocimientos en esta sección</h2>
+                <h2>Cuestionario: Comprueba tus conocimientos en esta sección</h2>
 
-  <div class="quiz-container">
+                <div class="quiz-container">
 
-    <!-- Pregunta 1 -->
-    <div class="quiz-question">
-      <p>1. ¿Cuál es el propósito principal de la etiqueta <code>&lt;a&gt;</code> en HTML?</p>
-      <label><input type="radio" name="q1" value="a"> Insertar una imagen en la página web.</label><br>
-      <label><input type="radio" name="q1" value="b"> Crear enlaces que permiten navegar a otras páginas o sitios web.</label><br>
-      <label><input type="radio" name="q1" value="c"> Mostrar texto con formato en negrita.</label>
-    </div>
+                    <!-- Pregunta 1 -->
+                    <div class="quiz-question">
+                        <p>1. ¿Cuál es el propósito principal de la etiqueta <code>&lt;a&gt;</code> en HTML?</p>
+                        <label><input type="radio" name="q1" value="a"> Insertar una imagen en la página
+                            web.</label><br>
+                        <label><input type="radio" name="q1" value="b"> Crear enlaces que permiten navegar a otras
+                            páginas o sitios web.</label><br>
+                        <label><input type="radio" name="q1" value="c"> Mostrar texto con formato en negrita.</label>
+                    </div>
 
-    <!-- Pregunta 2 -->
-    <div class="quiz-question">
-      <p>2. ¿Para qué sirve el atributo <code>target="_blank"</code> en un enlace?</p>
-      <label><input type="radio" name="q2" value="a"> Hace que el enlace se abra en una nueva pestaña o ventana del navegador.</label><br>
-      <label><input type="radio" name="q2" value="b"> Cambia el color del texto del enlace.</label><br>
-      <label><input type="radio" name="q2" value="c"> Muestra una vista previa del enlace al pasar el cursor.</label>
-    </div>
+                    <!-- Pregunta 2 -->
+                    <div class="quiz-question">
+                        <p>2. ¿Para qué sirve el atributo <code>target="_blank"</code> en un enlace?</p>
+                        <label><input type="radio" name="q2" value="a"> Hace que el enlace se abra en una nueva pestaña
+                            o ventana del navegador.</label><br>
+                        <label><input type="radio" name="q2" value="b"> Cambia el color del texto del
+                            enlace.</label><br>
+                        <label><input type="radio" name="q2" value="c"> Muestra una vista previa del enlace al pasar el
+                            cursor.</label>
+                    </div>
 
-    <!-- Pregunta 3 -->
-    <div class="quiz-question">
-      <p>3. ¿Qué función cumple el atributo <code>alt</code> en la etiqueta <code>&lt;img&gt;</code>?</p>
-      <label><input type="radio" name="q3" value="a"> Define el tamaño de la imagen en píxeles.</label><br>
-      <label><input type="radio" name="q3" value="b"> Describe el contenido de la imagen para accesibilidad y SEO.</label><br>
-      <label><input type="radio" name="q3" value="c"> Cambia la alineación de la imagen en la página.</label>
-    </div>
+                    <!-- Pregunta 3 -->
+                    <div class="quiz-question">
+                        <p>3. ¿Qué función cumple el atributo <code>alt</code> en la etiqueta <code>&lt;img&gt;</code>?
+                        </p>
+                        <label><input type="radio" name="q3" value="a"> Define el tamaño de la imagen en
+                            píxeles.</label><br>
+                        <label><input type="radio" name="q3" value="b"> Describe el contenido de la imagen para
+                            accesibilidad y SEO.</label><br>
+                        <label><input type="radio" name="q3" value="c"> Cambia la alineación de la imagen en la
+                            página.</label>
+                    </div>
 
-    <button id="checkQuiz">Comprobar respuestas</button>
-    <p id="quizResult" class="quiz-result"></p>
-  </div>
-</section>
+                    <button id="checkQuiz">Comprobar respuestas</button>
+                    <p id="quizResult" class="quiz-result"></p>
+                </div>
+            </section>
 
 
             <div class="lesson-navigation">
@@ -143,16 +176,17 @@
             <p>&copy; 2025 DominaLaWeb | Hecho con el 💖 para enseñar al Mundo</p>
             <p class="author-info">
                 Diseño y desarrollo por:
-               <a href="https://afc7.github.io/afcaro7.github.io/" target="_blank" rel="noopener noreferrer">
+                <a href="https://afc7.github.io/afcaro7.github.io/" target="_blank" rel="noopener noreferrer">
 
                     Andres Felipe Ingeniero Electrónico
                 </a>
             </p>
         </div>
     </footer>
-    
+
     <script src="../assets/js/script.js"></script>
     <script src="../assets/js/Q5.js"> </script>
 
 </body>
+
 </html>

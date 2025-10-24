@@ -11,23 +11,24 @@
 
 <body class="lesson-4">
 
-  <header class="main-header">
-    <div class="logo">
-        <span class="site-name">🚀 DominaLaWeb</span>
-    </div>
-    <button class="menu-toggle" aria-label="Abrir Menú">
-        ☰
-    </button>
-    <nav class="main-nav" id="mainMenu">
-        <ul>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="html-intro.html" class="active">HTML</a></li>
-            <li><a href="css-intro.html">CSS Básico</a></li>
-            <li><a href="css-avanzado-intro.html">CSS Avanzado</a></li>
-            <li><a href="../sobre-mi.html">Sobre Mí</a></li>
-        </ul>
-    </nav>
-</header>
+    <header class="main-header">
+        <div class="logo">
+            <span class="site-name">🚀 DominaLaWeb</span>
+        </div>
+        <button class="menu-toggle" aria-label="Abrir Menú">
+            ☰
+        </button>
+        <nav class="main-nav" id="mainMenu">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="html-intro.html" class="active">HTML</a></li>
+                <li><a href="css-intro.html">CSS Básico</a></li>
+                <li><a href="css-avanzado-intro.html">CSS Avanzado</a></li>
+                <li><a href="../Recursos/Recursos-intro.html">Recursos</a></li>
+                <li><a href="../sobre-mi.html">Sobre Mí</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main class="container lesson-page">
         <aside class="sidebar">
@@ -56,7 +57,8 @@
                     <strong>estructura y jerarquía</strong> del texto. El <code>&lt;h1&gt;</code> es el más
                     <strong>importante</strong> (título principal de la página) y solo debe usarse <strong>una
                         vez</strong> por página. Los números más altos (<code>&lt;h2&gt;</code>,
-                    <code>&lt;h3&gt;</code>, etc.) se usan para subtítulos.</p>
+                    <code>&lt;h3&gt;</code>, etc.) se usan para subtítulos.
+                </p>
 
                 <h3>Reglas de Oro de los Encabezados</h3>
                 <ul>
@@ -65,14 +67,17 @@
                     <li>No uses encabezados solo para hacer el texto más grande; usa CSS para eso.</li>
                 </ul>
 
-                <div class="code-block">
-                    <pre><code>
+                 <div class="code-container">
+                <pre id="codigo-tag">
 &lt;h1&gt;Título Principal del Artículo (Solo uno)&lt;/h1&gt;
 &lt;h2&gt;Sección Principal (Primer Subtítulo)&lt;/h2&gt;
 &lt;h3&gt;Sub-Sección de la Sección Principal&lt;/h3&gt;
 &lt;h4&gt;Detalle en Profundidad&lt;/h4&gt;
-            </code></pre>
-                </div>
+             </pre>
+                <button class="btn-copiar" onclick="copiarCodigo('codigo-tag', this)">
+                    Copiar Código
+                </button>
+            </div>
             </section>
 
             <section>
@@ -87,50 +92,58 @@
                     <code>&lt;p&gt;</code>.
                 </p>
 
-                <div class="code-block">
-                    <pre><code>
+                <div class="code-container">
+                <pre id="codigo-tag">
 &lt;p&gt;Este es un párrafo de texto. El navegador lo mostrará como un bloque completo.&lt;/p&gt;
 
 &lt;p&gt;Aunque este segundo párrafo está justo debajo en el código, el navegador le dará un espacio vertical para separarlo del anterior.&lt;/p&gt;
-            </code></pre>
-                </div>
+            </pre>
+                <button class="btn-copiar" onclick="copiarCodigo('codigo-tag', this)">
+                    Copiar Código
+                </button>
+            </div>
             </section>
 
             <section class="quiz-section">
                 <h2>Cuestionario: Comprueba tus conocimientos en esta sección</h2>
-            
+
                 <div class="quiz-container">
-            
+
                     <!-- Pregunta 1 -->
                     <div class="quiz-question">
                         <p>1. ¿Qué representa la etiqueta <code>&lt;h1&gt;</code> en una página HTML?</p>
-                        <label><input type="radio" name="q1" value="a"> Un encabezado secundario que puede repetirse varias
+                        <label><input type="radio" name="q1" value="a"> Un encabezado secundario que puede repetirse
+                            varias
                             veces.</label><br>
-                        <label><input type="radio" name="q1" value="b"> El título principal de la página y solo debe aparecer una
+                        <label><input type="radio" name="q1" value="b"> El título principal de la página y solo debe
+                            aparecer una
                             vez.</label><br>
                         <label><input type="radio" name="q1" value="c"> Un texto normal dentro de un párrafo.</label>
                     </div>
-            
+
                     <!-- Pregunta 2 -->
                     <div class="quiz-question">
                         <p>2. ¿Cuál de las siguientes afirmaciones sobre los encabezados es correcta?</p>
-                        <label><input type="radio" name="q2" value="a"> Puedes usar múltiples <code>&lt;h1&gt;</code> en una misma
+                        <label><input type="radio" name="q2" value="a"> Puedes usar múltiples <code>&lt;h1&gt;</code> en
+                            una misma
                             página.</label><br>
                         <label><input type="radio" name="q2" value="b"> No debes saltarte niveles, como pasar de
                             <code>&lt;h2&gt;</code> a <code>&lt;h4&gt;</code>.</label><br>
-                        <label><input type="radio" name="q2" value="c"> Los encabezados solo sirven para cambiar el tamaño del
+                        <label><input type="radio" name="q2" value="c"> Los encabezados solo sirven para cambiar el
+                            tamaño del
                             texto.</label>
                     </div>
-            
+
                     <!-- Pregunta 3 -->
                     <div class="quiz-question">
                         <p>3. ¿Qué hace la etiqueta <code>&lt;p&gt;</code> en HTML?</p>
-                        <label><input type="radio" name="q3" value="a"> Crea un bloque de texto que representa un párrafo
+                        <label><input type="radio" name="q3" value="a"> Crea un bloque de texto que representa un
+                            párrafo
                             completo.</label><br>
                         <label><input type="radio" name="q3" value="b"> Inserta una imagen dentro del texto.</label><br>
                         <label><input type="radio" name="q3" value="c"> Define un título principal de la página.</label>
                     </div>
-            
+
                     <button id="checkQuiz">Comprobar respuestas</button>
                     <p id="quizResult" class="quiz-result"></p>
                 </div>
@@ -146,12 +159,12 @@
         </article>
     </main>
 
-  <footer class="main-footer">
+    <footer class="main-footer">
         <div class="footer-content container">
             <p>&copy; 2025 DominaLaWeb | Hecho con el 💖 para enseñar al Mundo</p>
             <p class="author-info">
                 Diseño y desarrollo por:
-               <a href="https://afc7.github.io/afcaro7.github.io/" target="_blank" rel="noopener noreferrer">
+                <a href="https://afc7.github.io/afcaro7.github.io/" target="_blank" rel="noopener noreferrer">
 
                     Andres Felipe Ingeniero Electrónico
                 </a>
@@ -159,7 +172,7 @@
         </div>
     </footer>
 
-   <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/script.js"></script>
     <script src="../assets/js/Q4.js"> </script>
 
 </body>
