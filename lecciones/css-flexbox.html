@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,14 +44,18 @@
 
         <article class="lesson-content">
             <h1>Lección 6: Dominando Flexbox para Layouts Flexibles</h1>
-            <p><strong>Flexbox</strong> (Módulo de Caja Flexible) es una de las características más importantes de CSS moderno. Es un sistema de <strong>una dimensión</strong> diseñado para distribuir elementos en una fila o columna y asegurar que el espaciado sea eficiente, sin importar el tamaño de la pantalla.</p>
+            <p><strong>Flexbox</strong> (Módulo de Caja Flexible) es una de las características más importantes de CSS
+                moderno. Es un sistema de <strong>una dimensión</strong> diseñado para distribuir elementos en una fila
+                o columna y asegurar que el espaciado sea eficiente, sin importar el tamaño de la pantalla.</p>
 
             <hr>
 
             <section>
                 <h2>1. El Contenedor Flex (Flex Container)</h2>
-                <p>Para activar Flexbox, solo necesitas aplicar <strong><code>display: flex;</code></strong> al elemento padre (contenedor) que contiene los elementos que deseas organizar. Los elementos hijos dentro de él se convierten automáticamente en <strong>ítems flex (flex items)</strong>.</p>
-                
+                <p>Para activar Flexbox, solo necesitas aplicar <strong><code>display: flex;</code></strong> al elemento
+                    padre (contenedor) que contiene los elementos que deseas organizar. Los elementos hijos dentro de él
+                    se convierten automáticamente en <strong>ítems flex (flex items)</strong>.</p>
+
 
                 <div class="code-block">
                     <pre><code>
@@ -62,29 +67,75 @@
                     </code></pre>
                 </div>
             </section>
-            
+
             <section>
                 <h2>2. Propiedades de Alineación Clave</h2>
-                <p>El poder de Flexbox reside en dos propiedades principales aplicadas al <strong>contenedor</strong>:</p>
+                <p>El poder de Flexbox reside en dos propiedades principales aplicadas al <strong>contenedor</strong>:
+                </p>
 
                 <ul>
-                    <li><strong><code>justify-content</code></strong>: Controla la alineación y el espaciado a lo largo del <strong>eje principal</strong> (por defecto, horizontal). Valores comunes son <strong><code>space-between</code></strong>, <strong><code>center</code></strong>, y <strong><code>flex-start</code></strong>.</li>
-                    <li><strong><code>align-items</code></strong>: Controla la alineación a lo largo del <strong>eje transversal</strong> (por defecto, vertical). Valores comunes son <strong><code>center</code></strong>, <strong><code>flex-start</code></strong>, y <strong><code>stretch</code></strong>.</li>
+                    <li><strong><code>justify-content</code></strong>: Controla la alineación y el espaciado a lo largo
+                        del <strong>eje principal</strong> (por defecto, horizontal). Valores comunes son
+                        <strong><code>space-between</code></strong>, <strong><code>center</code></strong>, y
+                        <strong><code>flex-start</code></strong>.</li>
+                    <li><strong><code>align-items</code></strong>: Controla la alineación a lo largo del <strong>eje
+                            transversal</strong> (por defecto, vertical). Valores comunes son
+                        <strong><code>center</code></strong>, <strong><code>flex-start</code></strong>, y
+                        <strong><code>stretch</code></strong>.</li>
                 </ul>
-                
+
                 <p class="challenge-tip">
-                    <strong>💡 Concepto Clave:</strong> Por defecto, Flexbox intenta poner todos los ítems en una <strong>sola fila</strong>. Si quieres que los ítems salten a una nueva línea si no caben, usa <strong><code>flex-wrap: wrap;</code></strong> en el contenedor.
+                    <strong>💡 Concepto Clave:</strong> Por defecto, Flexbox intenta poner todos los ítems en una
+                    <strong>sola fila</strong>. Si quieres que los ítems salten a una nueva línea si no caben, usa
+                    <strong><code>flex-wrap: wrap;</code></strong> en el contenedor.
                 </p>
             </section>
-            
+
             <section>
                 <h2>3. Propiedades para Ítems Flex</h2>
                 <p>También puedes controlar cómo se comportan los elementos hijos (ítems) dentro del contenedor:</p>
                 <ul>
-                    <li><strong><code>flex-grow</code></strong>: Define si el ítem debe <strong>crecer</strong> para ocupar el espacio extra disponible (ej., <code>flex-grow: 1;</code>).</li>
-                    <li><strong><code>flex-shrink</code></strong>: Define si el ítem puede <strong>encogerse</strong> cuando no hay espacio suficiente.</li>
-                    <li><strong><code>order</code></strong>: Te permite cambiar el <strong>orden visual</strong> de un ítem sin alterar el orden en el HTML, usando números enteros.</li>
+                    <li><strong><code>flex-grow</code></strong>: Define si el ítem debe <strong>crecer</strong> para
+                        ocupar el espacio extra disponible (ej., <code>flex-grow: 1;</code>).</li>
+                    <li><strong><code>flex-shrink</code></strong>: Define si el ítem puede <strong>encogerse</strong>
+                        cuando no hay espacio suficiente.</li>
+                    <li><strong><code>order</code></strong>: Te permite cambiar el <strong>orden visual</strong> de un
+                        ítem sin alterar el orden en el HTML, usando números enteros.</li>
                 </ul>
+            </section>
+
+            <section class="quiz-section">
+                <h2>Cuestionario: Comprueba tus conocimientos en Flexbox</h2>
+
+                <div class="quiz-container">
+
+                    <div class="quiz-question">
+                        <p>1. ¿Cuál propiedad se debe aplicar al <b>elemento padre</b> (contenedor) para activar Flexbox?
+                        </p>
+                        <label><input type="radio" name="q1" value="a"> <code>display: inline;</code></label><br>
+                        <label><input type="radio" name="q1" value="b"> <code>display: flex;</code></label><br>
+                        <label><input type="radio" name="q1" value="c"> <code>flex-direction: row;</code></label>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p>2. ¿Cuál propiedad de alineación controla el espaciado a lo largo del <b>eje principal</b> (por
+                            defecto, horizontal)?</p>
+                        <label><input type="radio" name="q2" value="a"> <code>align-items</code></label><br>
+                        <label><input type="radio" name="q2" value="b"> <code>flex-wrap</code></label><br>
+                        <label><input type="radio" name="q2" value="c"> <code>justify-content</code></label>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p>3. ¿Qué propiedad se aplica a un ítem flex (elemento hijo) si quieres que <b>crezca</b> para
+                            ocupar el espacio extra disponible?</p>
+                        <label><input type="radio" name="q3" value="a"> <code>flex-grow</code></label><br>
+                        <label><input type="radio" name="q3" value="b"> <code>align-self</code></label><br>
+                        <label><input type="radio" name="q3" value="c"> <code>flex-shrink</code></label>
+                    </div>
+
+                    <button id="checkQuiz">Comprobar respuestas</button>
+                    <p id="quizResult" class="quiz-result"></p>
+                </div>
             </section>
 
             <div class="lesson-navigation">
@@ -98,15 +149,17 @@
         <div class="footer-content container">
             <p>&copy; 2025 DominaLaWeb | Hecho con el 💖 para enseñar al Mundo</p>
             <p class="author-info">
-                Diseño y desarrollo por: 
+                Diseño y desarrollo por:
                 <a href="https://afc7.github.io/afcaro7.github.io/" target="_blank" rel="noopener noreferrer">
                     Andres Felipe Ingeniero Electrónico
                 </a>
             </p>
         </div>
     </footer>
-    
+
     <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/Q13.js"> </script>
 
 </body>
+
 </html>

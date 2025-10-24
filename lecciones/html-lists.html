@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,23 +11,23 @@
 
 <body>
 
-     <header class="main-header">
-    <div class="logo">
-        <span class="site-name">🚀 DominaLaWeb</span>
-    </div>
-    <button class="menu-toggle" aria-label="Abrir Menú">
-        ☰
-    </button>
-    <nav class="main-nav" id="mainMenu">
-        <ul>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="html-intro.html" class="active">HTML</a></li>
-            <li><a href="css-intro.html">CSS Básico</a></li>
-            <li><a href="css-avanzado-intro.html">CSS Avanzado</a></li>
-            <li><a href="../sobre-mi.html">Sobre Mí</a></li>
-        </ul>
-    </nav>
-</header>
+    <header class="main-header">
+        <div class="logo">
+            <span class="site-name">🚀 DominaLaWeb</span>
+        </div>
+        <button class="menu-toggle" aria-label="Abrir Menú">
+            ☰
+        </button>
+        <nav class="main-nav" id="mainMenu">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="html-intro.html" class="active">HTML</a></li>
+                <li><a href="css-intro.html">CSS Básico</a></li>
+                <li><a href="css-avanzado-intro.html">CSS Avanzado</a></li>
+                <li><a href="../sobre-mi.html">Sobre Mí</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main class="container lesson-page">
         <aside class="sidebar">
@@ -45,16 +46,19 @@
 
         <article class="lesson-content">
             <h1>Lección 6: Organizando Datos con Listas y Tablas</h1>
-            <p>El HTML no solo sirve para colocar texto; también es una herramienta poderosa para estructurar datos complejos. Aprenderás a usar listas para menús y pasos, y tablas para datos tabulares.</p>
+            <p>El HTML no solo sirve para colocar texto; también es una herramienta poderosa para estructurar datos
+                complejos. Aprenderás a usar listas para menús y pasos, y tablas para datos tabulares.</p>
 
             <hr>
 
             <section>
                 <h2>1. Listas: Ordenadas y Desordenadas</h2>
-                <p>Existen dos tipos principales de listas, y ambas usan la etiqueta "<code>&lt;li&gt;</code>" (list item) para cada elemento dentro de ellas:</p>
-                
+                <p>Existen dos tipos principales de listas, y ambas usan la etiqueta "<code>&lt;li&gt;</code>" (list
+                    item) para cada elemento dentro de ellas:</p>
+
                 <h3>Listas Desordenadas (&lt;ul&gt;)</h3>
-                <p>Las listas desordenadas (Unordered List), creadas con la etiqueta "<code>&lt;ul&gt;</code>", se usan cuando el orden de los elementos no importa. Por defecto, el navegador usa puntos (viñetas).</p>
+                <p>Las listas desordenadas (Unordered List), creadas con la etiqueta "<code>&lt;ul&gt;</code>", se usan
+                    cuando el orden de los elementos no importa. Por defecto, el navegador usa puntos (viñetas).</p>
 
                 <div class="code-block">
                     <pre><code>
@@ -65,9 +69,10 @@
 &lt;/ul&gt;
                     </code></pre>
                 </div>
-                
+
                 <h3>Listas Ordenadas (&lt;ol&gt;)</h3>
-                <p>Las listas ordenadas (Ordered List), creadas con "<code>&lt;ol&gt;</code>", se usan cuando el orden es importante (ej., pasos de una receta o un ranking). Por defecto, el navegador usa números.</p>
+                <p>Las listas ordenadas (Ordered List), creadas con "<code>&lt;ol&gt;</code>", se usan cuando el orden
+                    es importante (ej., pasos de una receta o un ranking). Por defecto, el navegador usa números.</p>
 
                 <div class="code-block">
                     <pre><code>
@@ -79,20 +84,23 @@
                     </code></pre>
                 </div>
             </section>
-            
+
             <section>
                 <h2>2. Tablas: Organizando Datos Tabulares</h2>
-                <p>La etiqueta "<code>&lt;table&gt;</code>" es un elemento complejo diseñado para mostrar datos que se relacionan en filas y columnas (como hojas de cálculo o estadísticas). No la uses para crear diseños (¡eso es trabajo de CSS!).</p>
+                <p>La etiqueta "<code>&lt;table&gt;</code>" es un elemento complejo diseñado para mostrar datos que se
+                    relacionan en filas y columnas (como hojas de cálculo o estadísticas). No la uses para crear diseños
+                    (¡eso es trabajo de CSS!).</p>
 
                 <h3>Estructura de una Tabla Básica</h3>
                 <p>Una tabla se divide en:</p>
                 <ul>
                     <li><strong><code>&lt;table&gt;</code></strong>: El contenedor de toda la tabla.</li>
                     <li><strong><code>&lt;tr&gt;</code></strong> (Table Row): Define una fila de la tabla.</li>
-                    <li><strong><code>&lt;th&gt;</code></strong> (Table Header): Celdas de encabezado (generalmente en negrita).</li>
+                    <li><strong><code>&lt;th&gt;</code></strong> (Table Header): Celdas de encabezado (generalmente en
+                        negrita).</li>
                     <li><strong><code>&lt;td&gt;</code></strong> (Table Data): Celdas de datos normales.</li>
                 </ul>
-                
+
                 <div class="code-block">
                     <pre><code>
 &lt;table&gt;
@@ -112,8 +120,51 @@
                     </code></pre>
                 </div>
 
+                <section class="quiz-section">
+                    <h2>Cuestionario: Comprueba tus conocimientos en esta sección</h2>
+
+                    <div class="quiz-container">
+
+                        <!-- Pregunta 1 -->
+                        <div class="quiz-question">
+                            <p>1. ¿Cuál es la diferencia entre una lista ordenada (<code>&lt;ol&gt;</code>) y una
+                                desordenada (<code>&lt;ul&gt;</code>)?</p>
+                            <label><input type="radio" name="q1" value="a"> La lista ordenada usa números y la
+                                desordenada usa viñetas.</label><br>
+                            <label><input type="radio" name="q1" value="b"> Ambas se ven igual en el
+                                navegador.</label><br>
+                            <label><input type="radio" name="q1" value="c"> La lista desordenada siempre debe contener
+                                imágenes.</label>
+                        </div>
+
+                        <!-- Pregunta 2 -->
+                        <div class="quiz-question">
+                            <p>2. ¿Qué etiqueta se utiliza para definir una fila dentro de una tabla?</p>
+                            <label><input type="radio" name="q2" value="a"> &lt;td&gt;</label><br>
+                            <label><input type="radio" name="q2" value="b"> &lt;tr&gt;</label><br>
+                            <label><input type="radio" name="q2" value="c"> &lt;th&gt;</label>
+                        </div>
+
+                        <!-- Pregunta 3 -->
+                        <div class="quiz-question">
+                            <p>3. ¿Cuál es la función principal de la etiqueta <code>&lt;th&gt;</code> en una tabla?</p>
+                            <label><input type="radio" name="q3" value="a"> Crear celdas de encabezado que generalmente
+                                aparecen en negrita.</label><br>
+                            <label><input type="radio" name="q3" value="b"> Insertar una nueva fila en la
+                                tabla.</label><br>
+                            <label><input type="radio" name="q3" value="c"> Definir el contenedor principal de toda la
+                                tabla.</label>
+                        </div>
+
+                        <button id="checkQuiz">Comprobar respuestas</button>
+                        <p id="quizResult" class="quiz-result"></p>
+                    </div>
+                </section>
+
+
                 <p class="challenge-tip">
-                    <strong>¡Felicidades!</strong> Has completado el módulo esencial de HTML. El siguiente paso es el curso de CSS, donde aprenderás a hacer que toda esta estructura se vea increíble.
+                    <strong>¡Felicidades!</strong> Has completado el módulo esencial de HTML. El siguiente paso es el
+                    curso de CSS, donde aprenderás a hacer que toda esta estructura se vea increíble.
                 </p>
             </section>
 
@@ -124,20 +175,22 @@
         </article>
     </main>
 
- <footer class="main-footer">
+    <footer class="main-footer">
         <div class="footer-content container">
             <p>&copy; 2025 DominaLaWeb | Hecho con el 💖 para enseñar al Mundo</p>
             <p class="author-info">
                 Diseño y desarrollo por:
-               <a href="https://afc7.github.io/afcaro7.github.io/" target="_blank" rel="noopener noreferrer">
+                <a href="https://afc7.github.io/afcaro7.github.io/" target="_blank" rel="noopener noreferrer">
 
                     Andres Felipe Ingeniero Electrónico
                 </a>
             </p>
         </div>
     </footer>
-    
-    <script src="../assets/js/script.js"></script>
+
+   <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/Q6.js"> </script>
 
 </body>
+
 </html>

@@ -47,7 +47,8 @@
             <h1>Lección 4: Apuntando a Elementos con Selectores Comunes</h1>
             <p>La precisión es poder en CSS. Los selectores son las "direcciones" que usas para comunicarle al navegador
                 exactamente qué elemento quieres pintar. Los tres selectores más comunes y esenciales son por
-                <strong>Elemento (Etiqueta)</strong>, por <strong>Clase</strong> y por <strong>ID</strong>.</p>
+                <strong>Elemento (Etiqueta)</strong>, por <strong>Clase</strong> y por <strong>ID</strong>.
+            </p>
 
             <hr>
 
@@ -55,7 +56,8 @@
                 <h2>1. Selector de Elemento (Etiqueta)</h2>
                 <p>El selector más simple es el de <strong>Elemento</strong>, donde seleccionas todos los elementos que
                     usan una etiqueta HTML específica. Simplemente usa el nombre de la etiqueta (<code>p</code>,
-                    <code>h1</code>, <code>a</code>, etc.).</p>
+                    <code>h1</code>, <code>a</code>, etc.).
+                </p>
             </section>
 
             <section>
@@ -99,6 +101,47 @@
                 </div>
             </section>
 
+            <section class="quiz-section">
+                <h2>Cuestionario: Comprueba tus conocimientos en Selectores CSS</h2>
+
+                <div class="quiz-container">
+
+                    <div class="quiz-question">
+                        <p>1. ¿Qué símbolo se usa en CSS para seleccionar un elemento por su <strong>clase</strong>?</p>
+                        <label><input type="radio" name="q1" value="a"> El símbolo de almohadilla
+                            (<code>#</code>)</label><br>
+                        <label><input type="radio" name="q1" value="b"> Un punto (<code>.</code>)</label><br>
+                        <label><input type="radio" name="q1" value="c"> El nombre de la etiqueta (ej.
+                            <code>p</code>)</label>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p>2. ¿Qué símbolo se usa en CSS para seleccionar un <strong>elemento único</strong> por su
+                            <strong>ID</strong>?</p>
+                        <label><input type="radio" name="q2" value="a"> Un punto (<code>.</code>)</label><br>
+                        <label><input type="radio" name="q2" value="b"> El nombre de la etiqueta (ej.
+                            <code>div</code>)</label><br>
+                        <label><input type="radio" name="q2" value="c"> El símbolo de almohadilla
+                            (<code>#</code>)</label>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p>3. ¿Cuál selector se recomienda usar si necesitas aplicar el mismo estilo a <strong>múltiples
+                                elementos</strong>?</p>
+                        <label><input type="radio" name="q3" value="a"> Selector de ID (ej.
+                            <code>#mi-id</code>)</label><br>
+                        <label><input type="radio" name="q3" value="b"> Selector de Clase (ej.
+                            <code>.mi-clase</code>)</label><br>
+                        <label><input type="radio" name="q3" value="c"> Selector de Elemento (ej.
+                            <code>h2</code>)</label>
+                    </div>
+
+                    <button id="checkQuiz">Comprobar respuestas</button>
+                    <p id="quizResult" class="quiz-result"></p>
+                </div>
+            </section>
+
+
             <div class="lesson-navigation">
                 <a href="css-methods.html" class="nav-button prev">Lección Anterior</a>
                 <a href="css-box-model.html" class="nav-button next">Siguiente Lección</a>
@@ -119,6 +162,7 @@
     </footer>
 
     <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/Q10.js"> </script>
 
 </body>
 

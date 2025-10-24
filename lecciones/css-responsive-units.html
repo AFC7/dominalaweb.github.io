@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,7 +44,9 @@
 
         <article class="lesson-content">
             <h1>Lección 8: Dominando las Unidades Responsivas (rem, em, vw/vh)</h1>
-            <p>Para construir sitios web verdaderamente responsivos (que escalan bien en cualquier dispositivo), debemos dejar de depender de los píxeles (<strong><code>px</code></strong>) para el texto y los tamaños de caja y usar unidades relativas.</p>
+            <p>Para construir sitios web verdaderamente responsivos (que escalan bien en cualquier dispositivo), debemos
+                dejar de depender de los píxeles (<strong><code>px</code></strong>) para el texto y los tamaños de caja
+                y usar unidades relativas.</p>
 
             <hr>
 
@@ -51,20 +54,32 @@
                 <h2>1. Unidades Relativas al Texto (em y rem)</h2>
                 <p>Estas unidades son fundamentales para una tipografía accesible y escalable:</p>
                 <ul>
-                    <li><strong><code>em</code></strong>: Es relativo al <strong>tamaño de fuente del elemento padre</strong>. Si el padre tiene 20px, <code>1em</code> será 20px. Esto puede ser complejo de calcular en cascada.</li>
-                    <li><strong><code>rem</code></strong> (Root em): Es relativo al <strong>tamaño de fuente del elemento raíz</strong> (el elemento <code>&lt;html&gt;</code>). Si la fuente base del <code>&lt;html&gt;</code> es 16px, <code>2rem</code> siempre será 32px, sin importar el padre.</li>
+                    <li><strong><code>em</code></strong>: Es relativo al <strong>tamaño de fuente del elemento
+                            padre</strong>. Si el padre tiene 20px, <code>1em</code> será 20px. Esto puede ser complejo
+                        de calcular en cascada.</li>
+                    <li><strong><code>rem</code></strong> (Root em): Es relativo al <strong>tamaño de fuente del
+                            elemento raíz</strong> (el elemento <code>&lt;html&gt;</code>). Si la fuente base del
+                        <code>&lt;html&gt;</code> es 16px, <code>2rem</code> siempre será 32px, sin importar el padre.
+                    </li>
                 </ul>
                 <p class="challenge-tip">
-                    <strong> Práctica Profesional:</strong> Usa <strong><code>rem</code></strong> para el tamaño de las fuentes, padding y margin. Esto asegura que si un usuario cambia el tamaño de fuente base de su navegador, todo el layout escale proporcionalmente.
+                    <strong> Práctica Profesional:</strong> Usa <strong><code>rem</code></strong> para el tamaño de las
+                    fuentes, padding y margin. Esto asegura que si un usuario cambia el tamaño de fuente base de su
+                    navegador, todo el layout escale proporcionalmente.
                 </p>
             </section>
-            
+
             <section>
                 <h2>2. Unidades Relativas al Viewport (vw y vh)</h2>
-                <p>Estas unidades son perfectas para elementos que deben depender del tamaño total de la pantalla del usuario (viewport).</p>
+                <p>Estas unidades son perfectas para elementos que deben depender del tamaño total de la pantalla del
+                    usuario (viewport).</p>
                 <ul>
-                    <li><strong><code>vw</code></strong> (Viewport Width): Representa el <strong>1% del ancho del viewport</strong> (pantalla). Si la pantalla tiene 1000px de ancho, <code>10vw</code> son 100px.</li>
-                    <li><strong><code>vh</code></strong> (Viewport Height): Representa el <strong>1% de la altura del viewport</strong>. Es útil para hacer que una sección o imagen ocupe la pantalla completa.</li>
+                    <li><strong><code>vw</code></strong> (Viewport Width): Representa el <strong>1% del ancho del
+                            viewport</strong> (pantalla). Si la pantalla tiene 1000px de ancho, <code>10vw</code> son
+                        100px.</li>
+                    <li><strong><code>vh</code></strong> (Viewport Height): Representa el <strong>1% de la altura del
+                            viewport</strong>. Es útil para hacer que una sección o imagen ocupe la pantalla completa.
+                    </li>
                 </ul>
 
                 <div class="code-block">
@@ -82,6 +97,41 @@
                 </div>
             </section>
 
+            <section class="quiz-section">
+                <h2>Cuestionario: Comprueba tus conocimientos en Unidades Responsivas</h2>
+
+                <div class="quiz-container">
+
+                    <div class="quiz-question">
+                        <p>1. ¿Qué unidad de medida es relativa al tamaño de fuente del <strong>elemento raíz
+                                (&lt;html&gt;)</strong>?</p>
+                        <label><input type="radio" name="q1" value="a"> <code>em</code></label><br>
+                        <label><input type="radio" name="q1" value="b"> <code>px</code></label><br>
+                        <label><input type="radio" name="q1" value="c"> <code>rem</code></label>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p>2. ¿Cuál unidad representa el <strong>1% del ancho del viewport</strong> (pantalla)?</p>
+                        <label><input type="radio" name="q2" value="a"> <code>vh</code></label><br>
+                        <label><input type="radio" name="q2" value="b"> <code>vw</code></label><br>
+                        <label><input type="radio" name="q2" value="c"> <code>em</code></label>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p>3. ¿Por qué se considera la unidad <code>em</code> compleja de calcular en cascada?</p>
+                        <label><input type="radio" name="q3" value="a"> Es relativa al tamaño de fuente base del
+                            navegador.</label><br>
+                        <label><input type="radio" name="q3" value="b"> Es relativa al <strong>tamaño de fuente del
+                                elemento padre</strong>.</label><br>
+                        <label><input type="radio" name="q3" value="c"> Solo funciona en combinación con la unidad
+                            <code>vh</code>.</label>
+                    </div>
+
+                    <button id="checkQuiz">Comprobar respuestas</button>
+                    <p id="quizResult" class="quiz-result"></p>
+                </div>
+            </section>
+
             <div class="lesson-navigation">
                 <a href="css-grid.html" class="nav-button prev">Lección Anterior</a>
                 <a href="#" class="nav-button next">Módulo Completo</a>
@@ -93,15 +143,17 @@
         <div class="footer-content container">
             <p>&copy; 2025 DominaLaWeb | Hecho con el 💖 para enseñar al Mundo</p>
             <p class="author-info">
-                Diseño y desarrollo por: 
+                Diseño y desarrollo por:
                 <a href="https://afc7.github.io/afcaro7.github.io/" target="_blank" rel="noopener noreferrer">
                     Andres Felipe Ingeniero Electrónico
                 </a>
             </p>
         </div>
     </footer>
-    
+
     <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/Q15.js"> </script>
 
 </body>
+
 </html>

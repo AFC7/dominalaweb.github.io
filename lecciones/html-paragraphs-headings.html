@@ -96,7 +96,47 @@
                 </div>
             </section>
 
+            <section class="quiz-section">
+                <h2>Cuestionario: Comprueba tus conocimientos en esta sección</h2>
             
+                <div class="quiz-container">
+            
+                    <!-- Pregunta 1 -->
+                    <div class="quiz-question">
+                        <p>1. ¿Qué representa la etiqueta <code>&lt;h1&gt;</code> en una página HTML?</p>
+                        <label><input type="radio" name="q1" value="a"> Un encabezado secundario que puede repetirse varias
+                            veces.</label><br>
+                        <label><input type="radio" name="q1" value="b"> El título principal de la página y solo debe aparecer una
+                            vez.</label><br>
+                        <label><input type="radio" name="q1" value="c"> Un texto normal dentro de un párrafo.</label>
+                    </div>
+            
+                    <!-- Pregunta 2 -->
+                    <div class="quiz-question">
+                        <p>2. ¿Cuál de las siguientes afirmaciones sobre los encabezados es correcta?</p>
+                        <label><input type="radio" name="q2" value="a"> Puedes usar múltiples <code>&lt;h1&gt;</code> en una misma
+                            página.</label><br>
+                        <label><input type="radio" name="q2" value="b"> No debes saltarte niveles, como pasar de
+                            <code>&lt;h2&gt;</code> a <code>&lt;h4&gt;</code>.</label><br>
+                        <label><input type="radio" name="q2" value="c"> Los encabezados solo sirven para cambiar el tamaño del
+                            texto.</label>
+                    </div>
+            
+                    <!-- Pregunta 3 -->
+                    <div class="quiz-question">
+                        <p>3. ¿Qué hace la etiqueta <code>&lt;p&gt;</code> en HTML?</p>
+                        <label><input type="radio" name="q3" value="a"> Crea un bloque de texto que representa un párrafo
+                            completo.</label><br>
+                        <label><input type="radio" name="q3" value="b"> Inserta una imagen dentro del texto.</label><br>
+                        <label><input type="radio" name="q3" value="c"> Define un título principal de la página.</label>
+                    </div>
+            
+                    <button id="checkQuiz">Comprobar respuestas</button>
+                    <p id="quizResult" class="quiz-result"></p>
+                </div>
+            </section>
+
+
 
 
             <div class="lesson-navigation">

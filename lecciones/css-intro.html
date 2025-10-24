@@ -11,23 +11,23 @@
 
 <body>
 
-     <header class="main-header">
-    <div class="logo">
-        <span class="site-name">🚀 DominaLaWeb</span>
-    </div>
-    <button class="menu-toggle" aria-label="Abrir Menú">
-        ☰
-    </button>
-    <nav class="main-nav" id="mainMenu">
-        <ul>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="html-intro.html">HTML</a></li>
-            <li><a href="css-intro.html" class="active">CSS Básico</a></li>
-            <li><a href="css-avanzado-intro.html">CSS Avanzado</a></li>
-            <li><a href="../sobre-mi.html">Sobre Mí</a></li>
-        </ul>
-    </nav>
-</header>
+    <header class="main-header">
+        <div class="logo">
+            <span class="site-name">🚀 DominaLaWeb</span>
+        </div>
+        <button class="menu-toggle" aria-label="Abrir Menú">
+            ☰
+        </button>
+        <nav class="main-nav" id="mainMenu">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="html-intro.html">HTML</a></li>
+                <li><a href="css-intro.html" class="active">CSS Básico</a></li>
+                <li><a href="css-avanzado-intro.html">CSS Avanzado</a></li>
+                <li><a href="../sobre-mi.html">Sobre Mí</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main class="container lesson-page">
         <aside class="sidebar">
@@ -94,6 +94,48 @@
                     como esperas. ¡Lo veremos a fondo en las lecciones futuras!</p>
             </section>
 
+            <section class="quiz-section">
+                <h2>Cuestionario: Comprueba tus conocimientos en esta sección</h2>
+
+                <div class="quiz-container">
+
+                    <!-- Pregunta 1 -->
+                    <div class="quiz-question">
+                        <p>1. ¿Cuál es la función principal de CSS en una página web?</p>
+                        <label><input type="radio" name="q1" value="a"> Definir la estructura del contenido, como
+                            títulos y párrafos.</label><br>
+                        <label><input type="radio" name="q1" value="b"> Dar estilo y controlar la apariencia visual de
+                            los elementos HTML.</label><br>
+                        <label><input type="radio" name="q1" value="c"> Agregar interactividad mediante scripts.</label>
+                    </div>
+
+                    <!-- Pregunta 2 -->
+                    <div class="quiz-question">
+                        <p>2. ¿Qué representa el principio de “Separación de Preocupaciones” en el desarrollo web?</p>
+                        <label><input type="radio" name="q2" value="a"> Combinar HTML y CSS en un solo archivo para
+                            simplificar el código.</label><br>
+                        <label><input type="radio" name="q2" value="b"> Mantener separadas la estructura (HTML) y la
+                            presentación (CSS).</label><br>
+                        <label><input type="radio" name="q2" value="c"> Usar solo HTML sin aplicar estilos.</label>
+                    </div>
+
+                    <!-- Pregunta 3 -->
+                    <div class="quiz-question">
+                        <p>3. ¿Qué significa la “C” en CSS y a qué se refiere?</p>
+                        <label><input type="radio" name="q3" value="a"> “Color”, refiriéndose a las paletas de estilo
+                            visual.</label><br>
+                        <label><input type="radio" name="q3" value="b"> “Cascade”, indicando cómo el navegador decide
+                            qué estilos aplicar cuando hay conflictos.</label><br>
+                        <label><input type="radio" name="q3" value="c"> “Code”, representando el conjunto de reglas de
+                            diseño.</label>
+                    </div>
+
+                    <button id="checkQuiz">Comprobar respuestas</button>
+                    <p id="quizResult" class="quiz-result"></p>
+                </div>
+            </section>
+
+
             <div class="lesson-navigation">
                 <a href="../lecciones/html-lists.html" class="nav-button prev">Módulo HTML Completo</a>
                 <a href="css-syntax.html" class="nav-button next">Siguiente Lección</a>
@@ -101,12 +143,12 @@
         </article>
     </main>
 
-   <footer class="main-footer">
+    <footer class="main-footer">
         <div class="footer-content container">
             <p>&copy; 2025 DominaLaWeb | Hecho con el 💖 para enseñar al Mundo</p>
             <p class="author-info">
                 Diseño y desarrollo por:
-               <a href="https://afc7.github.io/afcaro7.github.io/" target="_blank" rel="noopener noreferrer">
+                <a href="https://afc7.github.io/afcaro7.github.io/" target="_blank" rel="noopener noreferrer">
 
                     Andres Felipe Ingeniero Electrónico
                 </a>
@@ -115,6 +157,7 @@
     </footer>
 
     <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/Q7.js"> </script>
 
 </body>
 

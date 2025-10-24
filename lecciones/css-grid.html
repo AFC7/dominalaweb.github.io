@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,18 +44,23 @@
 
         <article class="lesson-content">
             <h1>Lección 7: CSS Grid (Diseño en Filas y Columnas)</h1>
-            <p>Si Flexbox es la herramienta para alinear en <strong>una dimensión</strong> (fila O columna), <strong>CSS Grid</strong> es la herramienta definitiva para crear diseños complejos en <strong>dos dimensiones</strong> (filas Y columnas) al mismo tiempo. Es perfecto para el layout principal de toda la página.</p>
+            <p>Si Flexbox es la herramienta para alinear en <strong>una dimensión</strong> (fila O columna), <strong>CSS
+                    Grid</strong> es la herramienta definitiva para crear diseños complejos en <strong>dos
+                    dimensiones</strong> (filas Y columnas) al mismo tiempo. Es perfecto para el layout principal de
+                toda la página.</p>
 
             <hr>
 
             <section>
                 <h2>1. Activación de Grid</h2>
-                <p>Al igual que Flexbox, activas Grid en el elemento padre (contenedor) usando <strong><code>display: grid;</code></strong>.</p>
-                
+                <p>Al igual que Flexbox, activas Grid en el elemento padre (contenedor) usando
+                    <strong><code>display: grid;</code></strong>.</p>
+
                 <h3>Definición de Columnas y Filas</h3>
                 <p>La magia de Grid comienza al definir la estructura de la cuadrícula:</p>
                 <ul>
-                    <li><strong><code>grid-template-columns</code></strong>: Define cuántas columnas quieres y el ancho de cada una.</li>
+                    <li><strong><code>grid-template-columns</code></strong>: Define cuántas columnas quieres y el ancho
+                        de cada una.</li>
                     <li><strong><code>grid-template-rows</code></strong>: Define la altura de las filas.</li>
                 </ul>
 
@@ -70,18 +76,21 @@
                     </code></pre>
                 </div>
             </section>
-            
+
             <section>
                 <h2>2. La Unidad "fr" (Fracción)</h2>
-                <p>La unidad **<code>fr</code>** (fracción) es exclusiva de Grid y hace que sea increíblemente flexible. La unidad <code>1fr</code> significa "una parte del espacio libre restante".</p>
-                
-                <p>Por ejemplo, si tienes <code>grid-template-columns: 1fr 2fr 1fr;</code>, el espacio libre se divide en 4 partes, y la columna central toma 2 de esas partes.</p>
+                <p>La unidad **<code>fr</code>** (fracción) es exclusiva de Grid y hace que sea increíblemente flexible.
+                    La unidad <code>1fr</code> significa "una parte del espacio libre restante".</p>
+
+                <p>Por ejemplo, si tienes <code>grid-template-columns: 1fr 2fr 1fr;</code>, el espacio libre se divide
+                    en 4 partes, y la columna central toma 2 de esas partes.</p>
 
             </section>
-            
+
             <section>
                 <h2>3. Posicionamiento y Span (Ítems)</h2>
-                <p>Puedes posicionar los elementos hijos (ítems) en la cuadrícula usando líneas o nombres, o hacer que un elemento ocupe varias celdas (span):</p>
+                <p>Puedes posicionar los elementos hijos (ítems) en la cuadrícula usando líneas o nombres, o hacer que
+                    un elemento ocupe varias celdas (span):</p>
 
                 <div class="code-block">
                     <pre><code>
@@ -95,9 +104,48 @@
                 </div>
             </section>
 
+
+            <section class="quiz-section">
+                <h2>Cuestionario: Comprueba tus conocimientos en CSS Grid</h2>
+
+                <div class="quiz-container">
+
+                    <div class="quiz-question">
+                        <p>1. ¿Qué característica principal hace que CSS Grid sea la herramienta definitiva para el
+                            layout?</p>
+                        <label><input type="radio" name="q1" value="a"> Está diseñado para alinear elementos en una sola
+                            dimensión (fila O columna).</label><br>
+                        <label><input type="radio" name="q1" value="b"> Permite crear diseños en <strong>dos
+                                dimensiones</strong> (filas Y columnas) al mismo tiempo.</label><br>
+                        <label><input type="radio" name="q1" value="c"> Se usa exclusivamente para barras de
+                            navegación.</label>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p>2. ¿Cuál propiedad se debe aplicar al elemento padre para activar CSS Grid?</p>
+                        <label><input type="radio" name="q2" value="a"> <code>display: flex;</code></label><br>
+                        <label><input type="radio" name="q2" value="b"> <code>display: grid;</code></label><br>
+                        <label><input type="radio" name="q2" value="c"> <code>grid-template: 1fr;</code></label>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p>3. ¿Qué representa la unidad <code>fr</code> (fracción) en la definición de columnas y filas
+                            de Grid?</p>
+                        <label><input type="radio" name="q3" value="a"> El tamaño fijo de la fila.</label><br>
+                        <label><input type="radio" name="q3" value="b"> Una parte del espacio libre restante en el
+                            contenedor.</label><br>
+                        <label><input type="radio" name="q3" value="c"> Una medida igual a 1 rem.</label>
+                    </div>
+
+                    <button id="checkQuiz">Comprobar respuestas</button>
+                    <p id="quizResult" class="quiz-result"></p>
+                </div>
+            </section>
+
             <div class="lesson-navigation">
                 <a href="css-flexbox.html" class="nav-button prev">← Lección Anterior</a>
-                <a href="css-responsive-units.html" class="nav-button next">Siguiente Lección: Unidades Responsivas →</a>
+                <a href="css-responsive-units.html" class="nav-button next">Siguiente Lección: Unidades Responsivas
+                    →</a>
             </div>
         </article>
     </main>
@@ -106,15 +154,17 @@
         <div class="footer-content container">
             <p>&copy; 2025 DominaLaWeb | Hecho con el 💖 para enseñar al Mundo</p>
             <p class="author-info">
-                Diseño y desarrollo por: 
+                Diseño y desarrollo por:
                 <a href="https://afc7.github.io/afcaro7.github.io/" target="_blank" rel="noopener noreferrer">
                     Andres Felipe Ingeniero Electrónico
                 </a>
             </p>
         </div>
     </footer>
-    
+
     <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/Q14.js"> </script>
 
 </body>
+
 </html>

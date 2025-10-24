@@ -51,14 +51,16 @@
             <section>
                 <h2>El Layout Moderno: De Cajas a Contenedores Inteligentes</h2>
                 <p>Históricamente, posicionar elementos en la web era difícil (usando floats y posicionamiento). Hoy,
-                    tenemos dos herramientas increíbles que resuelven todos los problemas de <strong>layout</strong>:</p>
+                    tenemos dos herramientas increíbles que resuelven todos los problemas de <strong>layout</strong>:
+                </p>
 
                 <ul>
                     <li><strong><code>Flexbox</code>:</strong> Perfecto para alinear y distribuir elementos en una
                         <strong>sola dimensión</strong> (fila o columna). Es ideal para barras de navegación o
-                        componentes individuales.</li>
+                        componentes individuales.
+                    </li>
                     <li><strong><code>CSS Grid</code>:</strong> La herramienta definitiva para diseños bidimensionales.
-                        Te permite crear <strong>completas</strong>  (cabeceras, barras laterales, pies de página) en
+                        Te permite crear <strong>completas</strong> (cabeceras, barras laterales, pies de página) en
                         filas y columnas al mismo tiempo.</li>
                 </ul>
 
@@ -68,6 +70,41 @@
                 </p>
             </section>
 
+
+            <section class="quiz-section">
+                <h2>Cuestionario: Comprueba tus conocimientos en Layout Moderno</h2>
+
+                <div class="quiz-container">
+
+                    <div class="quiz-question">
+                        <p>1. ¿Cuáles son las dos herramientas modernas que resuelven los problemas de layout en CSS?
+                        </p>
+                        <label><input type="radio" name="q1" value="a"> Floats y Positioning</label><br>
+                        <label><input type="radio" name="q1" value="b"> Selectores y Modelo de Caja</label><br>
+                        <label><input type="radio" name="q1" value="c"> Flexbox y CSS Grid</label>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p>2. ¿Para qué es perfecto <code>Flexbox</code>?</p>
+                        <label><input type="radio" name="q2" value="a"> Para alinear elementos en una <strong>sola
+                                dimensión</strong> (fila o columna).</label><br>
+                        <label><input type="radio" name="q2" value="b"> Para crear diseños bidimensionales (filas y
+                            columnas a la vez).</label><br>
+                        <label><input type="radio" name="q2" value="c"> Para reemplazar el Modelo de Caja.</label>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p>3. ¿Qué herramienta es la "definitiva" para diseños <strong>bidimensionales</strong> (filas y
+                            columnas al mismo tiempo)?</p>
+                        <label><input type="radio" name="q3" value="a"> Flexbox</label><br>
+                        <label><input type="radio" name="q3" value="b"> CSS Grid</label><br>
+                        <label><input type="radio" name="q3" value="c"> Positioning</label>
+                    </div>
+
+                    <button id="checkQuiz">Comprobar respuestas</button>
+                    <p id="quizResult" class="quiz-result"></p>
+                </div>
+            </section>
             <div class="lesson-navigation">
                 <a href="css-box-model.html" class="nav-button prev">Módulo Básico Completo</a>
                 <a href="css-flexbox.html" class="nav-button next">Empezar Lección</a>
@@ -87,7 +124,8 @@
         </div>
     </footer>
 
-    <script src="../assets/js/script.js"></script>
+     <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/Q12.js"> </script>
 
 </body>
 
