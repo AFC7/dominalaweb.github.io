@@ -185,6 +185,15 @@ body {
     color: var(--color-primary);
 
 }
+.nav__logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav__logo-img {
+    height: 60px;
+    width: auto;
+}
 
 
 .main-nav ul {
@@ -217,11 +226,6 @@ body {
 .main-nav a.active {
 
     color: var(--color-primary);
-
-    /* CORREGIDO: Esto era un borde inferior. Lo he eliminado para quitar la línea, 
-       pero puedes cambiarlo por otra decoración si lo deseas. */
-    /* border-bottom: 2px solid var(--color-primary); */
-
 }
 
 
