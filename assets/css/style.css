@@ -77,7 +77,7 @@ a:active {
 
 
 
-/* Contenedor centrado y adaptable */
+/* Contenedor centrado y adaptable fondo normal*/
 .image-container {
     display: flex;
     justify-content: center;
@@ -90,6 +90,26 @@ a:active {
     /* Ancho máximo para pantallas grandes */
     padding: 1rem;
     background-color: #3498db;
+    /* Fondo claro opcional */
+    border-radius: 12px;
+    /* Bordes suaves */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil */
+}
+
+/* Contenedor centrado y adaptable fondo background */
+.image-container2 {
+    display: flex;
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
+    margin: 2rem auto;
+    /* Centra el bloque en la página */
+    max-width: 900px;
+    /* Ancho máximo para pantallas grandes */
+    padding: 1rem;
+    background-color: #f8f9fa;
     /* Fondo claro opcional */
     border-radius: 12px;
     /* Bordes suaves */
