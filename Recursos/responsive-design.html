@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design - DominaLaWeb</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="logo">
+           <a href="../index.html" class="nav__logo">
+            <img src="../assets/images/logo-page.webp" alt="Logo DominaLaWeb" class="nav__logo-img">
+        </a>
+        </div>
+        <button class="menu-toggle" aria-label="Abrir Menú">
+            ☰
+        </button>
+        <nav class="main-nav" id="mainMenu">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../lecciones/html-intro.html">HTML</a></li>
+                <li><a href="../lecciones/css-intro.html">CSS Básico</a></li>
+                <li><a href="../lecciones/css-avanzado-intro.html">CSS Avanzado</a></li>
+                <li><a href="Recursos-intro.html" class="active">Recursos</a></li>
+                <li><a href="../sobre-mi.html">Sobre Mí</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="container lesson-page">
+        <aside class="sidebar">
+            <h2>Recursos</h2>
+            <nav class="lesson-nav">
+                <ul>
+                    <li><a href="Recursos-intro.html">Recursos</a></li>
+                    <li><a href="button-whsp.html">¿Cómo añadir boton de Whatsapp?</a></li>
+                    <li><a href="responsive-design.html" class="active">Responsive Design</a></li>
+                    <li><a href="plantilla.html">Contenedores y Elementos con Animaciones</a></li>
+                    <li><a href="plantilla.html">Sliders y Carruseles de Imágenes</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <article class="lesson-content">
+            <h1>Adaptación a Diferentes Pantallas (Responsive Design)</h1>
+            <p>El <strong>Diseño Adaptable (Responsive Design)</strong> es la práctica de construir sitios web que se ajustan automáticamente al tamaño de la pantalla del usuario (PC, tablet o móvil), garantizando una experiencia de usuario óptima sin importar el dispositivo.</p>
+            <hr>
+
+            <section>
+                <h2>1. La Base en HTML: El Viewport Meta Tag</h2>
+                <p>Este es el paso más importante y a menudo olvidado. Le indica al navegador móvil que el ancho del sitio web debe ser igual al ancho del dispositivo, evitando que el móvil intente renderizar la página como si fuera un escritorio.</p>
+                
+                <h3>Código a añadir en el <code>&lt;head&gt;</code>:</h3>
+                <div class="code-container">
+                    <pre id="codigo-viewport-meta">
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</pre>
+                    <button class="btn-copiar" onclick="copiarCodigo('codigo-viewport-meta', this)">
+                        Copiar Meta Tag
+                    </button>
+                </div>
+                <p class="challenge-tip">
+                    <strong><code>width=device-width</code></strong> fuerza el ancho del contenido a coincidir con el ancho de la pantalla.<br>
+                    <strong><code>initial-scale=1.0</code></strong> establece el nivel de zoom inicial en 100%.
+                </p>
+
+                <h2>2. La Herramienta CSS: Media Queries</h2>
+                <p>Las Media Queries son la forma en que CSS aplica estilos condicionalmente, basados en reglas como el ancho de la ventana o el tipo de dispositivo. Esto te permite reestructurar tu layout (por ejemplo, cambiar un menú horizontal a vertical) solo cuando la pantalla es pequeña.</p>
+
+                <h3>Estructura y Puntos de Ruptura (Breakpoints) Comunes:</h3>
+                <div class="code-container">
+                    <pre id="codigo-media-queries">
+/* Estilos por defecto (PC / Escritorio - "Mobile Last") */
+.container {
+    display: flex; /* En PC, los elementos están lado a lado */
+}
+
+/* ------------------------------------ */
+/* PUNTO DE RUPTURA: TABLET (Hasta 992px) */
+/* ------------------------------------ */
+@media (max-width: 992px) {
+    /* Aquí se aplican estilos para pantallas más pequeñas, como las tablets */
+    .container {
+        padding: 0 15px; /* Reducir padding */
+    }
+}
+
+/* ------------------------------------ */
+/* PUNTO DE RUPTURA: MÓVIL (Hasta 768px) */
+/* ------------------------------------ */
+@media (max-width: 768px) {
+    /* Aquí se aplican estilos solo para móviles */
+    .container {
+        flex-direction: column; /* Apilar elementos en vertical */
+    }
+
+    h1 {
+        font-size: 2rem; /* Reducir el tamaño de fuente */
+    }
+}</pre>
+                    <button class="btn-copiar" onclick="copiarCodigo('codigo-media-queries', this)">
+                        Copiar Media Queries
+                    </button>
+                </div>
+
+                <h2>3. Principio Clave: Mobile First</h2>
+                <p>Aunque los ejemplos anteriores usan <b>max-width</b> (Desktop First), la mejor práctica es Mobile First:</p>
+                <ul>
+                    <li>Escribe el CSS base para móviles (la pantalla más pequeña).</li>
+                    <li>Usa <b>min-width</b> para "añadir" estilos de tablet y PC. Esto hace tu código más eficiente y semántico.</li>
+                </ul>
+                <div class="code-container">
+                    <pre id="codigo-mobile-first">
+/* 1. MOBILE FIRST (Estilos por defecto para teléfono) */
+.container {
+    width: 100%;
+    padding: 10px;
+}
+
+/* 2. TABLET Y MÁS GRANDE (Mínimo 768px) */
+@media (min-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+}
+
+/* 3. ESCRITORIO Y MÁS GRANDE (Mínimo 1200px) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}</pre>
+                    <button class="btn-copiar" onclick="copiarCodigo('codigo-mobile-first', this)">
+                        Copiar Mobile First
+                    </button>
+                </div>
+            </section>
+            
+            <div class="lesson-navigation">
+                <a href="button-whsp.html" class="nav-button prev">&laquo; Recurso Anterior</a>
+                <a href="plantilla.html" class="nav-button next">Siguiente Recurso &raquo;</a>
+            </div>
+        </article>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content container">
+            <p>&copy; 2025 DominaLaWeb | Hecho con el 💖 para enseñar al Mundo</p>
+            <p class="author-info">
+                Diseño y desarrollo por:
+                <a href="https://afc7.github.io/afcaro7.github.io/" target="_blank" rel="noopener noreferrer">
+                    Andres Felipe Ingeniero Electrónico
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+    <script>
+        // Función copiarCodigo (asume que ya existe en script.js)
+        function copiarCodigo(elementoId, boton) {
+            const codigoElemento = document.getElementById(elementoId);
+            const textoACopiar = codigoElemento.innerText;
+
+            navigator.clipboard.writeText(textoACopiar)
+                .then(() => {
+                    const textoOriginal = boton.textContent;
+                    const colorOriginal = boton.style.backgroundColor;
+
+                    boton.textContent = '¡Copiado! ✅';
+                    boton.style.backgroundColor = '#25D366';
+
+                    setTimeout(() => {
+                        boton.textContent = textoOriginal;
+                        boton.style.backgroundColor = colorOriginal;
+                    }, 2000);
+                })
+                .catch(err => {
+                    console.error('Error al copiar: ', err);
+                    alert('Error: No se pudo copiar. Intenta seleccionarlo manualmente.');
+                });
+        }
+    </script>
+</body>
+
+</html>
