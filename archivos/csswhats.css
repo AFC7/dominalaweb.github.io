@@ -1,0 +1,43 @@
+/* ===== Botón Flotante de WhatsApp - Escritorio (Desktop) ===== */
+.whatsapp-float-btn {
+    position: fixed;
+    /* Tamaño y Posición */
+    width: 65px; /* Tamaño ligeramente más conservador y estándar */
+    height: 65px;
+    bottom: 45px;
+    right: 45px;
+    
+    /* Estilo del Círculo */
+    background-color: #25D366;
+    color: #FFF;
+    border-radius: 50%; /* CLAVE: Usar 50% para un círculo perfecto */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+    z-index: 1000;
+    
+    /* Centrado del Icono */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem; /* Tamaño de icono proporcionado para 65px */
+    
+    /* Animación */
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float-btn:hover {
+    transform: scale(1.1);
+}
+
+/* --- */
+
+/* ===== Botón Flotante de WhatsApp - Móvil (Mobile) ===== */
+@media (max-width: 768px) { /* Usamos un media query para aplicar los cambios */
+    .whatsapp-float-btn {
+        width: 50px; /* Reducción de 65px a 50px */
+        height: 50px;
+        bottom: 20px; /* Posición más cerca del borde en móvil */
+        right: 20px;
+        /* CLAVE: Ajuste del tamaño de fuente a un valor proporcional (aproximadamente la mitad de la altura/ancho) */
+        font-size: 1.5rem; /* Ajustado de 2.5rem a 1.5rem (o 1.7rem máximo) */
+    }
+}
